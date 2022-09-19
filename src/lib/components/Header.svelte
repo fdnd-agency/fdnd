@@ -8,8 +8,8 @@
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-        color: var(--color-white);
-        padding: 1rem;
+		color: var(--color-white);
+		padding: 1rem;
 	}
 
 	img {
