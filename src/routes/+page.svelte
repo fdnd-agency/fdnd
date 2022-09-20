@@ -11,4 +11,4 @@
 De focus ligt op team building, samenwerken en hoe je frameworks inzet om een gezamenlijk doel te bereiken én in contact te blijven."
 />
 
-<SquadPageCard />
+<SquadPageCard squadTitle="Squad A" sprintTitle="Sprint 1" />

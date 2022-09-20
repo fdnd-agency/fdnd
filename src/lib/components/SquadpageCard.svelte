@@ -1,10 +1,15 @@
+<script lang="ts">
+    export let squadTitle:string
+    export let sprintTitle:string
+</script>
+
 <section>
     <div class="sprint-image">
         <div class="squad-title">
-            <h2>Squad A</h2>
+            <h2>{squadTitle}</h2>
         </div>
         <div class="sprint-title">
-            <h2>Sprint 1</h2>
+            <h2>{sprintTitle}</h2>
         </div>
     </div>
     <div class="sprint-components">
