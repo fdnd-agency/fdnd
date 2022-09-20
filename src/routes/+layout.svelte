@@ -3,6 +3,7 @@
   import '../styles/style.css'
 
   import Header from '$lib/components/Header.svelte'
+  import Footer from '$lib/components/Footer.svelte'
 </script>
 
 <svelte:head>
@@ -11,8 +12,9 @@
     rel="stylesheet"
   />
 </svelte:head>
-	
+
 <Header />
 <main>
   <slot />
 </main>
+<Footer />
