@@ -19,8 +19,8 @@
                 <Hashtag />
             </div>
             <div class="arrow-container">
-                <a href="">Bekijk deze squad
-                    <div class="arrow"></div>
+                <a href="#">Bekijk deze squad
+                    <span class="arrow"></span>
                 </a>
             </div>
     </div>
@@ -35,7 +35,7 @@
     .sprint-image {
         background-image: url("../assets/images/your-tribe.avif");
         position: relative;
-        height: 360px;
+        height: 22.5rem;
         width: 100%;
         background-size: cover;
         background-position: center 10%;
@@ -48,15 +48,15 @@
         right: 0;
         padding: .5rem 0 0 1rem;
         background-color: var(--blueberry);
-        border-bottom-left-radius: 10px;
+        border-bottom-left-radius: 0.625rem;
     }
 
     .squad-title h2 {
         color: var(--blueberry);
         background-color: var(--turquoise);
         padding: .75rem  .75rem;
-        margin: -10px 10px 10px 0;
-        border-radius: 10px;
+        margin: -.625rem .625rem .625rem 0;
+        border-radius: .625rem;
         font-size: 1.25rem;
     }
 
@@ -65,7 +65,7 @@
         bottom: 0;
         left: 0;
         background-color: var(--blueberry);
-        border-top-right-radius: 10px;
+        border-top-right-radius: .625rem;
         padding: .5rem;
     }
 
@@ -73,9 +73,9 @@
         color: var(--turquoise);
         border: 1px solid var(--turquoise);
         padding: .75rem .75rem;
-        border-radius: 10px;
+        border-radius: .625rem;
         font-size: 1.25rem;
-        margin: 0 10px -10px 0;
+        margin: 0 .625rem -.625rem 0;
     }
 
     .sprint-components {
@@ -92,15 +92,15 @@
         justify-content: center;
         padding: .75rem;
         background-color: var(--lavender);
-        width: 20px;
-        height: 20px;
-        margin-right: 5px;
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-right: .313rem;
     }
 
     .arrow-container {
         width: 4rem;
         flex: 1;
-        border-radius: 50px;
+        border-radius: 3.125rem;
         border: 2px solid var(--lavender);
     }
 
