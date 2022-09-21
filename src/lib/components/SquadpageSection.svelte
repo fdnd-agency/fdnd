@@ -1,7 +1,8 @@
 <script lang="ts">
   import Hashtag from '$lib/components/Hashtag.svelte'
+  import * as prismicH from '@prismicio/helpers'
 
-  export let year: number
+  export let squad: []
 </script>
 
 <section>
@@ -9,7 +10,7 @@
     <div>
       <Hashtag />
     </div>
-    <h2>leerjaar-{year}</h2>
+    {@html prismicH.asHTML(squad)}
   </div>
   <div>
     <slot />
