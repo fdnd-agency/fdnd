@@ -9,7 +9,7 @@
     <p>{!selected ? 'Selecteer Squad' : selected}</p>
     <div class="arrow" />
   </div>
-  <div class="items">
+  <div class="dropdown-items">
     <ul>
       {#each items as item}
         <li on:click={() => (selected = item)}><a href="#{item}">{item}</a></li>
@@ -25,7 +25,7 @@
     cursor: pointer;
   }
 
-  .dropdown:hover .items ul {
+  .dropdown:hover .dropdown-items ul {
     opacity: 1;
   }
 
