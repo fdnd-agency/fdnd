@@ -1,4 +1,6 @@
 <script lang="ts">
+    import Hashtag from "$lib/components/Hashtag.svelte";
+
     export let squadTitle:string
     export let sprintTitle:string
 </script>
@@ -6,7 +8,7 @@
 <section>
     <div class="sprint-image">
         <div class="squad-title">
-            <h2>{squadTitle}</h2>
+            <h2>{squadTitle}</h2> 
         </div>
         <div class="sprint-title">
             <h2>{sprintTitle}</h2>
@@ -14,11 +16,7 @@
     </div>
     <div class="sprint-components">
             <div class="hastag-container">
-                <svg class="hashtag" version="1.1" id="Capa_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 490 490" style="enable-background:new 0 0 490 490;" xml:space="preserve">
-                    <path d="M64.333,490h58.401l33.878-137.69h122.259L245.39,490h58.401l33.878-137.69h119.92v-48.162h-108.24l29.2-117.324h79.04
-                    v-48.162H390.23L424.108,0H365.31l-33.878,138.661H208.79L242.668,0h-58.415l-33.864,138.661H32.411v48.162h106.298l-28.818,117.324
-                    h-77.48v48.162h65.8L64.333,490z M197.11,186.824h122.642l-29.2,117.324H168.292L197.11,186.824z"></path>
-                </svg>
+                <Hashtag />
             </div>
             <div class="arrow-container">
                 <a href="">Bekijk deze squad

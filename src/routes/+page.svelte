@@ -1,7 +1,7 @@
 <script lang="ts">
   import Hero from '$lib/components/Hero.svelte'
   import Introduction from '$lib/components/Introduction.svelte'
-  import SquadPageCard from '$lib/components/SquadpageCard.svelte'
+  import SquadpageCard from '$lib/components/SquadpageCard.svelte'
 </script>
 
 <Hero pageTitle="Your Tribe For Life" />
@@ -11,4 +11,4 @@
 De focus ligt op team building, samenwerken en hoe je frameworks inzet om een gezamenlijk doel te bereiken én in contact te blijven."
 />
 
-<SquadPageCard squadTitle="Squad A" sprintTitle="Sprint 1" />
+<SquadpageCard squadTitle="Squad A" sprintTitle="Sprint 1" />
