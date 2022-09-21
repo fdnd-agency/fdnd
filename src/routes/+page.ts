@@ -1,4 +1,4 @@
-import createClient from '$lib/components/prismicio'
+import createClient from '$lib/prismicio'
 import type { PageLoad } from './$types'
 
 export const load: PageLoad = async ({ fetch }) => {

@@ -2,6 +2,7 @@
   import Dropdown from '$lib/components/Dropdown.svelte'
   import Hero from '$lib/components/Hero.svelte'
   import Introduction from '$lib/components/Introduction.svelte'
+  import SquadpageCard from '$lib/components/SquadpageCard.svelte'
   import type { PageData } from './$types'
 
   export let data: PageData
@@ -16,6 +17,9 @@ De focus ligt op team building, samenwerken en hoe je frameworks inzet om een ge
   />
   <Dropdown items={['The Founders', 'Gen 2']} />
 </div>
+/>
+
+<SquadpageCard squadTitle="Squad A" sprintTitle="Sprint 1" />
 
 <style>
   div {
