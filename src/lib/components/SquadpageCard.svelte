@@ -28,8 +28,8 @@
 
 <style>
     section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        min-width: 35rem;
+        scroll-snap-align: center;
     }
 
     .sprint-image {
