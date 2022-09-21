@@ -35,6 +35,12 @@
     scroll-snap-align: center;
   }
 
+  @media(max-width: 35rem) {
+    section {
+      min-width: 90vw;
+    }
+  }
+
   .sprint-image {
     background-image: url('/assets/images/your-tribe.avif');
     position: relative;

@@ -32,6 +32,12 @@
     z-index: 1;
     right: 0;
   }
+  
+  @media(max-width: 35rem) {
+    div:last-child:after {
+      display: none;
+    }
+  }
 
   div:first-child {
     display: flex;
