@@ -3,12 +3,11 @@
 </footer>
 
 <style>
+  footer {
+    margin: 1rem 0;
+  }
 
-    footer {
-        margin: 1rem;
-    }
-    
-    img {
-        width: 15rem;
-    }
+  img {
+    width: 15rem;
+  }
 </style>
