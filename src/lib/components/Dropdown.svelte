@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let items: any[]  
+  export let items: any[]
 
   let selected = ''
 </script>
@@ -24,6 +24,10 @@
     display: inline-block;
     cursor: pointer;
     z-index: 10;
+  }
+
+  .dropdown-items:focus-within ul {
+    opacity: 1;
   }
 
   .dropdown:hover .dropdown-items ul {
