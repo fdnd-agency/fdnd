@@ -33,7 +33,7 @@
     }
 
     .sprint-image {
-        background-image: url("../assets/images/your-tribe.avif");
+        background-image: url("/assets/images/your-tribe.avif");
         position: relative;
         height: 22.5rem;
         width: 100%;
