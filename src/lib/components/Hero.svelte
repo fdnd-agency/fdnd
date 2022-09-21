@@ -32,7 +32,7 @@
     width: fit-content;
     background: var(--blueberry);
     text-decoration: none;
-    border-bottom-right-radius: var(--pilled);
+    border-bottom-right-radius: .5rem;
     box-sizing: content-box;
   }
 
@@ -41,16 +41,17 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    padding: 2rem 0 0 2rem;
+    /* padding: 2rem 0 0 2rem; */
+    padding: 1rem 0 0 1rem;
     background: var(--blueberry);
-    border-top-left-radius: 2rem;
+    border-top-left-radius: .5rem;
     color: var(--lavender);
     line-height: calc(1.5rem + 1.5vw);
     text-decoration: none;
   }
 
   div:last-child > h1 {
-    font-size: calc(1.5rem + 1vw);
+    font-size: clamp(1rem, 5vw, 2rem);
     margin: 0;
     padding: .3rem;
     border: 2px solid var(--lavender);
