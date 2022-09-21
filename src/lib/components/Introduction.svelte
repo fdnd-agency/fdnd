@@ -24,4 +24,10 @@
     margin: 0;
     font-size: 1rem;
   }
+
+  @media (max-width: 35rem) {
+    p {
+      margin-bottom: 1rem;
+    }
+  }
 </style>

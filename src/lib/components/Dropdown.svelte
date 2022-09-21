@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let items: string[]
+  export let items: any[]  
 
   let selected = ''
 </script>
@@ -12,7 +12,7 @@
   <div class="dropdown-items">
     <ul>
       {#each items as item}
-        <li on:click={() => (selected = item)}><a href="#{item}">{item}</a></li>
+        <li on:click={() => (selected = item.title)}><a href="#{item.title}">{item.title}</a></li>
       {/each}
     </ul>
   </div>
@@ -23,6 +23,7 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
+    z-index: 10;
   }
 
   .dropdown:hover .dropdown-items ul {

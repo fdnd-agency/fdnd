@@ -3,19 +3,20 @@
   import * as prismicH from '@prismicio/helpers'
 
   export let squad: []
+  export let squadTitle: string;
 </script>
 
-<section>
-  <div>
+  <section id="{squadTitle}">
     <div>
-      <Hashtag />
+      <div>
+        <Hashtag />
+      </div>
+      {@html prismicH.asHTML(squad)}
     </div>
-    {@html prismicH.asHTML(squad)}
-  </div>
-  <div>
-    <slot />
-  </div>
-</section>
+    <div>
+      <slot />
+    </div>
+  </section>
 
 <style>
   section {
@@ -32,8 +33,8 @@
     z-index: 1;
     right: 0;
   }
-  
-  @media(max-width: 35rem) {
+
+  @media (max-width: 35rem) {
     div:last-child:after {
       display: none;
     }
@@ -54,8 +55,6 @@
     justify-content: center;
     padding: 0.75rem;
     background-color: var(--turquoise);
-    width: 1.25rem;
-    height: 1.25rem;
     margin-right: 0.313rem;
   }
 

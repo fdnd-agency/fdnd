@@ -18,3 +18,11 @@
   <slot />
 </main>
 <Footer />
+
+<style>
+  @media (max-width: 80rem) {
+    main {
+      padding: 1rem;
+    }
+  }
+</style>

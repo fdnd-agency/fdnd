@@ -35,7 +35,7 @@
     scroll-snap-align: center;
   }
 
-  @media(max-width: 35rem) {
+  @media (max-width: 35rem) {
     section {
       min-width: 90vw;
     }
@@ -99,10 +99,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.75rem;
+    padding: 1rem;
     background-color: var(--lavender);
-    width: 1.25rem;
-    height: 1.25rem;
     margin-right: 0.313rem;
   }
 
