@@ -17,7 +17,7 @@
   section {
     height: 70vh;
     position: relative;
-    background-image: url('../assets/images/hero-image.avif');
+    background-image: url('/assets/images/hero-image.avif');
     background-size: cover;
     background-position: center 10%;
     border-radius: var(--pilled);
