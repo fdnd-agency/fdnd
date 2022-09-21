@@ -4,20 +4,24 @@
 
 <section>
   <div>
-    <h1>FDND</h1>
+    <span>FDND</span>
   </div>
-  <div>{pageTitle}</div>
+  <div>
+    <h1>
+      {pageTitle}
+    </h1>
+  </div>
 </section>
 
 <style>
   section {
     height: 70vh;
     position: relative;
-    margin: 1rem;
     background-image: url('../assets/images/hero-image.avif');
     background-size: cover;
     background-position: center 10%;
     border-radius: var(--pilled);
+    margin: 1rem;
   }
 
   div:first-child {
@@ -41,36 +45,18 @@
     background: var(--blueberry);
     border-top-left-radius: 2rem;
     color: var(--lavender);
-    font-size: calc(1.5rem + 1.5vw);
     line-height: calc(1.5rem + 1.5vw);
     text-decoration: none;
   }
 
-  div:last-child::before {
-    content: '';
-    position: absolute;
-    background-color: transparent;
-    width: 0.5rem;
-    height: calc(2 * var(--rounded));
-    border-bottom-right-radius: var(--rounded);
-    top: calc(-2 * var(--rounded));
-    right: 0;
-    box-shadow: 0 var(--rounded) 0 0 var(--blueberry);
+  div:last-child > h1 {
+    font-size: calc(1.5rem + 1vw);
+    margin: 0;
+    padding: .3rem;
+    border: 2px solid var(--lavender);
   }
 
-  div:last-child::after {
-    content: '';
-    position: absolute;
-    background-color: transparent;
-    width: 0.5rem;
-    height: calc(2 * var(--rounded));
-    border-bottom-right-radius: var(--rounded);
-    left: calc(-1 * var(--rounded));
-    bottom: 0;
-    box-shadow: 0 var(--rounded) 0 0 var(--blueberry);
-  }
-
-  h1 {
+  span {
     display: block;
     padding: 0.5rem 1.2rem;
     border: 1px solid var(--turquoise);
@@ -79,9 +65,10 @@
     color: var(--turquoise);
     font-size: 2.5rem;
     text-transform: lowercase;
+    margin: 0;
   }
 
-  h1::before {
+  span::before {
     content: '';
     position: absolute;
     top: 0;
@@ -93,7 +80,7 @@
     border-top-left-radius: var(--rounded);
   }
 
-  h1::after {
+  span::after {
     left: 0;
     bottom: calc(-2 * var(--rounded));
     box-shadow: 0 calc(-1 * var(--rounded)) 0 0 var(--blueberry);
