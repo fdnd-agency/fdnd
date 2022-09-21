@@ -9,7 +9,8 @@
     justify-content: flex-start;
     align-items: center;
     color: var(--color-white);
-    padding: 1rem;
+    padding: 2rem 0;
+    margin: 1rem;
   }
 
   img {

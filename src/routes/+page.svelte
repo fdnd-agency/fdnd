@@ -2,6 +2,9 @@
   import Hero from '$lib/components/Hero.svelte'
   import Introduction from '$lib/components/Introduction.svelte'
   import SquadpageCard from '$lib/components/SquadpageCard.svelte'
+  import type { PageData } from './$types'
+
+  export let data: PageData
 </script>
 
 <Hero pageTitle="Your Tribe For Life" />
