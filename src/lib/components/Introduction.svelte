@@ -12,7 +12,6 @@
   section {
     color: var(--color-white);
     max-width: 35rem;
-    margin: 2rem 1rem;
   }
 
   h2 {

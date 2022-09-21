@@ -21,7 +21,7 @@
     background-size: cover;
     background-position: center 10%;
     border-radius: var(--pilled);
-    margin: 1rem;
+    margin-bottom: 2rem;
   }
 
   div:first-child {
@@ -32,7 +32,7 @@
     width: fit-content;
     background: var(--blueberry);
     text-decoration: none;
-    border-bottom-right-radius: .5rem;
+    border-bottom-right-radius: 0.5rem;
     box-sizing: content-box;
   }
 
@@ -44,7 +44,7 @@
     /* padding: 2rem 0 0 2rem; */
     padding: 1rem 0 0 1rem;
     background: var(--blueberry);
-    border-top-left-radius: .5rem;
+    border-top-left-radius: 0.5rem;
     color: var(--lavender);
     line-height: calc(1.5rem + 1.5vw);
     text-decoration: none;
@@ -53,7 +53,7 @@
   div:last-child > h1 {
     font-size: clamp(1rem, 5vw, 2rem);
     margin: 0;
-    padding: .3rem;
+    padding: 0.3rem;
     border: 2px solid var(--lavender);
   }
 
