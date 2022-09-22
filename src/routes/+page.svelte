@@ -7,7 +7,6 @@
   import type { PageData } from './$types'
 
   export let data: PageData
-  console.log(data)
 </script>
 
 <Hero pageTitle="Your Tribe For Life" />
@@ -19,7 +18,7 @@ De focus ligt op team building, samenwerken en hoe je frameworks inzet om een ge
   />
   <Dropdown items={data.squads} />
 </div>
-/>
+
 {#each data.squads as squad}
   <SquadpageSection squad={squad.name} squadTitle={squad.title}>
     {#each squad.squadpages as squadpage}

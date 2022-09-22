@@ -22,4 +22,14 @@
     border-left: 1px solid var(--color-white);
     padding-left: 1rem;
   }
+
+  @media (max-width: 35rem) {
+    img {
+      width: 10rem;
+    }
+
+    span {
+      font-size: 0.8rem;
+    }
+  }
 </style>
