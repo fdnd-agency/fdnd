@@ -1,5 +1,5 @@
 # 🎺 FDND Tribe Page
-![FDND Tribe Page Mockup](https://github.com/JustinLung/fdnd/blob/feature/23-readme/docs/mockup.png?raw=true)
+![FDND Tribe Page Mockup](https://github.com/JustinLung/fdnd/blob/main/docs/mockup.png?raw=true)
 
 ## 📚 Inhoudsopgave
   * [Beschrijving](#beschrijving)
