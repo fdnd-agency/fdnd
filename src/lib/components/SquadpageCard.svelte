@@ -55,7 +55,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding: 0.5rem 0 0 1rem;
+    padding: 0 0 0.75rem 0.75rem;
     background-color: var(--blueberry);
     border-bottom-left-radius: 0.625rem;
   }
@@ -88,9 +88,9 @@
     color: var(--blueberry);
     background-color: var(--turquoise);
     padding: 0.75rem 0.75rem;
-    margin: -0.625rem 0.625rem 0.625rem 0;
     border-radius: 0.625rem;
     font-size: 1.25rem;
+    margin: 0;
   }
 
   .sprint-title {
@@ -98,8 +98,8 @@
     bottom: 0;
     left: 0;
     background-color: var(--blueberry);
+    padding: 0.75rem 0.75rem 0 0;
     border-top-right-radius: var(--rounded);
-    padding: 0.5rem;
   }
 
   .sprint-title h2 {
@@ -108,7 +108,7 @@
     padding: 0.75rem 0.75rem;
     border-radius: 0.625rem;
     font-size: 1.25rem;
-    margin: 0 0.625rem -0.625rem 0;
+    margin: 0;
   }
 
   .sprint-title:before {
@@ -124,7 +124,7 @@
   }
 
   .sprint-title:after {
-    content: "";
+    content: '';
     position: absolute;
     background-color: transparent;
     width: 0.5rem;
@@ -140,6 +140,7 @@
     flex-direction: row;
     margin: 1rem 0;
     grid-row: 2;
+    gap: 0.75rem;
   }
 
   .hastag-container {
@@ -149,7 +150,6 @@
     justify-content: center;
     padding: 1rem;
     background-color: var(--lavender);
-    margin-right: 0.313rem;
   }
 
   .arrow-container {

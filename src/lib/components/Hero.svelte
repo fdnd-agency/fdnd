@@ -41,8 +41,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    /* padding: 2rem 0 0 2rem; */
-    padding: 1rem 0 0 1rem;
+    padding: 0.75rem 0 0 1rem;
     background: var(--blueberry);
     border-top-left-radius: 0.5rem;
     color: var(--lavender);
@@ -51,10 +50,9 @@
   }
 
   div:last-child > h1 {
-    font-size: clamp(1rem, 5vw, 2rem);
+    font-size: clamp(3rem, 5vw, 2rem);
     margin: 0;
-    padding: 0.3rem;
-    border: 2px solid var(--lavender);
+    font-weight: 400;
   }
 
   div:last-child > h1:before {
