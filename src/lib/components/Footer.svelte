@@ -4,14 +4,14 @@
 
 <style>
   footer {
-    margin: 2rem 0;
+    margin: 4rem 0 2rem 0;
   }
 
   img {
     width: 15rem;
   }
 
-  @media(max-width: 35rem) {
+  @media (max-width: 35rem) {
     footer {
       margin: 1rem;
     }

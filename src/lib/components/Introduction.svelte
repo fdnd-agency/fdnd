@@ -10,8 +10,9 @@
 
 <style>
   section {
+    font-size: 1.2rem;
     color: var(--color-white);
-    max-width: 35rem;
+    max-width: 35em;
   }
 
   h2 {
@@ -22,7 +23,6 @@
 
   p {
     margin: 0;
-    font-size: 1rem;
   }
 
   @media (max-width: 35rem) {

@@ -24,6 +24,7 @@
     display: inline-block;
     cursor: pointer;
     z-index: 10;
+    font-size: 1.2rem;
   }
 
   .dropdown-items:focus-within ul {
@@ -39,6 +40,7 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem;
+    padding-left: 1.5rem;
     border: 1px solid var(--lavender);
     color: var(--lavender);
     text-align: left;
