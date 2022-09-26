@@ -36,9 +36,10 @@ De focus ligt op team building, samenwerken en hoe je frameworks inzet om een ge
     display: flex;
     justify-content: space-between;
     margin: 3rem 0;
+    gap: 1rem;
   }
 
-  @media (max-width: 35rem) {
+  @media (max-width: 45rem) {
     div {
       flex-direction: column;
     }
