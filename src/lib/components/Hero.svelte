@@ -20,7 +20,7 @@
     background-image: url('/assets/images/hero-image.avif');
     background-size: cover;
     background-position: center 10%;
-    border-radius: var(--pilled);
+    border-radius: var(--rounded);
     margin-bottom: 2rem;
   }
 
@@ -53,6 +53,30 @@
     font-size: clamp(3rem, 5vw, 2rem);
     margin: 0;
     font-weight: 400;
+  }
+
+  div:last-child > h1:before {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    width: 0.5rem;
+    height: calc(2 * var(--rounded));
+    border-bottom-right-radius: var(--rounded);
+    top: calc(-2 * var(--rounded));
+    right: 0;
+    box-shadow: 0 var(--rounded) 0 0 var(--blueberry);
+  }
+
+  div:last-child > h1:after {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    width: 0.5rem;
+    height: calc(2 * var(--rounded));
+    border-bottom-right-radius: var(--rounded);
+    left: calc(-1 * var(--rounded));
+    bottom: 0;
+    box-shadow: 0 var(--rounded) 0 0 var(--blueberry);
   }
 
   span {
