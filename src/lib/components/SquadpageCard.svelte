@@ -48,25 +48,49 @@
     width: 100%;
     background-size: cover;
     background-position: center 10%;
-    border-radius: var(--pilled);
+    border-radius: var(--rounded);
   }
 
   .squad-title {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 0.5rem 0 0 1rem;
+    padding: 0 0 0.75rem 0.75rem;
     background-color: var(--blueberry);
     border-bottom-left-radius: 0.625rem;
   }
 
+  .squad-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(-1 * var(--rounded));
+    box-shadow: 0 calc(-1 * var(--rounded)) 0 0 var(--blueberry);
+    width: var(--rounded);
+    height: calc(2 * var(--rounded));
+    border-top-right-radius: var(--rounded);
+    background-color: transparent;
+  }
+
+  .squad-title::after {
+    content: '';
+    position: absolute;
+    right: calc(-1 * var(--rounded));
+    box-shadow: 0 calc(-1 * var(--rounded)) 0 0 var(--blueberry);
+    width: var(--rounded);
+    height: calc(2 * var(--rounded));
+    border-top-right-radius: var(--rounded);
+    background-color: transparent;
+    bottom: 0;
+    transform: translate(-100%, 100%);
+  }
   .squad-title :global(h2) {
     color: var(--blueberry);
     background-color: var(--turquoise);
     padding: 0.75rem 0.75rem;
-    margin: -0.625rem 0.625rem 0.625rem 0;
     border-radius: 0.625rem;
     font-size: 1.25rem;
+    margin: 0;
   }
 
   .sprint-title {
@@ -74,8 +98,8 @@
     bottom: 0;
     left: 0;
     background-color: var(--blueberry);
-    border-top-right-radius: 0.625rem;
-    padding: 0.5rem;
+    padding: 0.75rem 0.75rem 0 0;
+    border-top-right-radius: var(--rounded);
   }
 
   .sprint-title h2 {
@@ -84,7 +108,31 @@
     padding: 0.75rem 0.75rem;
     border-radius: 0.625rem;
     font-size: 1.25rem;
-    margin: 0 0.625rem -0.625rem 0;
+    margin: 0;
+  }
+
+  .sprint-title:before {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    width: 0.5rem;
+    height: calc(2 * var(--rounded));
+    border-bottom-left-radius: var(--rounded);
+    top: calc(-2 * var(--rounded));
+    left: 0;
+    box-shadow: 0 var(--rounded) 0 0 var(--blueberry);
+  }
+
+  .sprint-title:after {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    width: 0.5rem;
+    height: calc(2 * var(--rounded));
+    border-bottom-left-radius: var(--rounded);
+    right: calc(-1 * var(--rounded));
+    bottom: 0;
+    box-shadow: 0 var(--rounded) 0 0 var(--blueberry);
   }
 
   .sprint-components {
@@ -92,6 +140,7 @@
     flex-direction: row;
     margin: 1rem 0;
     grid-row: 2;
+    gap: 0.75rem;
   }
 
   .hastag-container {
@@ -101,7 +150,6 @@
     justify-content: center;
     padding: 1rem;
     background-color: var(--lavender);
-    margin-right: 0.313rem;
   }
 
   .arrow-container {

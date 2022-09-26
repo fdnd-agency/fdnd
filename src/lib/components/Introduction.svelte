@@ -10,8 +10,12 @@
 
 <style>
   section {
-    color: var(--color-white);
-    max-width: 35rem;
+    padding: 2rem;
+    font-size: 1.2rem;
+    max-width: 35em;
+    background-color: var(--turquoise);
+    color: var(--blueberry);
+    border-radius: var(--rounded);
   }
 
   h2 {
@@ -22,7 +26,6 @@
 
   p {
     margin: 0;
-    font-size: 1rem;
   }
 
   @media (max-width: 35rem) {

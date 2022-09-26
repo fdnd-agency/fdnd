@@ -24,6 +24,7 @@
     display: inline-block;
     cursor: pointer;
     z-index: 10;
+    font-size: 1.2rem;
   }
 
   .dropdown-items:focus-within ul {
@@ -39,6 +40,7 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem;
+    padding-left: 1.5rem;
     border: 1px solid var(--lavender);
     color: var(--lavender);
     text-align: left;
@@ -46,6 +48,7 @@
     position: relative;
     justify-content: space-between;
     width: 15rem;
+    border-radius: var(--pilled);
   }
 
   p {
@@ -67,6 +70,8 @@
     position: absolute;
     width: 100%;
     opacity: 0;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
   }
 
   li {
@@ -76,9 +81,11 @@
     background-color: var(--lavender);
     display: inline-block;
     color: var(--blueberry);
+    border-radius: var(--pilled);
   }
 
-  li:hover {
+  li:hover,
+  li:focus-within {
     background-color: var(--turquoise);
   }
 
