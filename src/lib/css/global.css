@@ -1,0 +1,19 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--blue);
+	font-family: 'Open-Sans', sans-serif;
+	color: var(--white);
+}
+
+a {
+	color: var(--white);
+}
