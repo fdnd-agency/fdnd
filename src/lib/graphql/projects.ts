@@ -2,7 +2,7 @@ export const allProjects = `
 query allProjects {
 	projects(first: 10) {
 		title
-		slug,
+		slug
 		visual {
 			url
 		}
@@ -13,13 +13,13 @@ export const projectBySlug = `
 query projectBySlug($slug: String!) {
 	projects(where: { slug: $slug }) {
 		title
-		client {
-			title
-		}
+		clients {
+      title
+    }
 		visual {
 			url
 		}
-		teamLead {
+		teamLeads {
 			firstName
 			surname
 		}
@@ -27,9 +27,23 @@ query projectBySlug($slug: String!) {
 			firstName
 			surname
 		}
-		productOwner {
+		productOwners {
 			firstName
 			surname
 		}
-	}
-}`;
+		studentwork(first: 20) {
+			title
+			sprint
+      website
+			students {
+				firstName
+				surname
+			}
+      repository
+      visual {
+        url
+      }
+    }
+  }
+}
+`;
