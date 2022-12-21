@@ -10,37 +10,48 @@
 	}
 </script>
 
-<a href="/">Terug</a>
+<section>
+	<h2>{data.project.title}</h2>
 
-<img src={data.project.visual.url} alt="{data.project.clients[0].title} logo" />
+	<section class="rounded green-on-blue">
+		<ul>
+			<li><span>Opdrachtgever:</span> <a href="/">{data.project.clients[0].title}</a></li>
+			<li>
+				<span>Product owner{isPlural(data.project.productOwners)}:</span>  
+				{#each data.project.productOwners as productOwner, i}
+					<a href="/">{getFullName(productOwner)}</a>
+				{/each}
+			</li>
 
-<h1>{data.project.clients[0].title}</h1>
+			<li>
+				<span>Coach:</span>
+				{#each data.project.coaches as coach, i}
+					<a href="/">{getFullName(coach)}</a>
+				{/each}
+			</li>
 
-<h2>Informatie</h2>
+			<li>
+				<span>Team lead{isPlural(data.project.teamLeads)}:</span>
+				{#each data.project.teamLeads as teamlead}
+					<a href="/">{getFullName(teamlead)}</a>
+				{/each}
+			</li>		
+		</ul>
 
-<h3>Product owner{isPlural(data.project.productOwners)}</h3>
-<ul>
-	{#each data.project.productOwners as productOwner}
-		<li>{getFullName(productOwner)}</li>
-	{/each}
-</ul>
 
-<h3>Team lead{isPlural(data.project.teamLeads)}</h3>
-<ul>
-	{#each data.project.teamLeads as teamlead}
-		<li>{getFullName(teamlead)}</li>
-	{/each}
-</ul>
+		<h3>Studenten</h3>
+		<ul>
+			{#each data.project.students as student}
+				<li><a href="/">{getFullName(student)}</a></li>
+			{/each}
+		</ul>
+	</section>
+</section>
 
-<h3>Student{isPlural(data.project.students)}</h3>
-<ul>
-	{#each data.project.students as student}
-		<li>{getFullName(student)}</li>
-	{/each}
-</ul>
+<section id="work">
 
-<h2>Studentwork</h2>
-<div>
+	<h2>Studentwork</h2>
+	
 	{#each data.project.studentwork as studentwork}
 		<StudentWork
 			title={studentwork.title}
@@ -50,16 +61,43 @@
 			students={studentwork.students}
 		/>
 	{/each}
-</div>
+
+
+</section>
+
 
 <style>
-	div {
-		display: flex;
-		flex-direction: row;
+	h2 {
+		margin-bottom: 2rem;
+		font-weight: normal;
 	}
-	img {
-		display: block;
-		width: 15rem;
-		margin: 1rem 0;
+	ul {
+		margin:0 0 2rem;
+		
+		
+	}
+	li {
+		list-style:none;
+		display:flex;
+	}
+	li > * {
+		white-space: nowrap;
+		margin-right: .5rem;
+	}
+	li span {
+		width:10rem;
+	}
+
+	section {
+		grid-column: 1 / auto;
+	}
+
+	section h2 {
+		margin-left:1rem
+	}
+
+	section section {
+		padding: 2rem;
+		margin: 0 -1rem 2rem;
 	}
 </style>

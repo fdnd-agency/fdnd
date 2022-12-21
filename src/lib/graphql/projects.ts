@@ -31,6 +31,10 @@ query projectBySlug($slug: String!) {
 			firstName
 			surname
 		}
+		coaches {
+			firstName
+			surname
+		}
 		studentwork(first: 20) {
 			title
 			sprint
