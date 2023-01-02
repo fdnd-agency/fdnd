@@ -47,11 +47,11 @@ Nu de website statisch gegeneerd wordt, publiceer je de website en zorg je er vo
 Focus sprint # - De focus van deze sprint ligt op het ontwerpen en ontwikkelen van een complexe gebruiksvriendelijke interactieve toepassing voor het web
 
 Voor deze leertaak gelden de gedragscriteria voor sprint 18 Let's JAM
-* Methodisch handelen: 
-* Samenwerken: 
-* Communiceren: 
-* Probleemoplossend vermogen: 
-* Lerend vermogen
+* Methodisch handelen: Richt in overleg projecten in volgens de development-lifecycle
+* Samenwerken: Draagt verantwoording voor eigen resultaten, benoemt teamresultaten en informeert 
+* Communiceren: Kan ontwerpkeuzes, eigen ideeën en producten overtuigend overbrengen aan belanghebbenden
+* Lerend vermogen: Volgt aangeboden internationale ontwikkelingen in het vakgebied en maakt onder begeleiding keuzes over eigen ontwikkeling
+* Lerend vermogen: Kent eigen capaciteiten en beperkingen, waardeert het vermogen van anderen en maakt dit bespreekbaar.
 
 
 Deze opdracht is done als:
