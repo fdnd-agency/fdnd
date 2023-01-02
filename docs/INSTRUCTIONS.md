@@ -1,56 +1,62 @@
 
-# [Sprintnaam] - [Leertaak-Naam]
+# Let's JAM webapplicatie
 
-[Beschrijving van de deeltaak]
+Ontwerp en ontwikkel een webapplicatie op basis van een bestaande api of een zelf in te richten headless CMS 
 
 ## Context
 
-Deze leertaak hoort bij sprint # [Sprintnaam]. 
-Dit is een leertaak die je [individueel / in een team] uitvoert.
+Deze leertaak hoort bij sprint 18 Let's JAM. Dit is een leertaak die je individueel of in een team uitvoert.
 
-In het college [[collegenaam](link)] wordt behandeld ... 
-
-Bij deze leertaak [hoort de deeltaak / horen de deeltaken]:
-- [[deeltaak](link)]
-- [[deeltaak](link)]
-- [[deeltaak](link)]
+In het college _S18W1-01-Sprintplanning-Lets-JAM_ wordt de opdracht uitgelegd.
 
 ## Doel van deze opdracht
 
-Je leert hoe je ... 
+In deze sprint ga je alles wat je dit semester hebt geleerd inzetten om een passende oplossing voor een case te realiseren. Het resultaat is een web applicatie op basis van data uit een bestaande API of een zelf in te richten API. Je maakt hierbij doelbewust keuzes voor het framework, de tooling en de workflow die je inzet.
 
 ## Werkwijze
 
-Bij elke leertaak wordt de development-lifecycle doorlopen. Hierdoor ontwikkel je een standaard aanpak voor frontend praktijkvraagstukken, werk je systematisch aan leertaken, ervaar je de relevantie van het geleerde en verwerf je de kennis, houding en vaardigheden die de beroepspraktijk van je vraagt.
-De development lifecycle kent de volgende stappen:
+Deze opdracht gaat over alle fasen van de DLC **Analyseren**, **Ontwerpen**, **Bouwen**, **Testen** en **Integreren** 
 
-1. Analyseren - bijvoorbeeld: grip krijgen op een taak door gesprekken met een opdrachtgever, schrijven van een debriefing, maken van een todo lijst, inventarisatie van bestaande informatie, overzicht creëren, plannen, definition of done etc.
-2. Ontwerpen - bijvoorbeeld: het maken van idee-schetsen, customer journey, breakdown chart, wireflows, navigatiestructuur en layout.
-3. Bouwen - bijvoorbeeld: toepassen van webtechnologie (HTML, CSS, JS), gebruik van tooling, werken volgens conventies en wetgeving, documenteren en bijhouden van een changelog.
-4. Integreren - bijvoorbeeld: publiceren, live zetten, uploaden naar de server, toevoegen in een bestaand systeem, ftp-en.
-5. Testen - bijvoorbeeld: Unit testing (TDD), System test, User test, device lab test, A\B testing.
+### Analyseren
 
-### Aanpak
+#### Aanpak
 
-1. Kies een user story uit de backlog van het project waar je aan gaat werken. De projecten staan bij [FDND Agency](https://github.com/fdnd-agency).  
-2. Fork deze leertaak
-3. Kopieer/plak de user story waar jij aan gaat werken naar de Wiki van de geforkte repository, dit ga je ontwerpen en maken
-4. Documenteer je proces a.h.v de development life cycle
-5. En schrijf een goede readme
+### Ontwerpen
+
+#### Aanpak
+
+### Bouwen
+
+
+#### Aanpak
+
+1. 
+2. 
+3. 
+
+### Integreren
+
+Nu de website statisch gegeneerd wordt, publiceer je de website en zorg je er voor dat bij een verandering van de content of de code de website opnieuw gebuild wordt (continuous deployment). Hiervoor maak je gebruik van GitHub Actions of zet je bijvoorbeeld Netlify in.
+
+#### Aanpak
+1. Publiceer je website met bijvoorbeeld Netlify. Nu je statische pagina's publiceert kan je ook met een GitHub action automatisch de site laten builden bij een update van de code.
+2. Zoek uit hoe je na een aanpassing van de content in het headless cms, automatisch een nieuwe build kunt laten maken.
 
 ## Criteria
 
-Focus sprint # - De focus van deze sprint ligt op ...
+Focus sprint # - De focus van deze sprint ligt op het ontwerpen en ontwikkelen van een complexe gebruiksvriendelijke interactieve toepassing voor het web
 
-Voor deze leertaak gelden de gedragscriteria voor sprint #: 
-* Methodisch handelen: ...
-* Samenwerken: ...
-* Communiceren: ...
-* Probleemoplossend vermogen: ...
-* Lerend vermogen: ...
+Voor deze leertaak gelden de gedragscriteria voor sprint 18 Let's JAM
+* Methodisch handelen: 
+* Samenwerken: 
+* Communiceren: 
+* Probleemoplossend vermogen: 
+* Lerend vermogen
+
 
 Deze opdracht is done als:
-- [ ] ...
-- [ ] ...
-- [ ] ...
+- [ ]
+- [ ]
+- [ ]
+
 
