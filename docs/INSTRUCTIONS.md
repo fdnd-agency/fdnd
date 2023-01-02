@@ -42,6 +42,11 @@ Nu de website statisch gegeneerd wordt, publiceer je de website en zorg je er vo
 1. Publiceer je website met bijvoorbeeld Netlify. Nu je statische pagina's publiceert kan je ook met een GitHub action automatisch de site laten builden bij een update van de code.
 2. Zoek uit hoe je na een aanpassing van de content in het headless cms, automatisch een nieuwe build kunt laten maken.
 
+### Testen
+
+
+#### Aanpak
+
 ## Criteria
 
 Focus sprint # - De focus van deze sprint ligt op het ontwerpen en ontwikkelen van een complexe gebruiksvriendelijke interactieve toepassing voor het web
