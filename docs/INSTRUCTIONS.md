@@ -17,6 +17,8 @@ In deze sprint ga je alles wat je dit semester hebt geleerd inzetten om een pass
 
 Deze opdracht gaat over alle fasen van de DLC **Analyseren**, **Ontwerpen**, **Bouwen**, **Testen** en **Integreren** 
 
+Doorloop de fasen van de DLC zoals je dat je de afgelopen anderhalf jaar hebt eigen gemaakt en documenteer je bevindingen in de README en de Wiki.
+
 ## Criteria
 
 Focus sprint # - De focus van deze sprint ligt op het ontwerpen en ontwikkelen van een complexe gebruiksvriendelijke interactieve toepassing voor het web
