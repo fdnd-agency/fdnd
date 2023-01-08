@@ -33,7 +33,8 @@ Voor deze leertaak gelden de gedragscriteria voor sprint 18 Let's JAM
 
 Deze opdracht is done als:
 - [ ] je hebt gewerkt volgens de verschillende fases van de development-lifecycle en je je werk hebt gedocumenteerd in de Readme en Wiki
-- [ ] je een webapplicatie hebt ontworpen en ontwikkeld die een (mogelijke) oplossing voor een design challenge van een opdrachtgever biedt.
+- [ ] je een complexe, gebruiksvriendelijke en interactieve webapplicatie hebt ontworpen en ontwikkeld
+- [ ] de webapplicatie een onderbouwde oplossing een voor een design challenge van een opdrachtgever biedt
 - [ ] de website op Github staat en een live url heeft
 
 
