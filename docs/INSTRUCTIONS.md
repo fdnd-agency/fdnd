@@ -1,7 +1,7 @@
 
 # Let's JAM webapplicatie
 
-Ontwerp en ontwikkel een webapplicatie op basis van een bestaande api of een zelf in te richten headless CMS 
+Ontwerp en ontwikkel een complexe, gebruiksvriendelijke en interactieve webapplicatie op basis van een bestaande api of een zelf in te richten headless CMS 
 
 ## Context
 
@@ -21,7 +21,7 @@ Doorloop de fasen van de DLC zoals je dat je de afgelopen anderhalf jaar hebt ei
 
 ## Criteria
 
-Focus sprint # - De focus van deze sprint ligt op het ontwerpen en ontwikkelen van een complexe gebruiksvriendelijke interactieve toepassing voor het web
+Focus sprint 18 - De focus van deze sprint ligt op het ontwerpen en ontwikkelen van een complexe gebruiksvriendelijke interactieve toepassing voor het web
 
 Voor deze leertaak gelden de gedragscriteria voor sprint 18 Let's JAM
 * Methodisch handelen: Richt in overleg projecten in volgens de development-lifecycle
