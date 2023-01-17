@@ -1,0 +1,17 @@
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+
+:root {
+    --element-primary: #4272CA;
+    --element-secondary: #F4F4F5;
+    --element-border: #E5E5E5;
+    --element-white: #FFFFFF;
+
+    --text-primary: #051D26;
+    --text-secondary:#6C6C76;
+    --text-special: #4272CA;
+    --text-white: #FFFFFF;
+    --text-gray: #A09FA4;
+    --text-gray-2: #AEACB4;
+}

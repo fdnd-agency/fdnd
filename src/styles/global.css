@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------
+# Global
+--------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--element-secondary);
+}
+
+section {
+    padding: 0 8rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: var(--text-white);
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+}
