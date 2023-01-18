@@ -68,7 +68,6 @@
 	a.active {
 		opacity: 1;
 	}
-
 	img {
 		width: 2rem;
 		height: 2rem;

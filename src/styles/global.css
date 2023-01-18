@@ -19,10 +19,6 @@ body {
     background-color: var(--element-secondary);
 }
 
-section {
-    padding: 0 8rem;
-}
-
 ul {
     list-style: none;
 }
@@ -34,5 +30,20 @@ a {
 h1 {
     color: var(--text-white);
     font-size: 3rem;
-    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h3 {
+    font-family: "Montserrat", sans-serif;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+}
+
+button {
+    outline: none;
+    border: none;
+    color: var(--text-white);
+    font-family: "Rubik", sans-serif;
+    text-transform: uppercase;
 }
