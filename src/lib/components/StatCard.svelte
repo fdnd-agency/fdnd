@@ -16,6 +16,10 @@
 		border-radius: 5px;
 	}
 
+	div:nth-child(2) {
+		margin-left: 1rem;
+	}
+
 	p {
 		font-size: 1.75rem;
 		font-family: "Montserrat", sans-serif;

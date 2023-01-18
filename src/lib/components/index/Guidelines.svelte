@@ -26,6 +26,7 @@
 	}
 
 	p::after {
+		margin-top: 0.5rem;
 		content: "";
 		display: block;
 		width: 100%;
@@ -35,9 +36,18 @@
 
 	ol {
 		margin-top: 1rem;
+		padding: 0 1rem;
+		font-family: "Inter", sans-serif;
+	}
+
+	li {
+		color: var(--text-gray-3);
+		margin-bottom: 1rem;
+		font-size: 0.95rem;
 	}
 
 	li::marker {
 		color: var(--element-primary);
+		font-weight: 600;
 	}
 </style>

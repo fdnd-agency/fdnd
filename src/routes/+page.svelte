@@ -14,6 +14,7 @@
 		kan helpen."
 	/>
 	<Questions title="Alle vragen" />
+
 	<iframe
 		title="Discord Widget"
 		src="https://discord.com/widget?id=1017099203882782750&theme=dark"
@@ -36,7 +37,7 @@
 			display: grid;
 			grid-template-columns: 0.6fr 1fr 0.6fr;
 			grid-template-rows: auto 1fr;
-			grid-gap: 3rem;
+			grid-gap: 2rem;
 			grid-template-areas:
 				"GeneralInfo Questions AdditionalInfo"
 				"GeneralInfo Questions AdditionalInfo";
