@@ -4,21 +4,26 @@
 	import Guidelines from "./Guidelines.svelte";
 
 	export let introText;
+	export let threads;
+
+	let countThread = threads.length;
 </script>
 
-<div class="general-info-wrapper">
-	<p>
-		{introText}
-	</p>
-	<ButtonPrimary title="Vraag toevoegen" />
+<aside>
+	<div class="general-info-wrapper">
+		<p>
+			{introText}
+		</p>
+		<ButtonPrimary title="Vraag toevoegen" />
 
-	<div class="stat-cards-wrapper">
-		<StatCard number="423" label="gestelde vragen" />
-		<StatCard number="372" label="reacties" />
+		<div class="stat-cards-wrapper">
+			<StatCard number={countThread} label="gestelde vragen" />
+			<StatCard number="372" label="reacties" />
+		</div>
+
+		<Guidelines />
 	</div>
-
-	<Guidelines />
-</div>
+</aside>
 
 <style>
 	.general-info-wrapper {

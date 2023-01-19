@@ -1,10 +1,23 @@
 <script>
+	import { filteredThreads } from "$lib/stores/searchThreads.js";
+	import { loop_guard } from "svelte/internal";
+	import { get } from "svelte/store";
+
 	export let placeholder;
+	export let threads;
+
+	let searchTerm = "";
+
+	$: searchedThreads = threads.filter((thread) => {
+		return thread.name.includes(searchTerm);
+	});
+
+	filteredThreads.set(searchedThreads);
 </script>
 
 <form action="">
 	<img src="/images/search-icon.png" alt="" />
-	<input type="search" {placeholder} />
+	<input type="search" bind:value={searchTerm} {placeholder} />
 	<button>Zoek</button>
 </form>
 

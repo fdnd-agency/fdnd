@@ -3,27 +3,26 @@
 	import IntroBar from "$lib/components/index/IntroBar.svelte";
 	import GeneralInformation from "$lib/components/index/GeneralInformation.svelte";
 	import Questions from "$lib/components/Questions.svelte";
+	import Filter from "$lib/components/index/Filter.svelte";
+
+	export let data;
+
+	let threads = data.threads.threads;
 </script>
 
 <Hero />
 <IntroBar />
 
 <section>
+	<!-- General information -->
 	<GeneralInformation
 		introText="De plek waar jij al jouw code vragen kan: stellen, terugvinden en anderen
 		kan helpen."
+		{threads}
 	/>
-	<Questions title="Alle vragen" />
 
-	<iframe
-		title="Discord Widget"
-		src="https://discord.com/widget?id=1017099203882782750&theme=dark"
-		width="350"
-		height="500"
-		allowtransparency="true"
-		frameborder="0"
-		sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-	/>
+	<!-- Questions -->
+	<Questions {threads} title="Alle vragen" />
 </section>
 
 <style>

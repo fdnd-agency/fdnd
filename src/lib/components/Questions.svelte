@@ -1,27 +1,42 @@
 <script>
+	import LayoutSwitch from "./index/LayoutSwitch.svelte";
+	import SortBtn from "./index/SortBtn.svelte";
 	import QuestionCard from "./QuestionCard.svelte";
 	import SearchBar from "./SearchBar.svelte";
+	import FilterBtn from "./FilterBtn.svelte";
 
+	import { get } from "svelte/store";
+	import { filteredThreads } from "$lib/stores/searchThreads.js";
+
+	export let threads;
 	export let title;
 </script>
 
 <section>
+	<!-- Title -->
 	<h3>{title}</h3>
-	<SearchBar placeholder="Vragen zoeken..." />
 
-	<QuestionCard
-		authorImg=""
-		authorName="Boudewijn"
-		date="18-01-2023"
-		title="Hoe kan ik beter worden in soft UX skills?"
-		categories={["soft skills", "user experience"]}
-		description="Hoi iedereen op dit forum. Ik ben bezig met het maken van verschillende
-		ontwerpen, maar ik Vind het erg moeilijk om user experience toe te passen.
-		Is er iemand die hier ervaring mee heeft En mij eventueel zou willen helpen?
-		Ik ben actief op dit forum, maar je kunt me eventueel ook Bereiken op
-		microsoft teams, discord en een privé bericht."
-		reactions="3"
-	/>
+	<!-- Searchbar -->
+	<SearchBar {threads} placeholder="Vragen zoeken..." />
+
+	<!-- Filter & Sort -->
+	<div class="actions-wrapper">
+		<SortBtn label="Sorteren op:" />
+		<FilterBtn />
+		<LayoutSwitch />
+	</div>
+
+	<!-- Questions -->
+	{#each threads as thread}
+		<QuestionCard
+			authorImg=""
+			authorName="Boudewijn"
+			date={thread.thread_metadata.create_timestamp}
+			title={thread.name}
+			categories={["soft skills", "user experience"]}
+			reactions={thread.message_count}
+		/>
+	{/each}
 </section>
 
 <style>
@@ -31,6 +46,12 @@
 
 	h3 {
 		font-size: 1.25rem;
+	}
+
+	.actions-wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 1.5rem;
 	}
 
 	@media (min-width: 60rem) {
