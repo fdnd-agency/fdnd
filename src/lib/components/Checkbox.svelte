@@ -1,0 +1,54 @@
+<script>
+	export let id;
+	export let name;
+	export let value;
+</script>
+
+<label>
+	<input type="checkbox" {id} {name} {value} />
+	<span>{name}</span>
+</label>
+
+<style>
+	label {
+		display: flex;
+		cursor: pointer;
+		position: relative;
+		align-items: center;
+		font-family: "Inter", sans-serif;
+		font-size: 0.85rem;
+	}
+
+	span {
+		padding: 0.35rem 0.35rem;
+	}
+
+	input {
+		width: 1rem;
+		height: 1rem;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-o-appearance: none;
+		appearance: none;
+		border: 1px solid var(--element-border);
+		outline: none;
+		cursor: pointer;
+		border-radius: 0.15rem;
+		position: relative;
+	}
+
+	input:checked {
+		background-color: var(--element-primary);
+	}
+
+	input:checked + span::before {
+		content: "\2713";
+		display: block;
+		text-align: center;
+		color: var(--text-white);
+		position: absolute;
+		top: 0.45rem;
+		left: 0.25rem;
+		font-size: 0.75rem;
+	}
+</style>

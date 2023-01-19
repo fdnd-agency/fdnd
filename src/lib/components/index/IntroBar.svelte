@@ -43,7 +43,7 @@
 
 	@media (min-width: 60rem) {
 		section {
-			padding: 0.75rem 8rem;
+			padding: 0.75rem 2rem;
 		}
 
 		p {
@@ -55,6 +55,12 @@
 		h2 {
 			font-size: 1.1rem;
 			margin-left: 5rem;
+		}
+	}
+
+	@media (min-width: 75rem) {
+		section {
+			padding: 0.75rem 5rem;
 		}
 	}
 </style>

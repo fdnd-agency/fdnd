@@ -48,7 +48,7 @@
 	@media (min-width: 60rem) {
 		section {
 			height: 20rem;
-			padding: 0 8rem;
+			padding: 0 2rem;
 		}
 
 		h1 {
@@ -58,6 +58,12 @@
 
 		p {
 			font-size: 1.1rem;
+		}
+	}
+
+	@media (min-width: 75rem) {
+		section {
+			padding: 0 5rem;
 		}
 	}
 </style>

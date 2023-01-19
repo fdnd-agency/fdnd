@@ -3,7 +3,10 @@
 </script>
 
 <div>
+	<!-- Button label -->
 	<p>{label}</p>
+
+	<!-- Select options -->
 	<select name="" id="">
 		<option value="0">datum</option>
 		<option value="1">reacties</option>
@@ -20,11 +23,11 @@
 		color: var(--text-gray);
 		font-family: "Inter", sans-serif;
 		font-weight: 500;
+		display: none;
 	}
 
 	select {
 		text-transform: uppercase;
-		margin-left: 0.5rem;
 		font-family: "Rubik", sans-serif;
 		color: var(--text-secondary);
 		font-weight: 500;
@@ -33,5 +36,22 @@
 		padding: 0.35rem;
 		border: 1px solid var(--element-border);
 		font-size: 0.9rem;
+	}
+
+	@media (min-width: 40rem) {
+		p {
+			display: block;
+			margin-right: 1rem;
+		}
+	}
+
+	@media (min-width: 60rem) {
+		p {
+			display: block;
+		}
+
+		select {
+			margin-left: 0.5rem;
+		}
 	}
 </style>

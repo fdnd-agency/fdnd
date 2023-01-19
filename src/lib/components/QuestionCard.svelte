@@ -8,8 +8,13 @@
 </script>
 
 <article>
+	<!-- Publication information -->
 	<p class="publish-information"><span>{authorName}</span>{date}</p>
+
+	<!-- Question title -->
 	<h4>{title}</h4>
+
+	<!-- Question categories -->
 	<ul>
 		{#each categories as category}
 			<li>
@@ -17,19 +22,27 @@
 			</li>
 		{/each}
 	</ul>
+
+	<!-- Question description -->
 	<p class="description">
 		{description}
 	</p>
+
 	<hr />
+
+	<!-- Question reactions -->
 	<p class="reactions">
 		<img src="/images/react-icon.jpg" alt="" />
-		<span>{reactions}</span> reacties
+		<span
+			>{reactions}
+			<p>reacties</p>
+		</span>
 	</p>
 </article>
 
 <style>
 	article {
-		margin-top: 2rem;
+		margin-top: 1rem;
 		background-color: var(--element-white);
 		padding: 1rem 1.5rem;
 		border-radius: 0.6rem;
@@ -61,7 +74,7 @@
 
 	h4 {
 		margin-top: 1rem;
-		font-size: 1.5rem;
+		font-size: 1.35rem;
 	}
 
 	ul {
@@ -71,7 +84,7 @@
 
 	li {
 		text-transform: uppercase;
-		font-size: 0.8rem;
+		font-size: 0.75rem;
 		color: var(--text-secondary);
 		font-family: "Rubik", sans-serif;
 		font-weight: 600;
@@ -109,5 +122,21 @@
 		color: var(--element-primary);
 		font-weight: 600;
 		margin-left: 0.3rem;
+	}
+
+	.reactions p {
+		color: var(--text-gray-4);
+		display: inline;
+		font-weight: medium;
+	}
+
+	@media (min-width: 75rem) {
+		h4 {
+			font-size: 1.5rem;
+		}
+
+		li {
+			font-size: 0.8rem;
+		}
 	}
 </style>

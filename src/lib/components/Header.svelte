@@ -2,14 +2,12 @@
 	import { page } from "$app/stores";
 
 	let y = 0;
-
-	$: console.log(y);
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-<header class:sticky={y >= 1}>
-	<p>FDND Stack</p>
+<header class:scrolled={y >= 1}>
+	<p class:large={y >= 1}>FDND Stack</p>
 
 	<nav>
 		<ul>
@@ -36,7 +34,7 @@
 		transition: background-color 200ms;
 	}
 
-	.sticky {
+	.scrolled {
 		-webkit-backdrop-filter: blur(8px);
 		backdrop-filter: blur(8px);
 		background-color: rgba(0, 0, 0, 0.35);
@@ -45,11 +43,15 @@
 	p {
 		font-family: "Montserrat", sans-serif;
 		font-size: 0.9rem;
+		transition: font-size 150ms;
+	}
+
+	p.large {
+		font-size: 1.1rem;
 	}
 
 	nav {
 		margin-left: auto;
-		display: none;
 	}
 
 	ul {
@@ -60,6 +62,7 @@
 	li {
 		margin-right: 1rem;
 		position: relative;
+		display: none;
 	}
 
 	li:nth-child(2) a::before {
@@ -91,15 +94,29 @@
 
 	@media (min-width: 60rem) {
 		header {
-			padding: 1.5rem 8rem;
+			padding: 1.5rem 2rem;
 		}
 
 		p {
 			font-size: 1.1rem;
 		}
 
+		p.large {
+			font-size: 1.35rem;
+		}
+
 		nav {
 			display: block;
+		}
+
+		li {
+			display: block;
+		}
+	}
+
+	@media (min-width: 75rem) {
+		header {
+			padding: 1.5rem 5rem;
 		}
 	}
 </style>

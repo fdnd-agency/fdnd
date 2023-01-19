@@ -26,9 +26,12 @@
 </aside>
 
 <style>
+	aside {
+		display: none;
+	}
+
 	.general-info-wrapper {
 		padding: 3rem 0;
-		display: none;
 	}
 
 	p {
@@ -43,7 +46,13 @@
 	}
 
 	@media (min-width: 60rem) {
-		.general-info-wrapper {
+		aside {
+			display: none;
+		}
+	}
+
+	@media (min-width: 75rem) {
+		aside {
 			display: block;
 		}
 	}

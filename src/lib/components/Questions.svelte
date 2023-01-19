@@ -1,10 +1,10 @@
 <script>
-	import LayoutSwitch from "./index/LayoutSwitch.svelte";
+	import LayoutSwitch from "./LayoutSwitch.svelte";
 	import SortBtn from "./index/SortBtn.svelte";
 	import QuestionCard from "./QuestionCard.svelte";
 	import SearchBar from "./SearchBar.svelte";
 	import FilterBtn from "./FilterBtn.svelte";
-
+	import CreateQuestionBtn from "./index/CreateQuestionBtn.svelte";
 	import { get } from "svelte/store";
 	import { filteredThreads } from "$lib/stores/searchThreads.js";
 
@@ -13,8 +13,14 @@
 </script>
 
 <section>
-	<!-- Title -->
-	<h3>{title}</h3>
+	<!-- Title & button wrapper -->
+	<div class="title-btn-wrapper">
+		<!-- Title -->
+		<h3>{title}</h3>
+
+		<!-- Create question button (mobile) -->
+		<CreateQuestionBtn title="Stel je vraag" />
+	</div>
 
 	<!-- Searchbar -->
 	<SearchBar {threads} placeholder="Vragen zoeken..." />
@@ -44,6 +50,12 @@
 		padding: 1rem 1.5rem;
 	}
 
+	.title-btn-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
 	h3 {
 		font-size: 1.25rem;
 	}
@@ -56,11 +68,14 @@
 
 	@media (min-width: 60rem) {
 		section {
-			padding: 1rem;
+			padding: 1rem 0;
 		}
 
 		h3 {
 			font-size: 1.8rem;
 		}
+	}
+
+	@media (min-width: 75rem) {
 	}
 </style>
