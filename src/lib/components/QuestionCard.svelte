@@ -1,5 +1,4 @@
 <script>
-	export let authorImg;
 	export let authorName;
 	export let date;
 	export let title;
