@@ -19,7 +19,7 @@
 		color: var(--text-gray);
 		font-family: "Inter", sans-serif;
 		font-weight: 500;
-		margin-right: 1rem;
+		margin: 0 1rem 0 0.5rem;
 	}
 
 	img {
@@ -29,6 +29,16 @@
 	@media (min-width: 60rem) {
 		div {
 			display: flex;
+		}
+
+		p {
+			font-size: 0.85rem;
+		}
+	}
+
+	@media (min-width: 75rem) {
+		p {
+			font-size: 0.9rem;
 		}
 	}
 </style>

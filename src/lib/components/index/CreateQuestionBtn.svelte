@@ -14,4 +14,10 @@
 		font-size: 0.95rem;
 		font-weight: 500;
 	}
+
+	@media (min-width: 75rem) {
+		button {
+			display: none;
+		}
+	}
 </style>

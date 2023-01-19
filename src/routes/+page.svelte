@@ -22,7 +22,7 @@
 	/>
 
 	<!-- Questions -->
-	<Questions {threads} title="Alle vragen" />
+	<Questions id="content" {threads} title="Alle vragen" />
 
 	<!-- Additional Information (Fillter) & Widget -->
 	<AdditionalInformation />

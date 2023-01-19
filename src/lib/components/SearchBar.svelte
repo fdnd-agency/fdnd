@@ -21,7 +21,7 @@
 	<input type="search" bind:value={searchTerm} {placeholder} />
 
 	<!-- Submit button -->
-	<button>Zoek</button>
+	<button type="button">Zoek</button>
 </form>
 
 <style>
@@ -59,6 +59,20 @@
 		background-color: var(--element-white);
 		color: var(--text-primary);
 		border-left: 1px solid var(--element-border);
+		transition: background-color 150ms;
+		cursor: pointer;
+	}
+
+	button:hover {
+		background-color: var(--element-primary-action);
+	}
+
+	button:active {
+		background-color: var(--element-primary-action);
+	}
+
+	button:focus {
+		background-color: var(--element-primary-action);
 	}
 
 	@media (min-width: 60rem) {

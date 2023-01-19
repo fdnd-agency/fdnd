@@ -10,17 +10,23 @@
 </script>
 
 <aside>
+	<!-- General info wrapper -->
 	<div class="general-info-wrapper">
+		<!-- Introduction text -->
 		<p>
 			{introText}
 		</p>
+
+		<!-- Create question button -->
 		<ButtonPrimary title="Vraag toevoegen" />
 
+		<!-- Channel stats -->
 		<div class="stat-cards-wrapper">
 			<StatCard number={countThread} label="gestelde vragen" />
 			<StatCard number="372" label="reacties" />
 		</div>
 
+		<!-- Channel guidelines -->
 		<Guidelines />
 	</div>
 </aside>

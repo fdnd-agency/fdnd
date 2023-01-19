@@ -7,46 +7,57 @@
 	export let categories;
 </script>
 
-<article>
-	<!-- Publication information -->
-	<p class="publish-information"><span>{authorName}</span>{date}</p>
+<a href="/">
+	<article>
+		<!-- Publication information -->
+		<p class="publish-information"><span>{authorName}</span>{date}</p>
 
-	<!-- Question title -->
-	<h4>{title}</h4>
+		<!-- Question title -->
+		<h4>{title}</h4>
 
-	<!-- Question categories -->
-	<ul>
-		{#each categories as category}
-			<li>
-				{category}
-			</li>
-		{/each}
-	</ul>
+		<!-- Question categories -->
+		<ul>
+			{#each categories as category}
+				<li>
+					{category}
+				</li>
+			{/each}
+		</ul>
 
-	<!-- Question description -->
-	<p class="description">
-		{description}
-	</p>
+		<!-- Question description -->
+		<p class="description">
+			{description}
+		</p>
 
-	<hr />
+		<hr />
 
-	<!-- Question reactions -->
-	<p class="reactions">
-		<img src="/images/react-icon.jpg" alt="" />
-		<span
-			>{reactions}
-			<p>reacties</p>
-		</span>
-	</p>
-</article>
+		<!-- Question reactions -->
+		<p class="reactions">
+			<img src="/images/react-icon.jpg" alt="" />
+			<span
+				>{reactions}
+				<p>reacties</p>
+			</span>
+		</p>
+	</article>
+</a>
 
 <style>
+	a {
+		color: var(--text-primary);
+	}
+
 	article {
 		margin-top: 1rem;
 		background-color: var(--element-white);
 		padding: 1rem 1.5rem;
 		border-radius: 0.6rem;
 		box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+		transition: transform 150ms;
+	}
+
+	article:hover {
+		transform: translateY(-2px);
 	}
 
 	.publish-information {

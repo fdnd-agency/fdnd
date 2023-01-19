@@ -8,8 +8,9 @@
 
 	<!-- Select options -->
 	<select name="" id="">
-		<option value="0">datum</option>
-		<option value="1">reacties</option>
+		<option value="0">a-z</option>
+		<option value="1">datum</option>
+		<option value="2">reacties</option>
 	</select>
 </div>
 
@@ -48,10 +49,17 @@
 	@media (min-width: 60rem) {
 		p {
 			display: block;
+			font-size: 0.85rem;
 		}
 
 		select {
 			margin-left: 0.5rem;
+		}
+	}
+
+	@media (min-width: 75rem) {
+		p {
+			font-size: 0.9rem;
 		}
 	}
 </style>
