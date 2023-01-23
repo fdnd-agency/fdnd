@@ -74,14 +74,17 @@
 
 	button:hover {
 		background-color: var(--element-primary-action);
+		color: var(--text-white);
 	}
 
 	button:active {
 		background-color: var(--element-primary-action);
+		color: var(--text-white);
 	}
 
 	button:focus {
 		background-color: var(--element-primary-action);
+		color: var(--text-white);
 	}
 
 	@media (min-width: 60rem) {

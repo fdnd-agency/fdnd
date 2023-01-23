@@ -89,7 +89,7 @@
 		height: 2rem;
 		object-fit: cover;
 		border-radius: 50%;
-		margin: -3px 15px;
+		margin: -3px;
 	}
 
 	@media (min-width: 60rem) {
@@ -111,6 +111,10 @@
 
 		li {
 			display: block;
+		}
+
+		img {
+			margin: -3px 15px;
 		}
 	}
 

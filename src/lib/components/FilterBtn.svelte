@@ -11,7 +11,6 @@
 	button {
 		background-color: var(--element-primary);
 		border-radius: 0.6rem;
-		/* padding: 0.5rem 1rem; */
 		padding: 0.4rem 1rem;
 		font-size: 0.9rem;
 		font-weight: 500;

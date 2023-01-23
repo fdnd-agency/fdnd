@@ -5,17 +5,22 @@
 	import LayoutSwitch from "./LayoutSwitch.svelte";
 	import QuestionCard from "./QuestionCard.svelte";
 	import SearchBar from "./SearchBar.svelte";
-
+	import QuestionsEmpty from "./index/QuestionsEmpty.svelte";
 	import { filteredThreads } from "$lib/stores/searchThreads.js";
 
 	export let threads;
 	export let members;
+	export let title;
 
 	const memberList = threads.map((thread) =>
 		members.find((member) => member.user.id == thread.owner_id)
 	);
 
-	export let title;
+	let memberNames = {};
+
+	memberList.forEach((member) => {
+		memberNames[`${member.user.id}`] = member.user.username;
+	});
 </script>
 
 <section>
@@ -42,6 +47,7 @@
 	{#each $filteredThreads as thread}
 		<QuestionCard
 			authorImg=""
+			authorName={memberNames[thread.owner_id]}
 			date={thread.thread_metadata.create_timestamp}
 			title={thread.name}
 			categories={["soft skills", "user experience"]}
@@ -50,7 +56,7 @@
 	{/each}
 
 	{#if $filteredThreads.length == 0}
-		<p>Geen zoekresultaten</p>
+		<QuestionsEmpty />
 	{/if}
 </section>
 

@@ -30,7 +30,6 @@
 
 <style>
 	.filter-wrapper {
-		/* margin: 4.5rem 0 0 2rem; */
 		background-color: var(--element-white);
 		padding: 1.25rem 1.6rem;
 		border-radius: 0.6rem;
@@ -38,7 +37,8 @@
 		border-top: 2px solid var(--element-primary);
 		position: fixed;
 		right: 0;
-		transform: translateX(-100%);
+		bottom: 1rem;
+		transform: translateX(100%);
 		transition: right 200ms;
 	}
 
