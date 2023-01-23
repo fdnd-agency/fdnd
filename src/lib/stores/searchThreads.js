@@ -1,3 +1,3 @@
 import { writable } from "svelte/store";
 
-export const filteredThreads = writable("");
+export const filteredThreads = writable([]);

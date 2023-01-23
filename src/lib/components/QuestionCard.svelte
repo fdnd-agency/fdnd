@@ -5,12 +5,14 @@
 	export let description;
 	export let reactions;
 	export let categories;
+
+	const formattedDate = new Date(date).toLocaleDateString();
 </script>
 
 <a href="/">
 	<article>
 		<!-- Publication information -->
-		<p class="publish-information"><span>{authorName}</span>{date}</p>
+		<p class="publish-information"><span>{authorName}</span>{formattedDate}</p>
 
 		<!-- Question title -->
 		<h4>{title}</h4>

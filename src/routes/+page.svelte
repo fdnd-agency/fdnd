@@ -4,10 +4,17 @@
 	import GeneralInformation from "$lib/components/index/GeneralInformation.svelte";
 	import Questions from "$lib/components/Questions.svelte";
 	import AdditionalInformation from "$lib/components/index/AdditionalInformation.svelte";
-
+	import { filteredThreads } from "$lib/stores/searchThreads.js";
+	import { get } from "svelte/store";
 	export let data;
 
-	let threads = data.threads.threads;
+	let threads = get(filteredThreads).length
+		? get(filteredThreads)
+		: data.threads.threads;
+
+	let members = data.members;
+
+	filteredThreads.set(threads);
 </script>
 
 <Hero />
@@ -19,10 +26,11 @@
 		introText="De plek waar jij al jouw code vragen kan: stellen, terugvinden en anderen
 		kan helpen."
 		{threads}
+		{members}
 	/>
 
 	<!-- Questions -->
-	<Questions id="content" {threads} title="Alle vragen" />
+	<Questions id="content" {threads} {members} title="Alle vragen" />
 
 	<!-- Additional Information (Fillter) & Widget -->
 	<AdditionalInformation />

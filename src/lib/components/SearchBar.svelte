@@ -1,27 +1,31 @@
 <script>
 	import { filteredThreads } from "$lib/stores/searchThreads.js";
-	import { loop_guard } from "svelte/internal";
-	import { get } from "svelte/store";
+	import { enhance } from "$app/forms";
 
 	export let placeholder;
 	export let threads;
 
-	let searchTerm = "";
+	function filterThreads(searchTerm) {
+		const filteredThreads = threads.filter((thread) => {
+			return thread.name.toLowerCase().includes(searchTerm);
+		});
 
-	$: searchedThreads = threads.filter((thread) => {
-		return thread.name.includes(searchTerm);
-	});
-
-	filteredThreads.set(searchedThreads);
+		return filteredThreads;
+	}
 </script>
 
-<form action="">
+<form method="POST" action="?/search" use:enhance>
 	<!-- Search input -->
 	<img src="/images/search-icon.png" alt="" />
-	<input type="search" bind:value={searchTerm} {placeholder} />
+	<input
+		type="search"
+		on:input={(e) => filteredThreads.set(filterThreads(e.target.value))}
+		{placeholder}
+		name="search"
+	/>
 
 	<!-- Submit button -->
-	<button type="button">Zoek</button>
+	<button type="submit">Zoek</button>
 </form>
 
 <style>
@@ -44,6 +48,11 @@
 		border: none;
 		box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
 		background-color: var(--element-white);
+	}
+
+	input::-webkit-search-cancel-button {
+		position: relative;
+		right: 4.5rem;
 	}
 
 	button {

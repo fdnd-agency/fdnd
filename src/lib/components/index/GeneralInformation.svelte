@@ -5,8 +5,10 @@
 
 	export let introText;
 	export let threads;
+	export let members;
 
 	let countThread = threads.length;
+	let countMembers = members.length;
 </script>
 
 <aside>
@@ -22,8 +24,8 @@
 
 		<!-- Channel stats -->
 		<div class="stat-cards-wrapper">
-			<StatCard number={countThread} label="gestelde vragen" />
-			<StatCard number="372" label="reacties" />
+			<StatCard number={countThread} label="open vragen" />
+			<StatCard number={countMembers} label="aantal leden" />
 		</div>
 
 		<!-- Channel guidelines -->

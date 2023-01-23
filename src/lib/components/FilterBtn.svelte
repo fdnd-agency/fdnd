@@ -3,8 +3,6 @@
 	import { filterState } from "$lib/stores/showFilter.js";
 
 	let showFilter = get(filterState);
-
-	$: console.log(showFilter);
 </script>
 
 <button>Filters</button>

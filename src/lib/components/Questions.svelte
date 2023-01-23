@@ -1,14 +1,20 @@
 <script>
-	import LayoutSwitch from "./LayoutSwitch.svelte";
-	import SortBtn from "./index/SortBtn.svelte";
-	import QuestionCard from "./QuestionCard.svelte";
-	import SearchBar from "./SearchBar.svelte";
 	import FilterBtn from "./FilterBtn.svelte";
 	import CreateQuestionBtn from "./index/CreateQuestionBtn.svelte";
-	import { get } from "svelte/store";
+	import SortBtn from "./index/SortBtn.svelte";
+	import LayoutSwitch from "./LayoutSwitch.svelte";
+	import QuestionCard from "./QuestionCard.svelte";
+	import SearchBar from "./SearchBar.svelte";
+
 	import { filteredThreads } from "$lib/stores/searchThreads.js";
 
 	export let threads;
+	export let members;
+
+	const memberList = threads.map((thread) =>
+		members.find((member) => member.user.id == thread.owner_id)
+	);
+
 	export let title;
 </script>
 
@@ -32,17 +38,20 @@
 		<LayoutSwitch />
 	</div>
 
-	<!-- Questions -->
-	{#each threads as thread}
+	<!-- Question card -->
+	{#each $filteredThreads as thread}
 		<QuestionCard
 			authorImg=""
-			authorName="Boudewijn"
 			date={thread.thread_metadata.create_timestamp}
 			title={thread.name}
 			categories={["soft skills", "user experience"]}
 			reactions={thread.message_count}
 		/>
 	{/each}
+
+	{#if $filteredThreads.length == 0}
+		<p>Geen zoekresultaten</p>
+	{/if}
 </section>
 
 <style>
