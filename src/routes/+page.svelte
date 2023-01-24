@@ -13,6 +13,8 @@
 		: data.threads.threads;
 
 	let members = data.members;
+	let tags = data.tags,
+		available_tags;
 
 	filteredThreads.set(threads);
 </script>
@@ -30,7 +32,7 @@
 	/>
 
 	<!-- Questions -->
-	<Questions id="content" {threads} {members} title="Alle vragen" />
+	<Questions id="content" {threads} {members} {tags} title="Alle vragen" />
 
 	<!-- Additional Information (Fillter) & Widget -->
 	<AdditionalInformation />

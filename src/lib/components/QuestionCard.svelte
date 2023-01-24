@@ -4,7 +4,7 @@
 	export let title;
 	export let description;
 	export let reactions;
-	export let categories;
+	export let tags;
 
 	const formattedDate = new Date(date).toLocaleDateString();
 </script>
@@ -19,9 +19,9 @@
 
 		<!-- Question categories -->
 		<ul>
-			{#each categories as category}
+			{#each tags as tag}
 				<li>
-					{category}
+					{tag}
 				</li>
 			{/each}
 		</ul>

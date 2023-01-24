@@ -15,7 +15,12 @@
 	<!-- Rangeslider -->
 	<h5>{title}</h5>
 	<p>Aantal reacties</p>
-	<RangeSlider min="0" max="500" value="0" />
+
+	<div class="rangeslider-wrapper">
+		<p>0</p>
+		<RangeSlider min="0" max="500" value="0" />
+		<p>1000</p>
+	</div>
 
 	<!-- Categories checkboxes -->
 	<div class="categories-wrapper">
@@ -51,6 +56,18 @@
 		font-family: "Montserrat", sans-serif;
 		margin-bottom: 0.6rem;
 		font-size: 0.85rem;
+	}
+
+	.rangeslider-wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	.rangeslider-wrapper p {
+		margin: 0;
+		font-family: "Rubik", sans-serif;
+		color: var(--element-primary);
+		font-weight: 500;
 	}
 
 	.categories-wrapper {

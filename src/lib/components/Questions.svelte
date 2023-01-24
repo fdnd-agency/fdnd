@@ -11,6 +11,7 @@
 	export let threads;
 	export let members;
 	export let title;
+	export let tags;
 
 	const memberList = threads.map((thread) =>
 		members.find((member) => member.user.id == thread.owner_id)
@@ -21,6 +22,10 @@
 	memberList.forEach((member) => {
 		memberNames[`${member.user.id}`] = member.user.username;
 	});
+
+	// const tagList = tags.map((tag) => {
+
+	// }
 </script>
 
 <section>
@@ -50,7 +55,7 @@
 			authorName={memberNames[thread.owner_id]}
 			date={thread.thread_metadata.create_timestamp}
 			title={thread.name}
-			categories={["soft skills", "user experience"]}
+			tags={["soft skills", "user experience"]}
 			reactions={thread.message_count}
 		/>
 	{/each}
@@ -89,8 +94,5 @@
 		h3 {
 			font-size: 1.8rem;
 		}
-	}
-
-	@media (min-width: 75rem) {
 	}
 </style>
