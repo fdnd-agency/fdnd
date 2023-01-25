@@ -2,11 +2,12 @@
 	export let id;
 	export let name;
 	export let value;
+	export let emoji;
 </script>
 
 <label>
 	<input type="checkbox" {id} {name} {value} />
-	<span>{name}</span>
+	<span>{emoji} {name}</span>
 </label>
 
 <style>
@@ -16,7 +17,12 @@
 		position: relative;
 		align-items: center;
 		font-family: "Inter", sans-serif;
-		font-size: 0.85rem;
+		font-size: 0.9rem;
+		text-transform: capitalize;
+	}
+
+	label:focus {
+		border: 3px solid red;
 	}
 
 	span {

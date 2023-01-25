@@ -26,11 +26,6 @@
 			{/each}
 		</ul>
 
-		<!-- Question description -->
-		<p class="description">
-			{description}
-		</p>
-
 		<hr />
 
 		<!-- Question reactions -->
@@ -105,14 +100,6 @@
 		padding: 0.3rem 0.9rem;
 		border-radius: 3rem;
 		margin-right: 0.3rem;
-	}
-
-	.description {
-		color: var(--text-gray-4);
-		margin-top: 1rem;
-		font-size: 0.9rem;
-		font-weight: 400;
-		line-height: 1.25rem;
 	}
 
 	hr {

@@ -13,6 +13,17 @@
 	export let title;
 	export let tags;
 
+	threads.map((thread) => {
+		let emoji = thread.applied_tags.map((tagId) => {
+			let found = tags.find((tag) => tagId == tag.id);
+			return found.emoji_name;
+		});
+		thread.emoji = emoji;
+		return emoji;
+	});
+
+	console.log(threads);
+
 	const memberList = threads.map((thread) =>
 		members.find((member) => member.user.id == thread.owner_id)
 	);
@@ -28,7 +39,7 @@
 	// }
 </script>
 
-<section>
+<section id="content">
 	<!-- Title & button wrapper -->
 	<div class="title-btn-wrapper">
 		<!-- Title -->
@@ -51,11 +62,10 @@
 	<!-- Question card -->
 	{#each $filteredThreads as thread}
 		<QuestionCard
-			authorImg=""
 			authorName={memberNames[thread.owner_id]}
 			date={thread.thread_metadata.create_timestamp}
 			title={thread.name}
-			tags={["soft skills", "user experience"]}
+			tags={thread.emoji}
 			reactions={thread.message_count}
 		/>
 	{/each}

@@ -1,10 +1,11 @@
 <script>
 	import Filter from "./Filter.svelte";
 	import DCWidget from "../DCWidget.svelte";
+	export let tags;
 </script>
 
 <div>
-	<Filter title="Filters" />
+	<Filter {tags} title="Filters" />
 	<DCWidget />
 </div>
 

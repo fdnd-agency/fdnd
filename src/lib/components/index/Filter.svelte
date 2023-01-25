@@ -1,17 +1,17 @@
 <script>
 	import RangeSlider from "../RangeSlider.svelte";
 	import Checkbox from "../Checkbox.svelte";
+	import { filterState } from "$lib/stores/showFilter.js";
+	import { get } from "svelte/store";
+	import { each } from "svelte/internal";
+	export let tags;
+
+	let showFilter = get(filterState);
 
 	export let title;
-
-	let showFilter = false;
-
-	function handleFilter() {
-		showFilter = !showFilter;
-	}
 </script>
 
-<div class="filter-wrapper">
+<div class="filter-wrapper" class:active={showFilter}>
 	<!-- Rangeslider -->
 	<h5>{title}</h5>
 	<p>Aantal reacties</p>
@@ -25,11 +25,15 @@
 	<!-- Categories checkboxes -->
 	<div class="categories-wrapper">
 		<p>Categorieën</p>
-		<Checkbox id="html" name="HTML" value="html" />
-		<Checkbox id="css" name="CSS" value="css" />
-		<Checkbox id="js" name="JavaScript" value="js" />
-		<Checkbox id="git" name="Git" value="git" />
-		<Checkbox id="feedback" name="Feedback" value="feedback" />
+
+		{#each tags as tag}
+			<Checkbox
+				id={tag.name}
+				name={tag.name}
+				emoji={tag.emoji_name}
+				value={tag.name}
+			/>
+		{/each}
 	</div>
 </div>
 
@@ -82,5 +86,9 @@
 			transition: none;
 			margin-bottom: 1.5rem;
 		}
+	}
+
+	.active {
+		transform: scale(3);
 	}
 </style>
