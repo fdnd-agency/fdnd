@@ -2,20 +2,16 @@
 	import RangeSlider from "../RangeSlider.svelte";
 	import Checkbox from "../Checkbox.svelte";
 	import { filterState } from "$lib/stores/showFilter.js";
-	import { get } from "svelte/store";
-	import { each } from "svelte/internal";
+
 	export let tags;
-
-	let showFilter = get(filterState);
-
 	export let title;
 </script>
 
-<div class="filter-wrapper" class:active={showFilter}>
-	<!-- Rangeslider -->
+<div class="filter-wrapper" class:visible={$filterState == true}>
 	<h5>{title}</h5>
 	<p>Aantal reacties</p>
 
+	<!-- Rangeslider -->
 	<div class="rangeslider-wrapper">
 		<p>0</p>
 		<RangeSlider min="0" max="500" value="0" />
@@ -26,6 +22,7 @@
 	<div class="categories-wrapper">
 		<p>Categorieën</p>
 
+		<!-- Loop over checkboxes -->
 		{#each tags as tag}
 			<Checkbox
 				id={tag.name}
@@ -47,7 +44,7 @@
 		right: 0;
 		bottom: 1rem;
 		transform: translateX(100%);
-		transition: right 200ms;
+		transition: transform 200ms;
 	}
 
 	h5 {
@@ -88,7 +85,8 @@
 		}
 	}
 
-	.active {
-		transform: scale(3);
+	.visible {
+		transform: translateX(0);
+		right: 0.5rem;
 	}
 </style>

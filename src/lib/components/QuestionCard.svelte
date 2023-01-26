@@ -17,13 +17,15 @@
 		<h4>{title}</h4>
 
 		<!-- Question categories -->
-		<ul>
-			{#each tags as tag}
-				<li>
-					{`${tag.emoji} ${tag.name}`}
-				</li>
-			{/each}
-		</ul>
+		<div>
+			<ul>
+				{#each tags as tag}
+					<li>
+						{`${tag.emoji} ${tag.name}`}
+					</li>
+				{/each}
+			</ul>
+		</div>
 
 		<hr />
 
@@ -84,11 +86,14 @@
 		font-size: 1.35rem;
 	}
 
+	div {
+		scroll-snap-type: x mandatory;
+		overflow: scroll;
+	}
+
 	ul {
 		display: flex;
 		margin-top: 1rem;
-		scroll-snap-type: x mandatory;
-		overflow: auto;
 	}
 
 	li {

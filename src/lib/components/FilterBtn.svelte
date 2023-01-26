@@ -2,15 +2,15 @@
 	import { filterState } from "$lib/stores/showFilter.js";
 	import { get } from "svelte/store";
 
-	$: showFilter = "false";
+	let showFilter = false;
 
-	function toggleFilter() {
-		showFilter = !showFilter;
-		filterState.set(showFilter);
+	function handleFilter() {
+		let state = (showFilter = !showFilter);
+		$filterState = state;
 	}
 </script>
 
-<button on:click={toggleFilter}>Filters</button>
+<button on:click={handleFilter}>filters</button>
 
 <style>
 	button {
