@@ -2,7 +2,6 @@
 	export let authorName;
 	export let date;
 	export let title;
-	export let description;
 	export let reactions;
 	export let tags;
 
@@ -21,7 +20,7 @@
 		<ul>
 			{#each tags as tag}
 				<li>
-					{tag}
+					{`${tag.emoji} ${tag.name}`}
 				</li>
 			{/each}
 		</ul>
@@ -88,6 +87,8 @@
 	ul {
 		display: flex;
 		margin-top: 1rem;
+		scroll-snap-type: x mandatory;
+		overflow: auto;
 	}
 
 	li {

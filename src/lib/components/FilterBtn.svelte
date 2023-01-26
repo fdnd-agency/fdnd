@@ -8,8 +8,6 @@
 		showFilter = !showFilter;
 		filterState.set(showFilter);
 	}
-
-	console.log(get(filterState));
 </script>
 
 <button on:click={toggleFilter}>Filters</button>

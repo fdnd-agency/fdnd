@@ -11,12 +11,12 @@
 
 <style>
 	div {
-		margin: 4.5rem 0 0 2rem;
+		padding: 4.5rem 0 0 2rem;
 	}
 
 	@media (min-width: 75rem) {
 		div {
-			margin: 4.5rem 0;
+			padding: 4.65rem 0;
 		}
 	}
 </style>

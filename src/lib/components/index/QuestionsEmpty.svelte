@@ -1,5 +1,5 @@
 <div>
-	<p>Geen zoekresultaten gevonden...</p>
+	<p>Geen resultaten gevonden...</p>
 </div>
 
 <style>

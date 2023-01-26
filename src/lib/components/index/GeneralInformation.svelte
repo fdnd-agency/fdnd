@@ -62,6 +62,11 @@
 	@media (min-width: 75rem) {
 		aside {
 			display: block;
+			padding: 4.65rem 0;
+		}
+
+		.general-info-wrapper {
+			padding: 0;
 		}
 	}
 </style>

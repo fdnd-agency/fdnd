@@ -1,12 +1,27 @@
 <script>
+	import { checkboxes } from "$lib/stores/filter";
+
 	export let id;
 	export let name;
 	export let value;
 	export let emoji;
+
+	function setChecked(e) {
+		if (e.target.checked) {
+			checkboxes.update((state) => {
+				return [...state, e.target.value];
+			});
+		} else {
+			checkboxes.update((state) => {
+				return state.filter((box) => box !== e.target.value);
+			});
+		}
+	}
+
 </script>
 
 <label>
-	<input type="checkbox" {id} {name} {value} />
+	<input on:change={setChecked} type="checkbox" {id} {name} {value} />
 	<span>{emoji} {name}</span>
 </label>
 

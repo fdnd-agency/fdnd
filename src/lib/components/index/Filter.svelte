@@ -43,7 +43,6 @@
 		padding: 1.25rem 1.6rem;
 		border-radius: 0.6rem;
 		box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
-		border-top: 2px solid var(--element-primary);
 		position: fixed;
 		right: 0;
 		bottom: 1rem;
@@ -85,6 +84,7 @@
 			transform: none;
 			transition: none;
 			margin-bottom: 1.5rem;
+			bottom: 0;
 		}
 	}
 

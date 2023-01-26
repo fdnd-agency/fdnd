@@ -7,23 +7,24 @@
 	import SearchBar from "./SearchBar.svelte";
 	import QuestionsEmpty from "./index/QuestionsEmpty.svelte";
 	import { filteredThreads } from "$lib/stores/searchThreads.js";
+	import { checkboxes } from "$lib/stores/filter";
 
 	export let threads;
 	export let members;
 	export let title;
 	export let tags;
 
+	// Find tag belonging to thread
 	threads.map((thread) => {
 		let emoji = thread.applied_tags.map((tagId) => {
 			let found = tags.find((tag) => tagId == tag.id);
-			return found.emoji_name;
+			return { emoji: found.emoji_name, name: found.name };
 		});
 		thread.emoji = emoji;
 		return emoji;
 	});
 
-	console.log(threads);
-
+	// Find authors of a question
 	const memberList = threads.map((thread) =>
 		members.find((member) => member.user.id == thread.owner_id)
 	);
@@ -34,9 +35,17 @@
 		memberNames[`${member.user.id}`] = member.user.username;
 	});
 
-	// const tagList = tags.map((tag) => {
-
-	// }
+	// Checkbox filter
+	$: threadsF = $checkboxes.length
+		? $filteredThreads.filter((thread) => {
+				const hasEmoji = thread.emoji.filter((emoji) =>
+					$checkboxes.includes(emoji.name)
+				);
+				if (hasEmoji.length) {
+					return thread;
+				}
+		  })
+		: $filteredThreads;
 </script>
 
 <section id="content">
@@ -60,7 +69,7 @@
 	</div>
 
 	<!-- Question card -->
-	{#each $filteredThreads as thread}
+	{#each threadsF as thread}
 		<QuestionCard
 			authorName={memberNames[thread.owner_id]}
 			date={thread.thread_metadata.create_timestamp}
@@ -70,7 +79,7 @@
 		/>
 	{/each}
 
-	{#if $filteredThreads.length == 0}
+	{#if threadsF.length == 0}
 		<QuestionsEmpty />
 	{/if}
 </section>
