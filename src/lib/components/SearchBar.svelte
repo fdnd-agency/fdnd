@@ -5,6 +5,7 @@
 	export let placeholder;
 	export let threads;
 
+	// Filter threads
 	function filterThreads(searchTerm) {
 		const filteredThreads = threads.filter((thread) => {
 			return thread.name.toLowerCase().includes(searchTerm);

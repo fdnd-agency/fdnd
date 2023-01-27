@@ -6,6 +6,7 @@
 	export let value;
 	export let emoji;
 
+	// Get value from selected checkbox
 	function setChecked(e) {
 		if (e.target.checked) {
 			checkboxes.update((state) => {
@@ -17,7 +18,6 @@
 			});
 		}
 	}
-
 </script>
 
 <label>
