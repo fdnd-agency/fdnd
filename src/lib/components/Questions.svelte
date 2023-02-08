@@ -63,7 +63,7 @@
 
 	<!-- Filter & Sort -->
 	<div class="actions-wrapper">
-		<SortBtn label="Sorteren op:" />
+		<SortBtn {threads} label="Sorteren op:" />
 		<FilterBtn />
 		<LayoutSwitch />
 	</div>

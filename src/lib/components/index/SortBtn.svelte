@@ -7,10 +7,10 @@
 	<p>{label}</p>
 
 	<!-- Select options -->
-	<select name="" id="">
-		<option value="1">datum</option>
-		<option value="0">a-z</option>
-		<option value="2">reacties</option>
+	<select>
+		<option value="alphabetic">a-z</option>
+		<option value="date">datum</option>
+		<option value="reactions">reacties</option>
 	</select>
 </div>
 

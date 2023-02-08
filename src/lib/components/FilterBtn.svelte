@@ -1,6 +1,5 @@
 <script>
 	import { filterState } from "$lib/stores/showFilter.js";
-	import { get } from "svelte/store";
 
 	let showFilter = false;
 

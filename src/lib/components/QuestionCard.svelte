@@ -94,6 +94,7 @@
 	ul {
 		display: flex;
 		margin-top: 1rem;
+		flex-wrap: wrap;
 	}
 
 	li {
