@@ -5,7 +5,12 @@
 	export let placeholder;
 	export let threads;
 
-	// Filter threads
+	/**
+	 * Filter threads
+	 * @constructor
+	 * @param {string} searchTerm - search value from input
+	 * @param {object} threads - list of all threads (questions)
+	 */
 	function filterThreads(searchTerm) {
 		const filteredThreads = threads.filter((thread) => {
 			return thread.name.toLowerCase().includes(searchTerm);

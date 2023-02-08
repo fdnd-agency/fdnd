@@ -2,6 +2,7 @@
 	export let title;
 </script>
 
+<!-- Create question button -->
 <button>{title}</button>
 
 <style>

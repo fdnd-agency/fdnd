@@ -7,7 +7,9 @@
 	export let title;
 </script>
 
+<!-- Filter wrapper -->
 <div class="filter-wrapper" class:visible={$filterState == true}>
+	<!-- Filter title -->
 	<h5>{title}</h5>
 	<p>Aantal reacties</p>
 

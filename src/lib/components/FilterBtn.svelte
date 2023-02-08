@@ -3,6 +3,10 @@
 
 	let showFilter = false;
 
+	/**
+	 * Toggle the filter state
+	 * @constructor
+	 */
 	function handleFilter() {
 		let state = (showFilter = !showFilter);
 		$filterState = state;

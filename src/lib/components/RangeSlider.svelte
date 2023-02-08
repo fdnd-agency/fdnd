@@ -4,6 +4,7 @@
 	export let value;
 </script>
 
+<!-- Custom rangeslider -->
 <input type="range" {min} {max} {value} />
 
 <style>

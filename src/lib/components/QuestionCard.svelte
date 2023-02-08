@@ -27,6 +27,7 @@
 			</ul>
 		</div>
 
+		<!-- Question seperator -->
 		<hr />
 
 		<!-- Question reactions -->

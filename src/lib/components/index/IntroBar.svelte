@@ -1,6 +1,8 @@
 <section>
+	<!-- Introbar icon -->
 	<p>🚀</p>
 
+	<!-- Introbar title -->
 	<h2>
 		Welkom!
 		<span>Boudewijn</span>

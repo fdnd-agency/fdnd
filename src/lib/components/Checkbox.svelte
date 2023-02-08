@@ -6,7 +6,11 @@
 	export let value;
 	export let emoji;
 
-	// Get value from selected checkbox
+	/**
+	 * Get & set value of checkboxes store
+	 * @constructor
+	 * @param {e} event - On change event.
+	 */
 	function setChecked(e) {
 		if (e.target.checked) {
 			checkboxes.update((state) => {

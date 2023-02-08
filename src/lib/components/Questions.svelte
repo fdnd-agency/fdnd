@@ -24,13 +24,14 @@
 		return emoji;
 	});
 
-	// Find authors of a question
+	// Find members of a question
 	const memberList = threads.map((thread) =>
 		members.find((member) => member.user.id == thread.owner_id)
 	);
 
 	let memberNames = {};
 
+	// Get member names
 	memberList.forEach((member) => {
 		memberNames[`${member.user.id}`] = member.user.username;
 	});
@@ -68,16 +69,18 @@
 		<LayoutSwitch />
 	</div>
 
-	<!-- Question card -->
-	{#each threadsF as thread}
-		<QuestionCard
-			authorName={memberNames[thread.owner_id]}
-			date={thread.thread_metadata.create_timestamp}
-			title={thread.name}
-			tags={thread.emoji}
-			reactions={thread.message_count}
-		/>
-	{/each}
+	<ul>
+		<!-- Question card -->
+		{#each threadsF as thread}
+			<QuestionCard
+				authorName={memberNames[thread.owner_id]}
+				date={thread.thread_metadata.create_timestamp}
+				title={thread.name}
+				tags={thread.emoji}
+				reactions={thread.message_count}
+			/>
+		{/each}
+	</ul>
 
 	{#if threadsF.length == 0}
 		<QuestionsEmpty />

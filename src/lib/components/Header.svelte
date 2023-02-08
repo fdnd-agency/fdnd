@@ -6,9 +6,12 @@
 
 <svelte:window bind:scrollY={y} />
 
+<!-- Header -->
 <header class:scrolled={y >= 1}>
+	<!--Logo -->
 	<p class:large={y >= 1}>FDND Stack</p>
 
+	<!-- Navigation menu -->
 	<nav>
 		<ul>
 			<li>

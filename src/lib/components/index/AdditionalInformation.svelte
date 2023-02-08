@@ -5,7 +5,10 @@
 </script>
 
 <div>
+	<!-- Filter -->
 	<Filter {tags} title="Filters" />
+
+	<!-- Discord widget -->
 	<DCWidget />
 </div>
 

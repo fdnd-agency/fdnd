@@ -1,6 +1,7 @@
 <div>
 	<p>Richtlijnen</p>
 
+	<!-- Guideline rules -->
 	<ol>
 		<li>Omschrijf je vraag zo duidelijk mogelijk</li>
 		<li>Gebruik schermafbeeldingen om code of errors te laten zien</li>

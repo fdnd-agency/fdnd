@@ -2,6 +2,7 @@
 	export let title;
 </script>
 
+<!-- Primary button -->
 <button type="button">{title}</button>
 
 <style>
