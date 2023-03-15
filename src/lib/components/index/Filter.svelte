@@ -2,12 +2,6 @@
     import {enhance} from "$app/forms";
     import {onMount} from "svelte";
 
-    let jsEnabled = true;
-
-    onMount(() => {
-        jsEnabled = false;
-    })
-
     // Components
     import RangeSlider from "../RangeSlider.svelte";
     import Checkbox from "../Checkbox.svelte";
