@@ -1,120 +1,124 @@
 <script>
-	import FilterBtn from "./FilterBtn.svelte";
-	import CreateQuestionBtn from "./index/CreateQuestionBtn.svelte";
-	import SortBtn from "./index/SortBtn.svelte";
-	import LayoutSwitch from "./LayoutSwitch.svelte";
-	import QuestionCard from "./QuestionCard.svelte";
-	import SearchBar from "./SearchBar.svelte";
-	import QuestionsEmpty from "./index/QuestionsEmpty.svelte";
-	import { filteredThreads } from "$lib/stores/searchThreads.js";
-	import { checkboxes } from "$lib/stores/filter";
+    import FilterBtn from "./FilterBtn.svelte";
+    import CreateQuestionBtn from "./index/CreateQuestionBtn.svelte";
+    import SortBtn from "./index/SortBtn.svelte";
+    import LayoutSwitch from "./LayoutSwitch.svelte";
+    import QuestionCard from "./QuestionCard.svelte";
+    import SearchBar from "./SearchBar.svelte";
+    import QuestionsEmpty from "./index/QuestionsEmpty.svelte";
 
-	export let threads;
-	export let members;
-	export let title;
-	export let tags;
+    // Props
+    export let threads;
+    export let members;
+    export let title;
+    export let tags;
 
-	// Find tag belonging to thread
-	threads.map((thread) => {
-		let emoji = thread.applied_tags.map((tagId) => {
-			let found = tags.find((tag) => tagId == tag.id);
-			return { emoji: found.emoji_name, name: found.name };
-		});
-		thread.emoji = emoji;
-		return emoji;
-	});
+    let memberNames = {};
 
-	// Find members of a question
-	const memberList = threads.map((thread) =>
-		members.find((member) => member.user.id == thread.owner_id)
-	);
+    // Stores
+    import {filteredThreads} from "$lib/stores/filteredThreads.js";
+    import {filters} from "$lib/stores/filters.js";
 
-	let memberNames = {};
+    // Find tag belonging to thread
+    threads.map((thread) => {
+        let emoji = thread.applied_tags.map((tagId) => {
+            let found = tags.find((tag) => tagId == tag.id);
+            return {emoji: found.emoji_name, name: found.name};
+        });
+        thread.emoji = emoji;
+        return emoji;
+    });
 
-	// Get member names
-	memberList.forEach((member) => {
-		memberNames[`${member.user.id}`] = member.user.username;
-	});
+    // Find members of a question
+    const memberList = threads.map((thread) =>
+        members.find((member) => member.user.id == thread.owner_id)
+    );
 
-	// Checkbox filter
-	$: threadsF = $checkboxes.length
-		? $filteredThreads.filter((thread) => {
-				const hasEmoji = thread.emoji.filter((emoji) =>
-					$checkboxes.includes(emoji.name)
-				);
-				if (hasEmoji.length) {
-					return thread;
-				}
-		  })
-		: $filteredThreads;
+    // Get member names
+    memberList.forEach((member) => {
+        memberNames[`${member.user.id}`] = member.user.username;
+    });
+
+    // Checkbox filter
+    $: threadsF = $filters.checkboxes.length
+        ? $filteredThreads.filter((thread) => {
+            const hasTag = thread.applied_tags.filter((tag) =>
+                $filters.checkboxes.includes(tag)
+            );
+            if (hasTag.length) {
+                return thread;
+            }
+        })
+        : $filteredThreads;
 </script>
 
 <section id="content">
-	<!-- Title & button wrapper -->
-	<div class="title-btn-wrapper">
-		<!-- Title -->
-		<h3>{title}</h3>
+    <!-- Title & button wrapper -->
+    <div class="title-btn-wrapper">
+        <!-- Title -->
+        <h3>{title}</h3>
 
-		<!-- Create question button (mobile) -->
-		<CreateQuestionBtn title="Stel je vraag" />
-	</div>
+        <!-- Create question button (mobile) -->
+        <CreateQuestionBtn title="Stel je vraag"/>
+    </div>
 
-	<!-- Searchbar -->
-	<SearchBar {threads} placeholder="Vragen zoeken..." />
+    <!-- Searchbar -->
+    <SearchBar {threads} placeholder="Vragen zoeken..."/>
 
-	<!-- Filter & Sort -->
-	<div class="actions-wrapper">
-		<SortBtn {threads} label="Sorteren op:" />
-		<FilterBtn />
-		<LayoutSwitch />
-	</div>
+    <!-- Filter & Sort -->
+    <div class="actions-wrapper">
+        <SortBtn {threads} label="Sorteren op:"/>
+        <FilterBtn/>
+        <LayoutSwitch/>
+    </div>
 
-	<ul>
-		<!-- Question card -->
-		{#each threadsF as thread}
-			<QuestionCard
-				authorName={memberNames[thread.owner_id]}
-				date={thread.thread_metadata.create_timestamp}
-				title={thread.name}
-				tags={thread.emoji}
-				reactions={thread.message_count}
-			/>
-		{/each}
-	</ul>
+    <ul>
+        <!-- Question card -->
+        {#each threadsF as thread}
+            <QuestionCard
+                    authorName={memberNames[thread.owner_id]}
+                    date={thread.thread_metadata.create_timestamp}
+                    title={thread.name}
+                    tags={thread.emoji}
+                    reactions={thread.message_count}
+            />
+        {/each}
+    </ul>
 
-	{#if threadsF.length == 0}
-		<QuestionsEmpty />
-	{/if}
+    <!-- Questions empty state -->
+    {#if threadsF.length == 0}
+        <QuestionsEmpty/>
+    {/if}
 </section>
 
 <style>
-	section {
-		padding: 1rem 1.5rem;
-	}
+    section {
+        padding: 1rem 1.5rem;
+    }
 
-	.title-btn-wrapper {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+    .title-btn-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-	h3 {
-		font-size: 1.25rem;
-	}
+    h3 {
+        font-size: 1.25rem;
+    }
 
-	.actions-wrapper {
-		display: flex;
-		justify-content: space-between;
-		margin-top: 1.5rem;
-	}
+    .actions-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.5rem;
+    }
 
-	@media (min-width: 60rem) {
-		section {
-			padding: 1rem 0;
-		}
+    @media (min-width: 60rem) {
+        section {
+            padding: 1rem 0;
+        }
 
-		h3 {
-			font-size: 1.8rem;
-		}
-	}
+        h3 {
+            font-size: 1.8rem;
+        }
+    }
 </style>
