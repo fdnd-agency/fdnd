@@ -53,8 +53,10 @@
 </script>
 
 <section id="content">
+
     <!-- Title & button wrapper -->
     <div class="title-btn-wrapper">
+
         <!-- Title -->
         <h3>{title}</h3>
 
@@ -76,6 +78,7 @@
         <!-- Question card -->
         {#each threadsF as thread}
             <QuestionCard
+                    id={thread.id}
                     authorName={memberNames[thread.owner_id]}
                     date={thread.thread_metadata.create_timestamp}
                     title={thread.name}

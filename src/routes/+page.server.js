@@ -1,6 +1,7 @@
 import {get} from "svelte/store";
 
 const bearerToken = import.meta.env.VITE_BEARER_TOKEN;
+// use URL API?
 const threadsUrl =
     "https://discord.com/api/guilds/1017099203882782750/threads/active";
 const membersUrl =
@@ -96,7 +97,7 @@ export const load = async () => {
                         return thread.applied_tags.includes(checkbox);
                     })
                     .every(Boolean);
-                return x;
+                 x;
             });
 
     // Set filtered threads store

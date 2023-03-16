@@ -6,7 +6,7 @@
 <style>
 	section {
 		background: url("/images/hero-bg.jpg");
-		background-position: 0 75%;
+		background-position: 0 40%;
 		background-size: cover;
 		height: 15rem;
 		padding: 1.5rem;
