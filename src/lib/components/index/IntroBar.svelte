@@ -1,11 +1,10 @@
 <section>
 	<!-- Introbar icon -->
-	<p>🚀</p>
+	<p>🏠</p>
 
 	<!-- Introbar title -->
 	<h2>
-		Welkom!
-		<span>Boudewijn</span>
+		Overzicht vragen
 	</h2>
 </section>
 
@@ -18,7 +17,7 @@
 	}
 
 	p {
-		background-color: #4272ca;
+		background-color: var(--element-primary);
 		font-size: 1.65rem;
 		width: 50px;
 		height: 50px;

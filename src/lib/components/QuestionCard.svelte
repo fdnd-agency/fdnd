@@ -141,6 +141,11 @@
     }
 
     @media (min-width: 75rem) {
+        article {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
         h4 {
             font-size: 1.5rem;
         }

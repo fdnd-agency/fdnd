@@ -21,7 +21,7 @@
 	}
 
 	p {
-		font-size: 1.75rem;
+		font-size: 1.1rem;
 		font-family: "Montserrat", sans-serif;
 		color: var(--text-secondary);
 	}
@@ -29,9 +29,15 @@
 	span {
 		margin-top: 10px;
 		text-transform: uppercase;
-		font-size: 11px;
+		font-size: 0.65rem;
 		font-family: "Rubik", sans-serif;
 		font-weight: bold;
 		color: var(--text-gray-2);
+	}
+
+	@media (min-width: 75rem) {
+		p {
+			font-size: 1.75rem;
+		}
 	}
 </style>

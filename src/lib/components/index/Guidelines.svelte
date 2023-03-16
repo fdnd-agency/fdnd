@@ -16,6 +16,7 @@
 <style>
 	div {
 		margin-top: 2rem;
+		display: none;
 	}
 
 	p {
@@ -50,5 +51,11 @@
 	li::marker {
 		color: var(--element-primary);
 		font-weight: 600;
+	}
+
+	@media (min-width: 75rem) {
+		div {
+			display: block;
+		}
 	}
 </style>

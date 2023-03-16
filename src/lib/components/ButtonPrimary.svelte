@@ -3,10 +3,10 @@
 </script>
 
 <!-- Primary button -->
-<button type="button">{title}</button>
+<a href="https://discord.com/channels/1017099203882782750/1027275543755890799" target="_blank">{title}</a>
 
 <style>
-	button {
+	a {
 		background-color: var(--element-primary);
 		padding: 1.25rem 0;
 		width: 100%;
@@ -16,18 +16,28 @@
 		font-weight: bold;
 		cursor: pointer;
 		transition: background-color 150ms, transform 100ms;
+        display: none;
+        color: var(--text-white);
+        text-align: center;
+        text-transform: uppercase;
 	}
 
-	button:hover {
+	a:hover {
 		background-color: var(--element-primary-action);
 	}
 
-	button:active {
+	a:active {
 		background-color: var(--element-primary-action);
 		transform: scale(0.97);
 	}
 
-	button:focus {
+	a:focus {
 		background-color: var(--element-primary-action);
 	}
+
+    @media (min-width: 60rem) {
+        a {
+            display: block;
+        }
+    }
 </style>

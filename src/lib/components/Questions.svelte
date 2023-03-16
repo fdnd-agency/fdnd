@@ -69,9 +69,9 @@
 
     <!-- Filter & Sort -->
     <div class="actions-wrapper">
-        <SortBtn {threads} label="Sorteren op:"/>
+<!--        <SortBtn {threads} label="Sorteren op:"/>-->
         <FilterBtn/>
-        <LayoutSwitch/>
+<!--        <LayoutSwitch/>-->
     </div>
 
     <ul>

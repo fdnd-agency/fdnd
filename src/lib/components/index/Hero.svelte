@@ -1,12 +1,8 @@
-<section>
-	<h1>FDND Stack</h1>
-	<p>Een plek voor al jouw code vragen</p>
-</section>
+<section />
 
 <style>
 	section {
-		background: url("/images/hero-bg.jpg");
-		background-position: 0 40%;
+		background: url("/images/hero-bg-fdnd.avif");
 		background-size: cover;
 		height: 15rem;
 		padding: 1.5rem;
@@ -63,6 +59,8 @@
 
 	@media (min-width: 75rem) {
 		section {
+			height: 25rem;
+            background-position: 0 40%;
 			padding: 0 5rem;
 		}
 	}

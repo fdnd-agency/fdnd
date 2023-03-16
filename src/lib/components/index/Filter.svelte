@@ -42,6 +42,7 @@
                 />
             {/each}
 
+
             <!-- Apply filter button -->
             <button type="submit">Apply filters</button>
         </form>
