@@ -2,7 +2,6 @@
     import {filters} from "$lib/stores/filters";
 
     let newCheckboxes;
-
     export let name;
     export let value;
     export let label;
