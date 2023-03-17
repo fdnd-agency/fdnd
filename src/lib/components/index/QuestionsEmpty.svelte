@@ -6,7 +6,13 @@
 	div {
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		margin-top: 2.5rem;
+		flex-direction: column;
+	}
+
+	span {
+		color: var(--element-primary);
 	}
 
 	p {
@@ -15,7 +21,7 @@
 
 	@media (min-width: 60rem) {
 		p {
-			font-size: 1rem;
+			font-size: 1rem
 		}
 	}
 </style>

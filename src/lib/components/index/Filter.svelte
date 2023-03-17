@@ -1,6 +1,5 @@
 <script>
     import {enhance} from "$app/forms";
-    import {onMount} from "svelte";
 
     // Components
     import RangeSlider from "../RangeSlider.svelte";
@@ -42,9 +41,10 @@
                 />
             {/each}
 
-
-            <!-- Apply filter button -->
-            <button type="submit">Apply filters</button>
+            <noscript>
+                <!-- Apply filter button -->
+                <button type="submit">Apply filters</button>
+            </noscript>
         </form>
     </div>
 </div>
