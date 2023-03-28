@@ -14,6 +14,7 @@
 <li>
     <a href={`${baseThreadsUrl}/${id}`} target="_blank">
         <article>
+
             <!-- Publication information -->
             <p class="publish-information"><span>{authorName}</span>{formattedDate}</p>
 
@@ -21,15 +22,13 @@
             <h4>{title}</h4>
 
             <!-- Question categories -->
-            <div>
-                <ul class="tags-wrapper">
-                    {#each tags as tag}
-                        <li>
-                            {`${tag.emoji} ${tag.name}`}
-                        </li>
-                    {/each}
-                </ul>
-            </div>
+            <ul class="tags-wrapper">
+                {#each tags as tag}
+                    <li>
+                        {`${tag.emoji} ${tag.name}`}
+                    </li>
+                {/each}
+            </ul>
 
             <!-- Question seperator -->
             <hr/>
@@ -90,11 +89,6 @@
         font-size: 1.35rem;
     }
 
-    div {
-        scroll-snap-type: x mandatory;
-        overflow: scroll;
-    }
-
     .tags-wrapper {
         display: flex;
         margin-top: 1rem;
@@ -111,6 +105,7 @@
         padding: 0.3rem 0.9rem;
         border-radius: 3rem;
         margin-right: 0.3rem;
+        margin-bottom: 0.5rem;
     }
 
     hr {
@@ -152,6 +147,10 @@
 
         li {
             font-size: 0.8rem;
+        }
+
+        .tags-wrapper li {
+            margin-bottom: 0;
         }
     }
 </style>
