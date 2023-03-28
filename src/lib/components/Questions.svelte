@@ -107,6 +107,7 @@
 
     h3 {
         font-size: 1.25rem;
+        font-weight: 800;
     }
 
     .actions-wrapper {

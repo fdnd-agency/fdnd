@@ -24,6 +24,7 @@
 		font-size: 1.1rem;
 		font-family: "Montserrat", sans-serif;
 		color: var(--text-secondary);
+		font-weight: bold;
 	}
 
 	span {

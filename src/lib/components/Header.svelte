@@ -1,6 +1,4 @@
 <script>
-    import {page} from "$app/stores";
-
     let y = 0;
 </script>
 
@@ -35,6 +33,7 @@
         font-family: "Montserrat", sans-serif;
         font-size: 0.9rem;
         transition: font-size 150ms;
+        font-weight: bold;
     }
 
     p.large {
