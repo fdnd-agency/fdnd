@@ -48,10 +48,6 @@
         text-transform: capitalize;
     }
 
-    label:focus {
-        border: 3px solid red;
-    }
-
     span {
         padding: 0.35rem 0.35rem;
     }
@@ -64,7 +60,6 @@
         -o-appearance: none;
         appearance: none;
         border: 1px solid var(--element-border);
-        outline: none;
         cursor: pointer;
         border-radius: 0.15rem;
         position: relative;
