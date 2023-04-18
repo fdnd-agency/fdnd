@@ -13,6 +13,6 @@
 	}
 
 	a:focus {
-		top: 0;
+		top: 5rem;
 	}
 </style>
