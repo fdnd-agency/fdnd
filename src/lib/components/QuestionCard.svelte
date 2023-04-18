@@ -12,7 +12,7 @@
 </script>
 
 <li>
-    <a href={`${baseThreadsUrl}/${id}`} target="_blank">
+    <a href={`${baseThreadsUrl}/${id}`}>
         <article>
 
             <!-- Publication information -->
@@ -35,7 +35,7 @@
 
             <!-- Question reactions -->
             <p class="reactions">
-                <img src="/images/react-icon.jpg" alt=""/>
+                <img width="13.6" height="13.6" src="/images/react-icon.jpg" alt=""/>
                 <span
                 >{reactions}
             <p>reacties</p>
