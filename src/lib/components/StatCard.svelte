@@ -33,7 +33,7 @@
 		font-size: 0.65rem;
 		font-family: "Rubik", sans-serif;
 		font-weight: bold;
-		color: var(--text-gray-2);
+		color: var(--text-secondary);
 	}
 
 	@media (min-width: 75rem) {

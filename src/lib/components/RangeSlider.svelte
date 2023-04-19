@@ -5,7 +5,7 @@
 </script>
 
 <!-- Custom rangeslider -->
-<input type="range" {min} {max} {value} />
+<input type="range" id="reactions" {min} {max} {value} />
 
 <style>
 	input {

@@ -62,7 +62,7 @@
     }
 
     .publish-information {
-        color: var(--text-gray);
+        color: var(--text-secondary);
         font-size: 0.8rem;
         font-weight: 600;
         display: flex;
@@ -79,7 +79,7 @@
         display: inline-block;
         width: 0.3rem;
         height: 0.3rem;
-        background-color: var(--text-gray);
+        background-color: var(--text-secondary);
         border-radius: 50%;
         margin: 0 5px;
     }
@@ -131,7 +131,7 @@
     }
 
     .reactions p {
-        color: var(--text-gray-4);
+        color: var(--text-secondary);
         display: inline;
     }
 

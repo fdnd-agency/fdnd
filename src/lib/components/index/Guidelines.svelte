@@ -24,7 +24,7 @@
 		font-size: 1rem;
 		font-weight: bold;
 		text-transform: uppercase;
-		color: var(--text-gray-2);
+		color: var(--text-secondary);
 	}
 
 	p::after {
@@ -43,7 +43,7 @@
 	}
 
 	li {
-		color: var(--text-gray-3);
+		color: var(--text-secondary);
 		margin-bottom: 1rem;
 		font-size: 0.95rem;
 	}

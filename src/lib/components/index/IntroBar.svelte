@@ -34,12 +34,8 @@
 	h2 {
 		font-family: "Inter", sans-serif;
 		font-size: 0.85rem;
-		color: var(--text-gray-2);
+		color: var(--text-secondary);
 		margin-left: 3.5rem;
-	}
-
-	span {
-		color: var(--text-primary);
 	}
 
 	@media (min-width: 60rem) {

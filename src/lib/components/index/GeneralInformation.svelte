@@ -40,7 +40,7 @@
 
 	p {
 		font-weight: 500;
-		color: var(--text-introduction);
+		color: var(--text-secondary);
 		font-size: 0.8rem;
 	}
 
