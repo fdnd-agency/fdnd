@@ -32,7 +32,7 @@
     />
 
     <!-- Submit button -->
-    <button type="submit">Zoek</button>
+    <!-- <button type="submit">Zoek</button> -->
 </form>
 
 <style>
@@ -51,15 +51,8 @@
     input {
         width: 100%;
         padding: 0.65rem 2.5rem;
-        border-radius: 10px;
-        border: none;
-        box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
-        background-color: var(--element-white);
-    }
-
-    input::-webkit-search-cancel-button {
-        position: relative;
-        right: 4.5rem;
+        border-radius: 5px;
+        border: 3px solid var(--element-border);
     }
 
     button {

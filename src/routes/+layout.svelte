@@ -7,5 +7,5 @@
 </script>
 
 <SkipLink/>
-<Header/>
+<!-- <Header/> -->
 <slot/>

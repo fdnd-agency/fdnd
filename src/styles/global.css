@@ -38,12 +38,18 @@ a {
 # Headings
 --------------------------------------------------------------*/
 h1 {
-    color: var(--text-white);
-    font-size: 3rem;
+    color: var(--text-special);
+    font-size: 1.88rem;
 }
 
-h1, h3, h4, h5 {
+h1, h3, h5 {
     font-family: "Montserrat", sans-serif;
+}
+
+h4 {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.13rem;
+    font-weight: 500;
 }
 
 p {
