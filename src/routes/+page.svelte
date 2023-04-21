@@ -4,6 +4,8 @@
     import GeneralInformation from "$lib/components/index/GeneralInformation.svelte";
     import Questions from "$lib/components/Questions.svelte";
     import AdditionalInformation from "$lib/components/index/AdditionalInformation.svelte";
+    import Header from "$lib/components/Header.svelte";
+    import MainInformation from "$lib/components/index/MainInformation.svelte";
 
     // Stores
     import { filteredThreads } from "$lib/stores/filteredThreads.js";
@@ -23,12 +25,17 @@
 </script>
 
 <section>
-    <Sidebar title="FDND Stack" />
+    <Sidebar {threads} title="FDND Stack" />
+
+    <div>
+        <Header />
+        <MainInformation {threads} {members} {tags} />
+    </div>
 </section>
 
 <style>
     section {
-        display: grid;
+        /* display: grid; */
         grid-template-columns: 0.4fr 1fr 0.75fr;
         grid-template-rows: auto 1fr;
         grid-template-areas:

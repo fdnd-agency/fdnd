@@ -1,39 +1,28 @@
 <div>
-	<p>Richtlijnen</p>
+	<h4>Richtlijnen</h4>
 
-	<!-- Guideline rules -->
+	<!-- Guidelines -->
 	<ol>
-		<li>Omschrijf je vraag zo duidelijk mogelijk</li>
-		<li>Gebruik schermafbeeldingen om code of errors te laten zien</li>
+		<li><p>Omschrijf je vraag zo duidelijk mogelijk</p></li>
+		<li><p>Gebruik schermafbeeldingen om code of errors te laten zien</p></li>
 		<li>
-			Stel niet dezelfde vragen als iemand anders al een vergelijkbare vraag
-			heeft gesteld
+			<p>	Stel niet dezelfde vragen als iemand anders al een vergelijkbare vraag
+			heeft gesteld</p>
 		</li>
-		<li>Iedereen is hier om elkaar te helpen. Denk aan elkaars gevoelens</li>
+		<li>
+			<p>Iedereen is hier om elkaar te helpen. Denk aan elkaars gevoelens</p>
+		</li>
 	</ol>
 </div>
 
 <style>
 	div {
-		margin-top: 2rem;
-		display: none;
+		padding: 0 0.94rem;
 	}
 
 	p {
 		font-family: "Rubik", sans-serif;
 		font-size: 1rem;
-		font-weight: bold;
-		text-transform: uppercase;
-		color: var(--text-secondary);
-	}
-
-	p::after {
-		margin-top: 0.5rem;
-		content: "";
-		display: block;
-		width: 100%;
-		height: 2px;
-		background-color: var(--element-border);
 	}
 
 	ol {
@@ -51,11 +40,5 @@
 	li::marker {
 		color: var(--element-primary);
 		font-weight: 600;
-	}
-
-	@media (min-width: 75rem) {
-		div {
-			display: block;
-		}
 	}
 </style>

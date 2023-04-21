@@ -10,7 +10,6 @@
     // Props
     export let threads;
     export let members;
-    export let title;
     export let tags;
 
     let memberNames = {};
@@ -53,26 +52,9 @@
 </script>
 
 <section id="content">
+    <SortBtn label="Sorteren op:" />
 
-    <!-- Title & button wrapper -->
-    <div class="title-btn-wrapper">
-
-        <!-- Title -->
-        <h3>{title}</h3>
-
-        <!-- Create question button (mobile) -->
-        <CreateQuestionBtn title="Stel je vraag"/>
-    </div>
-
-    <!-- Searchbar -->
-    <SearchBar {threads} placeholder="Vragen zoeken..."/>
-
-    <!-- Filter & Sort -->
-    <div class="actions-wrapper">
-        <!--        <SortBtn {threads} label="Sorteren op:"/>-->
-        <FilterBtn/>
-        <!--        <LayoutSwitch/>-->
-    </div>
+    <CreateQuestionBtn title="Stel je vraag" />
 
     <ul>
         <!-- Question card -->
@@ -96,7 +78,7 @@
 
 <style>
     section {
-        padding: 1rem 1.5rem;
+        padding: 3rem 4.7rem;
     }
 
     .title-btn-wrapper {
@@ -114,15 +96,5 @@
         display: flex;
         justify-content: space-between;
         margin-top: 1.5rem;
-    }
-
-    @media (min-width: 60rem) {
-        section {
-            padding: 1rem 0;
-        }
-
-        h3 {
-            font-size: 1.8rem;
-        }
     }
 </style>

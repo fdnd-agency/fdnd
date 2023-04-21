@@ -1,26 +1,32 @@
 <script>
     export let title;
+    export let threads;
 
     import SearchBar from "./SearchBar.svelte";
     import SidebarNavMenu from "./SidebarNavMenu.svelte";
     import SidebarNavMenuPersonal from "./SidebarNavMenuPersonal.svelte";
+    import Guidelines from "./index/Guidelines.svelte";
 </script>
 
-<section>
+<aside>
     <h1>{title}</h1>
-    <SearchBar placeholder="Vragen zoeken..." />
+    <SearchBar {threads} placeholder="Vragen zoeken..."  />
     <SidebarNavMenu />
     <hr />
     <SidebarNavMenuPersonal />
     <hr />
-</section>
+    <Guidelines />
+</aside>
 
 <style>
-    section {
+    aside {
         background-color: var(--element-white);
         grid-area: Sidebar;
-        height: 100vh;
+        height: 100%;
         padding: 1.56rem;
+        border-right: 2px solid var(--element-border);
+        position: fixed;
+        width: 25rem;
     }
 
     hr {
