@@ -19,7 +19,7 @@
             <p class="publish-information"><span>{authorName}</span>{formattedDate}</p>
 
             <!-- Question title -->
-            <h4>{title}</h4>
+            <h3>{title}</h3>
 
             <!-- Question categories -->
             <ul class="tags-wrapper">
@@ -84,7 +84,7 @@
         margin: 0 5px;
     }
 
-    h4 {
+    h3 {
         margin-top: 1rem;
         font-size: 1.35rem;
     }
@@ -98,10 +98,10 @@
     .tags-wrapper li {
         text-transform: uppercase;
         font-size: 0.75rem;
-        color: var(--text-secondary);
+        color: var(--text-gray-dark);
         font-family: "Rubik", sans-serif;
         font-weight: 600;
-        border: 1px solid var(--element-border);
+        border: 2px solid var(--element-border);
         padding: 0.3rem 0.9rem;
         border-radius: 3rem;
         margin-right: 0.3rem;
@@ -131,7 +131,7 @@
     }
 
     .reactions p {
-        color: var(--text-secondary);
+        color: var(--text-gray-dark);
         display: inline;
     }
 

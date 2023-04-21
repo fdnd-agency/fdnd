@@ -9,7 +9,6 @@
 <style>
     header {
         z-index: 999;
-        color: var(--text-white);
         display: flex;
         grid-area: Header;
         background-color: var(--element-white);
@@ -19,7 +18,9 @@
         margin-left: 25rem;
     }
 
-    h2 {
-        color: var(--text-primary);
+    img {
+        width: 2rem;
+        height: auto;
+        margin-right: 0.94rem;
     }
 </style>

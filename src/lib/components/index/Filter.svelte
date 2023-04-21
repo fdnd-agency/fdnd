@@ -1,12 +1,12 @@
 <script>
-    import {enhance} from "$app/forms";
+    import { enhance } from "$app/forms";
 
     // Components
     import RangeSlider from "../RangeSlider.svelte";
     import Checkbox from "../Checkbox.svelte";
 
     // Stores
-    import {filterState} from "$lib/stores/showFilter.js";
+    import { filterState } from "$lib/stores/showFilter.js";
 
     // Get data
     export let tags;
@@ -15,29 +15,21 @@
 
 <!-- Filter wrapper -->
 <div class="filter-wrapper" class:visible={$filterState === true}>
-
+    
     <!-- Filter title -->
     <h5>{title}</h5>
-    <p>Aantal reacties</p>
-
-    <!-- Custom rangeslider -->
-    <div class="rangeslider-wrapper">
-        <p>0</p>
-        <RangeSlider min="0" max="500" value="0"/>
-        <p>1000</p>
-    </div>
 
     <!-- Categories checkboxes -->
     <div class="categories-wrapper">
-        <p>Categorieën</p>
+        <p>Categorie</p>
 
         <form method="POST" action="?/checkboxFilter" use:enhance>
             {#each tags as tag}
                 <Checkbox
-                        name="checkbox"
-                        value={tag.id}
-                        emoji={tag.emoji_name}
-                        label={tag.name}
+                    name="checkbox"
+                    value={tag.id}
+                    emoji={tag.emoji_name}
+                    label={tag.name}
                 />
             {/each}
 
@@ -47,19 +39,24 @@
             </noscript>
         </form>
     </div>
+
+    <!-- Custom rangeslider -->
+    <p>Aantal reacties</p>
+    <div class="rangeslider-wrapper">
+        <p>0</p>
+        <RangeSlider min="0" max="500" value="0" />
+        <p>1000</p>
+    </div>
 </div>
 
 <style>
     .filter-wrapper {
         background-color: var(--element-white);
         padding: 1.25rem 1.6rem;
-        border-radius: 0.6rem;
+        border-radius: 5px;
         box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
-        position: fixed;
-        right: 0;
-        bottom: 1rem;
-        transform: translateX(100%);
-        transition: transform 200ms;
+        display: inline-block;
+        align-self: start;
     }
 
     h5 {
@@ -106,15 +103,5 @@
 
     button:hover {
         background-color: var(--element-primary-action);
-    }
-
-    @media (min-width: 60rem) {
-        .filter-wrapper {
-            position: relative;
-            transform: none;
-            transition: none;
-            margin-bottom: 1.5rem;
-            bottom: 0;
-        }
     }
 </style>

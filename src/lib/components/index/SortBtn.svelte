@@ -21,7 +21,7 @@
 	}
 
 	p {
-		color: var(--text-gray);
+		color: var(--text-gray-dark);
 		font-family: "Inter", sans-serif;
 		font-weight: 500;
 		display: none;
@@ -30,13 +30,13 @@
 	select {
 		text-transform: uppercase;
 		font-family: "Rubik", sans-serif;
-		color: var(--text-secondary);
+		color: var(--text-gray-dark);
 		font-weight: 500;
-		border-radius: 3rem;
-		text-align: center;
+		border-radius: 5px;
 		padding: 0.35rem;
-		border: 1px solid var(--element-border);
+		border: 2px solid var(--element-border);
 		font-size: 0.9rem;
+		background-color: var(--element-white);
 	}
 
 	@media (min-width: 40rem) {

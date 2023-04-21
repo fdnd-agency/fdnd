@@ -15,14 +15,14 @@
     let memberNames = {};
 
     // Stores
-    import {filteredThreads} from "$lib/stores/filteredThreads.js";
-    import {filters} from "$lib/stores/filters.js";
+    import { filteredThreads } from "$lib/stores/filteredThreads.js";
+    import { filters } from "$lib/stores/filters.js";
 
     // Find tag belonging to thread
     threads.map((thread) => {
         let emoji = thread.applied_tags.map((tagId) => {
             let found = tags.find((tag) => tagId == tag.id);
-            return {emoji: found.emoji_name, name: found.name};
+            return { emoji: found.emoji_name, name: found.name };
         });
         thread.emoji = emoji;
         return emoji;
@@ -41,46 +41,43 @@
     // Checkbox filter
     $: threadsF = $filters.checkboxes.length
         ? $filteredThreads.filter((thread) => {
-            const hasTag = thread.applied_tags.filter((tag) =>
-                $filters.checkboxes.includes(tag)
-            );
-            if (hasTag.length) {
-                return thread;
-            }
-        })
+              const hasTag = thread.applied_tags.filter((tag) =>
+                  $filters.checkboxes.includes(tag)
+              );
+              if (hasTag.length) {
+                  return thread;
+              }
+          })
         : $filteredThreads;
 </script>
 
 <section id="content">
-    <SortBtn label="Sorteren op:" />
-
-    <CreateQuestionBtn title="Stel je vraag" />
+    <div class="sort-create-wrapper">
+        <SortBtn label="Sorteren op:" />
+        <CreateQuestionBtn label="Stel je vraag" />
+    </div>
 
     <ul>
         <!-- Question card -->
         {#each threadsF as thread}
             <QuestionCard
-                    id={thread.id}
-                    authorName={memberNames[thread.owner_id]}
-                    date={thread.thread_metadata.create_timestamp}
-                    title={thread.name}
-                    tags={thread.emoji}
-                    reactions={thread.message_count}
+                id={thread.id}
+                authorName={memberNames[thread.owner_id]}
+                date={thread.thread_metadata.create_timestamp}
+                title={thread.name}
+                tags={thread.emoji}
+                reactions={thread.message_count}
             />
         {/each}
     </ul>
 
     <!-- Questions empty state -->
     {#if threadsF.length == 0}
-        <QuestionsEmpty/>
+        <QuestionsEmpty />
     {/if}
 </section>
 
 <style>
-    section {
-        padding: 3rem 4.7rem;
-    }
-
     .title-btn-wrapper {
         display: flex;
         justify-content: space-between;
@@ -92,9 +89,9 @@
         font-weight: 800;
     }
 
-    .actions-wrapper {
+    .sort-create-wrapper {
         display: flex;
         justify-content: space-between;
-        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 </style>
