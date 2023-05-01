@@ -32,12 +32,13 @@
     />
 
     <!-- Submit button -->
-    <!-- <button type="submit">Zoek</button> -->
+    <noscript>
+        <button type="submit">Zoek</button>
+    </noscript>
 </form>
 
 <style>
     form {
-        margin-top: 1.5rem;
         display: flex;
         position: relative;
         align-items: center;
@@ -49,48 +50,16 @@
     }
 
     input {
-        width: 100%;
+        /* width: 30rem; */
+        flex-grow: 1;
         padding: 0.65rem 2.5rem;
         border-radius: 5px;
-        border: 3px solid var(--element-border);
+        border: 1px solid var(--green);
+        color: var(--green);
+        background-color: transparent;
     }
 
-    button {
-        position: absolute;
-        right: 0;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        height: 100%;
-        font-size: 1rem;
-        font-weight: bold;
-        padding: 0.6rem 1.5rem;
-        font-size: 0.85rem;
-        background-color: var(--element-white);
-        color: var(--text-primary);
-        border-left: 1px solid var(--element-border);
-        transition: background-color 150ms;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: var(--element-primary-action);
-        color: var(--text-white);
-    }
-
-    button:active {
-        background-color: var(--element-primary-action);
-        color: var(--text-white);
-    }
-
-    button:focus {
-        background-color: var(--element-primary-action);
-        color: var(--text-white);
-    }
-
-    @media (min-width: 60rem) {
-        button {
-            background-color: var(--element-primary);
-            color: var(--text-white);
-        }
+    input::placeholder {
+        color: var(--green);
     }
 </style>

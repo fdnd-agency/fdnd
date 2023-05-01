@@ -17,7 +17,11 @@
 
 <style>
 	div {
-		padding: 0 0.94rem;
+		padding: 0.94rem 1.6rem;
+		border: 1px solid var(--green);
+		border-radius: 0.63rem;
+		color: var(--green);
+		display: none;
 	}
 
 	p {

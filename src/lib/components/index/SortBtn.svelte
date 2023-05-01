@@ -18,10 +18,11 @@
 	div {
 		display: flex;
 		align-items: center;
+		margin-bottom: 1rem;
 	}
 
 	p {
-		color: var(--text-gray-dark);
+		color: var(--white);
 		font-family: "Inter", sans-serif;
 		font-weight: 500;
 		display: none;
@@ -30,11 +31,11 @@
 	select {
 		text-transform: uppercase;
 		font-family: "Rubik", sans-serif;
-		color: var(--text-gray-dark);
+		color: var(--green);
 		font-weight: 500;
-		border-radius: 5px;
+		border-radius: 2rem;
 		padding: 0.35rem;
-		border: 2px solid var(--element-border);
+		border: 2px solid var(--green);
 		font-size: 0.9rem;
 		background-color: var(--element-white);
 	}

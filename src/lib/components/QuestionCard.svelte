@@ -55,6 +55,7 @@
         border-radius: 0.6rem;
         box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
         transition: transform 150ms;
+        background-color: var(--green);
     }
 
     article:hover {
@@ -62,14 +63,14 @@
     }
 
     .publish-information {
-        color: var(--text-secondary);
+        color: var(--blue);
         font-size: 0.8rem;
         font-weight: 600;
         display: flex;
     }
 
     .publish-information span {
-        color: var(--element-primary);
+        color: var(--blue);
         display: flex;
         align-items: center;
     }
@@ -79,7 +80,7 @@
         display: inline-block;
         width: 0.3rem;
         height: 0.3rem;
-        background-color: var(--text-secondary);
+        background-color: var(--blue);
         border-radius: 50%;
         margin: 0 5px;
     }
@@ -87,6 +88,7 @@
     h3 {
         margin-top: 1rem;
         font-size: 1.35rem;
+        color: var(--blue);
     }
 
     .tags-wrapper {
@@ -98,7 +100,7 @@
     .tags-wrapper li {
         text-transform: uppercase;
         font-size: 0.75rem;
-        color: var(--text-gray-dark);
+        color: var(--white);
         font-family: "Rubik", sans-serif;
         font-weight: 600;
         border: 2px solid var(--element-border);
@@ -106,6 +108,7 @@
         border-radius: 3rem;
         margin-right: 0.3rem;
         margin-bottom: 0.5rem;
+        background-color: var(--blue);
     }
 
     hr {

@@ -51,16 +51,16 @@
         : $filteredThreads;
 </script>
 
-<section id="content">
+<main id="content">
     <div class="sort-create-wrapper">
         <SortBtn label="Sorteren op:" />
-        <CreateQuestionBtn label="Stel je vraag" />
+        <SearchBar {threads} placeholder="Vragen zoeken..." />
     </div>
 
     <ul>
         <!-- Question card -->
         {#each threadsF as thread}
-            <QuestionCard
+            <QuestionCard 
                 id={thread.id}
                 authorName={memberNames[thread.owner_id]}
                 date={thread.thread_metadata.create_timestamp}
@@ -75,9 +75,13 @@
     {#if threadsF.length == 0}
         <QuestionsEmpty />
     {/if}
-</section>
+</main>
 
 <style>
+    main {
+        padding: 0 1rem;
+    }
+
     .title-btn-wrapper {
         display: flex;
         justify-content: space-between;
@@ -92,6 +96,7 @@
     .sort-create-wrapper {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
         margin-bottom: 1.5rem;
     }
 </style>

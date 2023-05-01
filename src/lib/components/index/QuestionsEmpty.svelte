@@ -1,5 +1,5 @@
 <div>
-	<p>Geen resultaten gevonden...</p>
+	<p>Geen zoekresultaten gevonden...</p>
 </div>
 
 <style>
@@ -11,12 +11,9 @@
 		flex-direction: column;
 	}
 
-	span {
-		color: var(--element-primary);
-	}
-
 	p {
 		font-size: 0.95rem;
+		color: var(--green);
 	}
 
 	@media (min-width: 60rem) {

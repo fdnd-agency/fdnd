@@ -7,10 +7,13 @@
 
     // Stores
     import { filterState } from "$lib/stores/showFilter.js";
+    import {filteredThreads} from "$lib/stores/filteredThreads.js";
 
     // Get data
     export let tags;
     export let title;
+
+
 </script>
 
 <!-- Filter wrapper -->
@@ -51,12 +54,16 @@
 
 <style>
     .filter-wrapper {
-        background-color: var(--element-white);
+        background-color: var(--purple);
         padding: 1.25rem 1.6rem;
         border-radius: 5px;
-        box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
-        display: inline-block;
         align-self: start;
+        position: fixed;
+        z-index: 998;
+        width: 100%;
+        height: 100%;
+        transform: translateY(100%);
+        transition: transform 200ms ease;
     }
 
     h5 {
@@ -88,8 +95,7 @@
     }
 
     .visible {
-        transform: translateX(0);
-        right: 0.5rem;
+        transform: translateY(0);
     }
 
     button {
@@ -103,5 +109,13 @@
 
     button:hover {
         background-color: var(--element-primary-action);
+    }
+
+    @media (min-width: 60rem) {
+        .filter-wrapper {
+            transform: none;
+            transition: none;
+            position: relative;
+        }
     }
 </style>

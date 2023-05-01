@@ -16,7 +16,7 @@ html,body {
 }
 
 body {
-    background-color: var(--element-secondary);
+    background-color: var(--blue);
 }
 
 ul {
@@ -38,7 +38,6 @@ a {
 # Headings
 --------------------------------------------------------------*/
 h1 {
-    color: var(--text-special);
     font-size: 1.88rem;
 }
 

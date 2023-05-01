@@ -6,11 +6,11 @@
     import AdditionalInformation from "$lib/components/index/AdditionalInformation.svelte";
     import Header from "$lib/components/Header.svelte";
     import MainInformation from "$lib/components/index/MainInformation.svelte";
+    import Filter from "$lib/components/index/Filter.svelte";
 
     // Stores
     import { filteredThreads } from "$lib/stores/filteredThreads.js";
     import { get } from "svelte/store";
-    import Sidebar from "../lib/components/Sidebar.svelte";
 
     // Get data
     export let data;
@@ -25,21 +25,22 @@
 </script>
 
 <section>
-    <Sidebar {threads} title="FDND Stack" />
+    <Filter {tags} title="Filters" />
 
-    <div>
-        <Header />
-        <MainInformation {threads} {members} {tags} />
-    </div>
+    <Questions id="content" {threads} {members} {tags} />
+
+    <AdditionalInformation />
 </section>
 
 <style>
     section {
-        /* display: grid; */
-        grid-template-columns: 0.4fr 1fr 0.75fr;
-        grid-template-rows: auto 1fr;
-        grid-template-areas:
-            "Sidebar Header Header"
-            "Sidebar Threads AdditionalInfo";
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        /* grid-gap: 3.1rem; */
+        /* padding: 0 4.7rem; */
+        /* grid-template-areas: */
+        /* "Sidebar Header Header" */
+        /* "Sidebar Threads AdditionalInfo"; */
+        /* } */
     }
 </style>

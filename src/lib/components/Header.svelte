@@ -1,26 +1,58 @@
+<script>
+    import {filterState} from "$lib/stores/showFilter.js";
+
+    let showFilter = false;
+
+    function handleFilter() {
+        let state = (showFilter = !showFilter);
+        $filterState = state;
+    }
+</script>
+
 <!-- Header -->
 <header>
+    <h1>FDND Stack</h1>
 
-    <!-- Logo & Text -->
-    <img src="/images/stack-icon.svg" alt="">
-    <h2>Alle vragen</h2>
+    <div>
+        <img on:click={handleFilter} class="filter-icon" src="/images/filter-icon.png" alt="" />
+        <img class="profile-icon" src="/images/profile-icon.jpg" alt="" />
+    </div>
 </header>
 
 <style>
     header {
         z-index: 999;
         display: flex;
-        grid-area: Header;
-        background-color: var(--element-white);
-        padding: 1.56rem;
-        align-items: center;
+        /* padding: 1.56rem 4.7rem; */
+        padding: 1rem;
+        /* align-items: center; */
         border-bottom: 2px solid var(--element-border);
-        margin-left: 25rem;
+    }
+
+    h1 {
+        color: var(--green);
+        font-size: 1.5rem;
+    }
+
+    div {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
     }
 
     img {
-        width: 2rem;
-        height: auto;
-        margin-right: 0.94rem;
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+
+    img:nth-child(2) {
+        margin-left: 1rem;
+    }
+
+    .profile-icon {
+        /* width: 2.2rem; */
+        /* height: 2.2rem; */
+        border-radius: 50%;
+        object-fit: cover;
     }
 </style>

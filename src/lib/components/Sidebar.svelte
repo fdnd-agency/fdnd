@@ -1,6 +1,5 @@
 <script>
     export let title;
-    export let threads;
 
     import SearchBar from "./SearchBar.svelte";
     import SidebarNavMenu from "./SidebarNavMenu.svelte";
@@ -10,12 +9,9 @@
 
 <aside>
     <h1>{title}</h1>
-    <SearchBar {threads} placeholder="Vragen zoeken..."  />
+    <p>Een plek voor al jouw code vragen</p>
     <SidebarNavMenu />
     <hr />
-    <SidebarNavMenuPersonal />
-    <hr />
-    <Guidelines />
 </aside>
 
 <style>

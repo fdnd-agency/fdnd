@@ -2,17 +2,8 @@
 # Variables
 --------------------------------------------------------------*/
 :root {
-    --element-primary: #5864F2;
-    --element-primary-action: #4751c4;
-    --element-secondary: #F9F9F9;
-    --element-border: #E5E5E5;
-    --element-border-dark: #E2E2E2;
-    --element-white: #FFFFFF;
-
-    --text-primary: #051D26;
-    --text-secondary:#B4B6BC;
-    --text-special: #5864F2;
-    --text-white: #FFFFFF;
-    --text-gray: #AEACB4;
-    --text-gray-dark: #6C6C76;
+    --blue: #050542;
+    --green: #66e5bf;
+    --purple: #a675f5;
+    --white: #ffffff;
 }
