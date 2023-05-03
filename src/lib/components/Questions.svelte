@@ -97,6 +97,24 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        margin-bottom: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    @media (min-width: 60rem) {
+        main {
+            padding: 0;
+        }
+    }
+
+    @media (min-width: 30rem) {
+        .sort-create-wrapper {
+            flex-direction: row;
+        }
+    }
+
+    @media (min-width: 75rem) {
+        .sort-create-wrapper {
+            flex-direction: row;
+        }
     }
 </style>

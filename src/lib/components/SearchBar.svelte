@@ -22,6 +22,7 @@
 </script>
 
 <form method="POST" action="?/search" use:enhance>
+
     <!-- Search input -->
     <img src="/images/search-icon.png" alt=""/>
     <input
@@ -50,16 +51,26 @@
     }
 
     input {
-        /* width: 30rem; */
         flex-grow: 1;
         padding: 0.65rem 2.5rem;
-        border-radius: 5px;
+        border-radius: 0.5rem;
         border: 1px solid var(--green);
         color: var(--green);
         background-color: transparent;
+        width: 20rem;
     }
 
     input::placeholder {
         color: var(--green);
+    }
+
+    @media (min-width: 30rem) {
+
+    }
+
+    @media (min-width: 75rem) {
+        input {
+            width: 100%;
+        }
     }
 </style>

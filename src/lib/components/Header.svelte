@@ -23,10 +23,7 @@
     header {
         z-index: 999;
         display: flex;
-        /* padding: 1.56rem 4.7rem; */
         padding: 1rem;
-        /* align-items: center; */
-        border-bottom: 2px solid var(--element-border);
     }
 
     h1 {
@@ -50,9 +47,29 @@
     }
 
     .profile-icon {
-        /* width: 2.2rem; */
-        /* height: 2.2rem; */
         border-radius: 50%;
         object-fit: cover;
+    }
+
+    @media (min-width: 60rem) {
+        header {
+            padding: 1rem 2rem;
+        }
+
+        .filter-icon {
+            display: none;
+        }
+    }
+
+    @media (min-width: 75rem) {
+        header {
+            padding: 1.56rem 4.7rem;
+            align-items: center;
+        }
+
+        .profile-icon {
+            width: 2.2rem;
+            height: 2.2rem;
+        }
     }
 </style>

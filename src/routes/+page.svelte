@@ -10,6 +10,7 @@
 
     // Stores
     import { filteredThreads } from "$lib/stores/filteredThreads.js";
+    import {filterState } from "$lib/stores/showFilter.js";
     import { get } from "svelte/store";
 
     // Get data
@@ -24,8 +25,8 @@
     filteredThreads.set(threads);
 </script>
 
-<section>
-    <Filter {tags} title="Filters" />
+<section class:disable-scroll={$filterState === true}>
+    <Filter {filteredThreads} {tags} title="Filters" />
 
     <Questions id="content" {threads} {members} {tags} />
 
@@ -33,14 +34,21 @@
 </section>
 
 <style>
-    section {
-        display: grid;
-        grid-template-columns: 0.5fr 1fr;
-        /* grid-gap: 3.1rem; */
-        /* padding: 0 4.7rem; */
-        /* grid-template-areas: */
-        /* "Sidebar Header Header" */
-        /* "Sidebar Threads AdditionalInfo"; */
-        /* } */
+    @media(min-width: 60rem) {
+        section {
+            display: grid;
+            grid-template-columns: 0.35fr 1fr;
+            grid-gap: 2rem;
+            padding: 0 2rem;
+            align-items: start;
+        }
+    }
+
+    @media (min-width: 75rem) {
+        section {
+            grid-template-columns: 0.4fr 1fr 0.4fr;
+            padding: 0 4.7rem;
+            grid-gap: 3.1rem;
+        }
     }
 </style>

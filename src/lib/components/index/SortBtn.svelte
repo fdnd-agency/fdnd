@@ -35,9 +35,15 @@
 		font-weight: 500;
 		border-radius: 2rem;
 		padding: 0.35rem;
-		border: 2px solid var(--green);
+		border: 1px solid var(--green);
 		font-size: 0.9rem;
-		background-color: var(--element-white);
+		background-color: transparent;
+	}
+
+	@media (min-width: 30rem) {
+		div {
+			margin-bottom: 0;
+		}
 	}
 
 	@media (min-width: 40rem) {

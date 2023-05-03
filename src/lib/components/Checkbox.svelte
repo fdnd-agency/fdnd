@@ -18,7 +18,6 @@
         filters.update((state) => {
             if (e.target.checked) {
                 const checkedCheckboxes = state.checkboxes.filter((checkbox) => checkbox !== newCheckboxValue);
-
                 newCheckboxes = [...checkedCheckboxes, newCheckboxValue];
             } else {
                 newCheckboxes = state.checkboxes.filter((checkbox) => checkbox !== newCheckboxValue);

@@ -1,10 +1,17 @@
 <script>
     import CommunityWidget from "../CommunityWidget.svelte";
-import Guidelines from "./Guidelines.svelte";
-
+    import Guidelines from "./Guidelines.svelte";
 </script>
 
 <div>
-	<Guidelines />
+    <Guidelines />
     <CommunityWidget />
 </div>
+
+<style>
+    @media (min-width: 75rem) {
+        div {
+            margin-top: 5.35rem;
+        }
+    }
+</style>

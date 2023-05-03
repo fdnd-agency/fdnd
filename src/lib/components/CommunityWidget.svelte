@@ -68,4 +68,10 @@
         box-shadow: -0.35rem 0.6rem 0 0.16rem;
         color: var(--blue);
     }
+
+    @media (min-width: 75rem) {
+        div {
+            display: block;
+        }
+    }
 </style>
