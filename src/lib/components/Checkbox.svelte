@@ -1,7 +1,9 @@
 <script>
     import {filters} from "$lib/stores/filters";
+    import {filteredThreads} from "$lib/stores/filteredThreads";
 
     let newCheckboxes;
+
     export let name;
     export let value;
     export let label;
@@ -12,12 +14,13 @@
      * @constructor
      * @param {e} event - On change event.
      */
-    function setChecked(e) {
+     function setChecked(e) {
         const newCheckboxValue = e.target.value;
 
         filters.update((state) => {
             if (e.target.checked) {
                 const checkedCheckboxes = state.checkboxes.filter((checkbox) => checkbox !== newCheckboxValue);
+
                 newCheckboxes = [...checkedCheckboxes, newCheckboxValue];
             } else {
                 newCheckboxes = state.checkboxes.filter((checkbox) => checkbox !== newCheckboxValue);
@@ -32,7 +35,7 @@
 </script>
 
 <label>
-    <input type="checkbox" {name} {value} on:input={setChecked}/>
+    <input type="checkbox" {name} {value} on:input={setChecked} />
     <span>{emoji} {label}</span>
 </label>
 

@@ -9,7 +9,6 @@
 
 <style>
 	input {
-		color: var(--element-border);
-		outline: none;
+		background-color: var(--white);
 	}
 </style>

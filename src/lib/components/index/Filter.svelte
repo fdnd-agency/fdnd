@@ -40,14 +40,6 @@
         </form>
     </div>
 
-    <!-- Custom rangeslider -->
-    <p>Aantal reacties</p>
-    <div class="rangeslider-wrapper">
-        <p>0</p>
-        <RangeSlider min="0" max="500" value="0" />
-        <p>1000</p>
-    </div>
-
     <div class="filter-btn-wrapper">
         <button>Toon ... resultaten</button>
     </div>
@@ -87,9 +79,7 @@
 
     .rangeslider-wrapper p {
         margin: 0;
-        font-family: "Rubik", sans-serif;
-        color: var(--element-primary);
-        font-weight: 500;
+        font-family: "Inter", sans-serif;
     }
 
     .categories-wrapper {
@@ -101,10 +91,6 @@
         transform: translateY(0);
         visibility: visible;
         opacity: 1;
-    }
-
-    .visible :global(body) {
-        background-color: red;
     }
 
     button {

@@ -1,3 +1,11 @@
+<script context="module">
+    export async function load({ session }) {
+        return {
+            props: {user: session.user || false }
+        }
+    }
+</script>
+
 <script>
     import Hero from "$lib/components/index/Hero.svelte";
     import IntroBar from "$lib/components/index/IntroBar.svelte";
@@ -22,7 +30,10 @@
     let members = data.members;
     let tags = data.tags.available_tags;
 
-    filteredThreads.set(threads);
+    filteredThreads.set(threads);   
+
+    export let user;
+    console.log('user', user)
 </script>
 
 <section class:disable-scroll={$filterState === true}>

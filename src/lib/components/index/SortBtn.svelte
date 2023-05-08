@@ -8,8 +8,8 @@
 
 	<!-- Select options -->
 	<select>
-		<option value="alphabetic">a-z</option>
 		<option value="date">datum</option>
+		<option value="alphabetic">a-z</option>
 		<option value="reactions">reacties</option>
 	</select>
 </div>

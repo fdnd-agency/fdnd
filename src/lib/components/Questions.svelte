@@ -1,4 +1,6 @@
 <script>
+    import {get} from "svelte/store";
+
     import FilterBtn from "./FilterBtn.svelte";
     import CreateQuestionBtn from "./index/CreateQuestionBtn.svelte";
     import SortBtn from "./index/SortBtn.svelte";
@@ -37,6 +39,9 @@
     memberList.forEach((member) => {
         memberNames[`${member.user.id}`] = member.user.username;
     });
+
+    // Date descending
+    threads.sort((a, b) => new Date(b.thread_metadata.create_timestamp) - new Date(a.thread_metadata.create_timestamp))
 
     // Checkbox filter
     $: threadsF = $filters.checkboxes.length
