@@ -1,19 +1,6 @@
-<script context="module">
-    export async function load({ session }) {
-        return {
-            props: {user: session.user || false }
-        }
-    }
-</script>
-
 <script>
-    import Hero from "$lib/components/index/Hero.svelte";
-    import IntroBar from "$lib/components/index/IntroBar.svelte";
-    import GeneralInformation from "$lib/components/index/GeneralInformation.svelte";
     import Questions from "$lib/components/Questions.svelte";
     import AdditionalInformation from "$lib/components/index/AdditionalInformation.svelte";
-    import Header from "$lib/components/Header.svelte";
-    import MainInformation from "$lib/components/index/MainInformation.svelte";
     import Filter from "$lib/components/index/Filter.svelte";
 
     // Stores
@@ -32,14 +19,17 @@
 
     filteredThreads.set(threads);   
 
-    export let user;
-    console.log('user', user)
+    // console.log('user', data.user)
 </script>
 
 <section class:disable-scroll={$filterState === true}>
     <Filter {filteredThreads} {tags} title="Filters" />
 
     <Questions id="content" {threads} {members} {tags} />
+
+    {#if data.user}
+    <img src="https://cdn.discordapp.com/avatars/{data.user.id}/{data.user.avatar}.png" alt="">
+    {/if}
 
     <AdditionalInformation />
 </section>

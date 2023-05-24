@@ -44,7 +44,7 @@ export const actions = {
     },
 };
 
-export const load = async () => {
+export const load = async ({locals}) => {
 
     // Get all threads
     const reqThreads = await fetch(threadsUrl, {
@@ -108,5 +108,6 @@ export const load = async () => {
         threads,
         members,
         tags,
+        user: locals.user
     };
 };

@@ -10,7 +10,7 @@ export async function GET({ url, cookies }) {
   const disco_refresh_token = cookies.get('disco_refresh_token');
   
   if (!disco_refresh_token) {
-    throw error(500)
+    throw redirect(302, "/")
   }
 
   // initializing data object to be pushed to Discord's token endpoint.
@@ -19,15 +19,26 @@ export async function GET({ url, cookies }) {
     client_id: DISCORD_CLIENT_ID,
     client_secret: DISCORD_CLIENT_SECRET,
     grant_type: 'refresh_token',
-    refresh_token: disco_refresh_token,
+    refresh_token: disco_refresh_token, 
+    redirect_uri: DISCORD_REDIRECT_URI
   };
+  
+  let payload = new URLSearchParams();
 
-  console.log(dataObject);
+  payload.append("client_id", DISCORD_CLIENT_ID)
+  payload.append("client_secret", DISCORD_CLIENT_SECRET)
+  payload.append("grant_type", 'refresh_token')
+  payload.append("refresh_token", disco_refresh_token)
+  payload.append("redirect_uri", DISCORD_REDIRECT_URI)
+
+  console.log(payload); 
+
+  // console.log(dataObject);
 
   // performing a Fetch request to Discord's token endpoint
   const request = await fetch('https://discord.com/api/oauth2/token', {
     method: 'POST',
-    body: new URLSearchParams(dataObject),  
+    body: payload,
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
   });
   
@@ -37,27 +48,25 @@ export async function GET({ url, cookies }) {
 
   disco_access_token = tokens.access_token;
 
-  if (tokens.error) {
-    throw error(500)
-  }
+  // if (tokens.error) {
+  //   throw redirect(302, "/")
+  // }
 
-  const access_token_expires_in = new Date(Date.now() + tokens.expires_in); // 10 minutes
-  const refresh_token_expires_in = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000); // 30 days
 
   const accessTokenOptions = {
     path: "/",
     httpOnly: true,
-    maxAge: access_token_expires_in
+    maxAge: 10 * 60 * 1000
   }
 
   const refreshTokenOptions = {
     path: "/",
     httpOnly: true,
-    maxAge: refresh_token_expires_in
+    maxAge:  30 * 24 * 60 * 60 * 1000
   }
 
   cookies.set("disco_access_token", disco_access_token, accessTokenOptions);
   cookies.set("disco_refresh_token", disco_refresh_token, refreshTokenOptions);
   
-  throw redirect(200, "/");
+  throw redirect(302, "/");
 }

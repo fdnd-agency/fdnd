@@ -6,14 +6,15 @@ import { redirect } from '@sveltejs/kit';
 
 export async function GET({ url, cookies }) {
   const returnCode = url.searchParams.get('code');
-  let disco_access_token, disco_refresh_token
+  
+  let disco_access_token, disco_refresh_token;
 
   const dataObject = {
     client_id: DISCORD_CLIENT_ID,
     client_secret: DISCORD_CLIENT_SECRET,
     grant_type: 'authorization_code',
-    redirect_uri: DISCORD_REDIRECT_URI,
     code: returnCode,
+    redirect_uri: DISCORD_REDIRECT_URI,
     scope: 'identify email guilds'
   };
 
@@ -22,25 +23,24 @@ export async function GET({ url, cookies }) {
     body: new URLSearchParams(dataObject),
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
   });
-
+  
   const tokens = await request.json();
+
+  console.log(tokens);
 
   disco_access_token = tokens.access_token;
   disco_refresh_token = tokens.refresh_token;
 
-  const access_token_expires_in = new Date(Date.now() + tokens.expires_in); // 10 minutes
-  const refresh_token_expires_in = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000); // 30 days
-
   const accessTokenOptions = {
     path: "/",
     httpOnly: true,
-    maxAge: access_token_expires_in
+    maxAge: 10 * 60 * 1000
   }
 
   const refreshTokenOptions = {
     path: "/",
     httpOnly: true,
-    maxAge: refresh_token_expires_in
+    maxAge: 30 * 24 * 60 * 60 * 1000
   }
 
   cookies.set("disco_access_token", disco_access_token, accessTokenOptions);

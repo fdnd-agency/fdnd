@@ -1,3 +1,12 @@
+<script context="module">
+    export async function load({ session }) {
+        return {
+            props: {user: session.user || false }
+        }
+    }
+</script>
+
+
 <script>
     import {filterState} from "$lib/stores/showFilter.js";
 
@@ -7,6 +16,7 @@
         let state = (showFilter = !showFilter);
         $filterState = state;
     }
+
 </script>
 
 <!-- Header -->
@@ -15,7 +25,7 @@
 
     <div>
         <img on:click={handleFilter} class="filter-icon" src="/images/filter-icon.png" alt="" />
-        <img class="profile-icon" src="/images/profile-icon.jpg" alt="" />
+        <!-- <p>{data.user.username}</p> -->
     </div>
 </header>
 
