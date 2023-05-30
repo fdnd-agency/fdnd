@@ -57,7 +57,6 @@
         border: 1px solid var(--green);
         color: var(--green);
         background-color: transparent;
-        width: 20rem;
     }
 
     input::placeholder {
@@ -69,8 +68,6 @@
     }
 
     @media (min-width: 75rem) {
-        input {
-            width: 100%;
-        }
+       
     }
 </style>

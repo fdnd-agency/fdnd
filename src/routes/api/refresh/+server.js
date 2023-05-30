@@ -2,7 +2,7 @@ const DISCORD_CLIENT_ID = import.meta.env.VITE_DISCORD_CLIENT_ID;
 const DISCORD_CLIENT_SECRET = import.meta.env.VITE_DISCORD_CLIENT_SECRET;
 const DISCORD_REDIRECT_URI = import.meta.env.VITE_DISCORD_REDIRECT_URI;
 
-import { error, redirect } from '@sveltejs/kit';
+import { redirect } from '@sveltejs/kit';
 
 export async function GET({ url, cookies }) {
   let disco_access_token;
@@ -33,9 +33,7 @@ export async function GET({ url, cookies }) {
 
   console.log(payload); 
 
-  // console.log(dataObject);
-
-  // performing a Fetch request to Discord's token endpoint
+  // performing a fetch request to Discord's token endpoint
   const request = await fetch('https://discord.com/api/oauth2/token', {
     method: 'POST',
     body: payload,
@@ -44,14 +42,7 @@ export async function GET({ url, cookies }) {
   
   const tokens = await request.json();
 
-  console.log(tokens);
-
   disco_access_token = tokens.access_token;
-
-  // if (tokens.error) {
-  //   throw redirect(302, "/")
-  // }
-
 
   const accessTokenOptions = {
     path: "/",

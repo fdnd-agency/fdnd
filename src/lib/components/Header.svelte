@@ -1,32 +1,21 @@
-<script context="module">
-    export async function load({ session }) {
-        return {
-            props: {user: session.user || false }
-        }
-    }
-</script>
-
-
 <script>
-    import {filterState} from "$lib/stores/showFilter.js";
+    import ButtonPrimary from "./ButtonPrimary.svelte";
+    import ProfileInformation from "./ProfileInformation.svelte";
 
-    let showFilter = false;
-
-    function handleFilter() {
-        let state = (showFilter = !showFilter);
-        $filterState = state;
-    }
-
+    export let user;
 </script>
 
 <!-- Header -->
 <header>
-    <h1>FDND Stack</h1>
+    <h1>fdnd stack</h1>
 
-    <div>
-        <img on:click={handleFilter} class="filter-icon" src="/images/filter-icon.png" alt="" />
-        <!-- <p>{data.user.username}</p> -->
-    </div>
+        {#if user}
+          <ProfileInformation user={user} />
+        {/if}
+
+        {#if !user}
+            <ButtonPrimary title="Login" url="/api/auth" />
+        {/if}
 </header>
 
 <style>
@@ -34,40 +23,23 @@
         z-index: 999;
         display: flex;
         padding: 1rem;
+        justify-content: space-between;
+        align-items: center;
     }
 
     h1 {
         color: var(--green);
-        font-size: 1.5rem;
-    }
-
-    div {
-        margin-left: auto;
-        display: flex;
-        align-items: center;
-    }
-
-    img {
-        width: 1.75rem;
-        height: 1.75rem;
-    }
-
-    img:nth-child(2) {
-        margin-left: 1rem;
-    }
-
-    .profile-icon {
-        border-radius: 50%;
-        object-fit: cover;
+        font-size: 1.35rem;
+        box-shadow: var(--green) -4px 4px;
+        border: 1px solid var(--green);
+        border-radius: 10px;
+        padding: 1rem;
+        text-transform: lowercase;  
     }
 
     @media (min-width: 60rem) {
         header {
             padding: 1rem 2rem;
-        }
-
-        .filter-icon {
-            display: none;
         }
     }
 
@@ -75,11 +47,6 @@
         header {
             padding: 1.56rem 4.7rem;
             align-items: center;
-        }
-
-        .profile-icon {
-            width: 2.2rem;
-            height: 2.2rem;
         }
     }
 </style>

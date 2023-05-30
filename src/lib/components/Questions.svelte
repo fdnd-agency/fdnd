@@ -59,8 +59,10 @@
 <main id="content">
     <div class="sort-create-wrapper">
         <SortBtn label="Sorteren op:" />
-        <SearchBar {threads} placeholder="Vragen zoeken..." />
+        <FilterBtn />
     </div>
+
+    <SearchBar {threads} placeholder="Vragen zoeken..." />
 
     <ul>
         <!-- Question card -->
@@ -87,21 +89,10 @@
         padding: 0 1rem;
     }
 
-    .title-btn-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    h3 {
-        font-size: 1.25rem;
-        font-weight: 800;
-    }
-
     .sort-create-wrapper {
         display: flex;
         justify-content: space-between;
-        flex-direction: column;
+        align-items: center;
         margin: 1.5rem 0;
     }
 

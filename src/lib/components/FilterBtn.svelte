@@ -13,19 +13,28 @@
 	}
 </script>
 
-<button on:click={handleFilter}>filters</button>
+<picture>
+	<img
+		on:click={handleFilter}
+		class="filter-icon"
+		src="/images/filter-icon.png"
+		alt="Open/sluit filters"
+	/>
+</picture>
 
 <style>
-	button {
-		background-color: var(--element-primary);
-		border-radius: 0.6rem;
-		padding: 0.4rem 1rem;
-		font-size: 0.9rem;
-		font-weight: 500;
+	picture {
+		width: 2.25rem;
+		height: auto;
+	}
+
+	picture img {
+		width: inherit;
+		height: inherit;
 	}
 
 	@media (min-width: 60rem) {
-		button {
+		img {
 			display: none;
 		}
 	}

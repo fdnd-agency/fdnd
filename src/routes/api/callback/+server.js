@@ -26,8 +26,6 @@ export async function GET({ url, cookies }) {
   
   const tokens = await request.json();
 
-  console.log(tokens);
-
   disco_access_token = tokens.access_token;
   disco_refresh_token = tokens.refresh_token;
 

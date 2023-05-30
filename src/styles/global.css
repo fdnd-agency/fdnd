@@ -8,7 +8,8 @@
     margin: 0;
 }
 
-html,body {
+html,
+body {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -17,6 +18,9 @@ html,body {
 
 body {
     background-color: var(--blue);
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+
 }
 
 ul {
@@ -51,21 +55,8 @@ h3 {
 }
 
 h4 {
-    font-family: "Rubik", sans-serif;
     font-size: 1.13rem;
     font-weight: 500;
-}
-
-
-h1, h2, h3, h5 {
-    font-family: "Montserrat", sans-serif;
-}
-
-/*--------------------------------------------------------------
-# Paragraphs
---------------------------------------------------------------*/
-p {
-    font-family: "Inter", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -79,6 +70,3 @@ button {
     text-transform: uppercase;
 }
 
-a {
-    font-family: "Rubik", sans-serif;
-}

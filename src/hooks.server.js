@@ -2,13 +2,11 @@ const DISCORD_API_URL = import.meta.env.VITE_DISCORD_API_URL;
 const HOST = import.meta.env.VITE_HOST;
 
 import { redirect } from "@sveltejs/kit";
-import cookie from "cookie";
 
 export async function handle({ event, resolve }) {
     const request = event.request;
     const refreshToken = event.cookies.get('disco_refresh_token')
     const accessToken = event.cookies.get('disco_access_token')
-    // const cookies = cookie.parse(sCookies);
 
     // if only refresh token is found, then access token has expired. perform a refresh on it.
     if (refreshToken && !accessToken) {
@@ -42,7 +40,6 @@ export async function handle({ event, resolve }) {
         }
 
         return redirect(302, "/");
-
     }
 
     if (accessToken) {
@@ -70,5 +67,5 @@ export async function handle({ event, resolve }) {
     }
 
     const defaultResponse = await resolve(event)
-    return defaultResponse
+    return defaultResponse;
 }

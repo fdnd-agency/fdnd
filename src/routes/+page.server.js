@@ -11,6 +11,7 @@ const tagsUrl = "https://discord.com/api/channels/1027275543755890799";
 // Stores
 import {filteredThreads} from "$lib/stores/filteredThreads";
 import {filters} from "$lib/stores/filters";
+import {session} from "$lib/stores/session";
 
 // Form actions
 export const actions = {
@@ -102,6 +103,9 @@ export const load = async ({locals}) => {
 
     // Set filtered threads store
     filteredThreads.set(checkBoxesFiltered);
+
+    // Set session store with user data
+    session.set({locals});
 
     // Return JSON
     return {

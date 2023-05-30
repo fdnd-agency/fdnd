@@ -18,7 +18,6 @@
 	div {
 		display: flex;
 		align-items: center;
-		margin-bottom: 1rem;
 	}
 
 	p {
@@ -26,6 +25,7 @@
 		font-family: "Inter", sans-serif;
 		font-weight: 500;
 		display: none;
+		font-size: 1rem;
 	}
 
 	select {

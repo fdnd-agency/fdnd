@@ -30,12 +30,9 @@
                 {/each}
             </ul>
 
-            <!-- Question seperator -->
-            <hr/>
-
             <!-- Question reactions -->
             <p class="reactions">
-                <img width="13.6" height="13.6" src="/images/react-icon.jpg" alt=""/>
+                <img src="/images/react-icon.svg" alt=""/>
                 <span
                 >{reactions}
             <p>reacties</p>
@@ -50,10 +47,8 @@
 
     article {
         margin-top: 1rem;
-        background-color: var(--element-white);
         padding: 1rem 1.5rem;
         border-radius: 0.6rem;
-        box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
         transition: transform 150ms;
         background-color: var(--green);
     }
@@ -111,15 +106,11 @@
         background-color: var(--blue);
     }
 
-    hr {
-        border: 1px solid var(--element-border);
-        margin: 1rem 0;
-    }
-
     .reactions {
         font-size: 0.9rem;
         display: flex;
         align-items: center;
+        margin-top: 1rem;
     }
 
     .reactions img {
@@ -128,26 +119,17 @@
     }
 
     .reactions span {
-        color: var(--element-primary);
+        color: var(--blue);
         font-weight: 600;
-        margin-left: 0.3rem;
+        margin-left: 0.5rem;
     }
 
     .reactions p {
-        color: var(--text-gray-dark);
+        color: var(--blue);
         display: inline;
     }
 
     @media (min-width: 75rem) {
-        article {
-            margin-top: 0;
-            margin-bottom: 1rem;
-        }
-
-        h4 {
-            font-size: 1.5rem;
-        }
-
         li {
             font-size: 0.8rem;
         }

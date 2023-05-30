@@ -5,7 +5,7 @@
 
     // Stores
     import { filteredThreads } from "$lib/stores/filteredThreads.js";
-    import {filterState } from "$lib/stores/showFilter.js";
+    import { filterState } from "$lib/stores/showFilter.js";
     import { get } from "svelte/store";
 
     // Get data
@@ -18,18 +18,12 @@
     let tags = data.tags.available_tags;
 
     filteredThreads.set(threads);   
-
-    // console.log('user', data.user)
 </script>
 
 <section class:disable-scroll={$filterState === true}>
     <Filter {filteredThreads} {tags} title="Filters" />
 
     <Questions id="content" {threads} {members} {tags} />
-
-    {#if data.user}
-    <img src="https://cdn.discordapp.com/avatars/{data.user.id}/{data.user.avatar}.png" alt="">
-    {/if}
 
     <AdditionalInformation />
 </section>
