@@ -1,19 +1,17 @@
 <script>
-    import AuthDropdown from "./AuthDropdown.svelte";
-
     export let user;
 </script>
 
 <div>
-    <p>{user.username}</p>
-    <picture>
-        <img
-            src="https://cdn.discordapp.com/avatars/{user.id}/{user.avatar}.png"
-            alt=""
-        />
-    </picture>
-
-    <AuthDropdown />
+    <button>
+        <p>{user.username}</p>
+        <picture>
+            <img
+                src="https://cdn.discordapp.com/avatars/{user.id}/{user.avatar}.png"
+                alt=""
+            />
+        </picture>
+    </button>
 </div>
 
 <style>
@@ -21,6 +19,13 @@
         display: flex;
         align-items: center;
         position: relative;
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+        text-transform: none;
+        background: none;
     }
 
     picture {

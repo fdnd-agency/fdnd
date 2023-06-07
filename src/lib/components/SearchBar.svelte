@@ -63,11 +63,9 @@
         color: var(--green);
     }
 
-    @media (min-width: 30rem) {
-
-    }
-
-    @media (min-width: 75rem) {
-       
+    @media (min-width: 40rem) {
+        form {
+            margin-bottom: 1rem;
+        }
     }
 </style>

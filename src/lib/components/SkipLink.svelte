@@ -4,7 +4,7 @@
 	a {
 		position: absolute;
 		top: -5rem;
-		background-color: var(--element-white);
+		background-color: var(--purple);
 		z-index: 999;
 		left: 5rem;
 		padding: 1rem;
@@ -13,6 +13,6 @@
 	}
 
 	a:focus {
-		top: 5rem;
+		top: 7.5rem;
 	}
 </style>

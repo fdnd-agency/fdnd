@@ -1,10 +1,6 @@
 <script>
-    import {get} from "svelte/store";
-
     import FilterBtn from "./FilterBtn.svelte";
-    import CreateQuestionBtn from "./index/CreateQuestionBtn.svelte";
     import SortBtn from "./index/SortBtn.svelte";
-    import LayoutSwitch from "./LayoutSwitch.svelte";
     import QuestionCard from "./QuestionCard.svelte";
     import SearchBar from "./SearchBar.svelte";
     import QuestionsEmpty from "./index/QuestionsEmpty.svelte";
@@ -96,15 +92,17 @@
         margin: 1.5rem 0;
     }
 
-    @media (min-width: 60rem) {
-        main {
-            padding: 0;
+    @media (min-width: 40rem) {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1rem;
         }
     }
 
-    @media (min-width: 30rem) {
-        .sort-create-wrapper {
-            flex-direction: row;
+    @media (min-width: 60rem) {
+        main {
+            padding: 0;
         }
     }
 

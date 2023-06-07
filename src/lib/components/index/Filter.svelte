@@ -2,7 +2,6 @@
     import { enhance } from "$app/forms";
 
     // Components
-    import RangeSlider from "../RangeSlider.svelte";
     import Checkbox from "../Checkbox.svelte";
 
     // Stores
@@ -49,7 +48,6 @@
     .filter-wrapper {
         background-color: var(--purple);
         padding: 1.25rem 1.6rem;
-        /* border-radius: 5px; */
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
         position: fixed;
@@ -70,16 +68,6 @@
         font-family: "Montserrat", sans-serif;
         margin-bottom: 0.6rem;
         font-size: 0.85rem;
-    }
-
-    .rangeslider-wrapper {
-        display: flex;
-        align-items: center;
-    }
-
-    .rangeslider-wrapper p {
-        margin: 0;
-        font-family: "Inter", sans-serif;
     }
 
     .categories-wrapper {

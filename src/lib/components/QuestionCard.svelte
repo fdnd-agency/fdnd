@@ -51,6 +51,7 @@
         border-radius: 0.6rem;
         transition: transform 150ms;
         background-color: var(--green);
+        height: 100%;
     }
 
     article:hover {
@@ -127,6 +128,12 @@
     .reactions p {
         color: var(--blue);
         display: inline;
+    }
+
+    @media (min-width: 40rem) {
+        article {
+            margin-top: 0;
+        }
     }
 
     @media (min-width: 75rem) {
