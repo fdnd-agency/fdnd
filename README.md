@@ -1,6 +1,6 @@
 # 🗺 FDND Stack
 
-<img width="800" alt="Scherm­afbeelding 2023-01-26 om 19 19 40" src="https://user-images.githubusercontent.com/45170095/214917612-53477b69-4f08-4db7-9a61-41f51b06079c.png">
+![Screenshot from 2023-06-07 13-14-51](https://github.com/fdnd-agency/fdnd/assets/45170095/5e659add-584a-4546-b171-a7f730c55719)
 
 Dit project omvat een nieuwe versie van de FDND Stack applicatie. In de huidige uitwerking is de focus gelegd op het houden van overzicht en de mogelijkheid om gestelde vragen te zoeken en te filteren.
 
