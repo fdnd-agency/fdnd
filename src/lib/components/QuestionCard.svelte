@@ -140,9 +140,5 @@
         li {
             font-size: 0.8rem;
         }
-
-        .tags-wrapper li {
-            margin-bottom: 0;
-        }
     }
 </style>
