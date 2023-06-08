@@ -9,7 +9,6 @@
 		left: 5rem;
 		padding: 1rem;
 		color: var(--text-primary);
-		font-family: "Inter", sans-serif;
 	}
 
 	a:focus {

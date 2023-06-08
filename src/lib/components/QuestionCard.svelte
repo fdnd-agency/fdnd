@@ -14,7 +14,7 @@
 <li>
     <a href={`${baseThreadsUrl}/${id}`}>
         <article>
-
+            
             <!-- Publication information -->
             <p class="publish-information"><span>{authorName}</span>{formattedDate}</p>
 
@@ -48,7 +48,7 @@
     article {
         margin-top: 1rem;
         padding: 1rem 1.5rem;
-        border-radius: 0.6rem;
+        border-radius: var(--border-round);
         transition: transform 150ms;
         background-color: var(--green);
         height: 100%;
@@ -94,14 +94,13 @@
     }
 
     .tags-wrapper li {
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-size: 0.75rem;
         color: var(--white);
-        font-family: "Rubik", sans-serif;
         font-weight: 600;
         border: 2px solid var(--element-border);
         padding: 0.3rem 0.9rem;
-        border-radius: 3rem;
+        border-radius: var(--border-round-pilled);
         margin-right: 0.3rem;
         margin-bottom: 0.5rem;
         background-color: var(--blue);

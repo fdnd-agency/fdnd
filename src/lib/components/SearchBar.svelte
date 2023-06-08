@@ -53,7 +53,7 @@
     input {
         flex-grow: 1;
         padding: 0.65rem 2.5rem;
-        border-radius: 0.5rem;
+        border-radius: var(--border-round);
         border: 1px solid var(--green);
         color: var(--green);
         background-color: transparent;

@@ -12,6 +12,6 @@
 		color: var(--green);
 		background-color: var(--blue);
 		border: 1px solid var(--green);
-		border-radius: 2rem;
+		border-radius: var(--border-round-pilled);
 	}
 </style>

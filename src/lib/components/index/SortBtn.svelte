@@ -22,7 +22,6 @@
 
 	p {
 		color: var(--white);
-		font-family: "Inter", sans-serif;
 		font-weight: 500;
 		display: none;
 		font-size: 1rem;
@@ -30,13 +29,12 @@
 
 	select {
 		text-transform: uppercase;
-		font-family: "Rubik", sans-serif;
 		color: var(--green);
 		font-weight: 500;
-		border-radius: 2rem;
+		border-radius: var(--border-round-pilled);
 		padding: 0.35rem;
 		border: 1px solid var(--green);
-		font-size: 0.9rem;
+		font-size: 0.85rem;
 		background-color: transparent;
 	}
 

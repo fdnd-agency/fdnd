@@ -53,7 +53,7 @@
     figcaption span {
         padding: 0.5rem 1rem;
         border: 1px solid var(--green);
-        border-radius: 2rem;
+        border-radius: var(--border-round-pilled);
         white-space: nowrap;
         color: var(--green);
     }

@@ -32,7 +32,7 @@
         font-size: 1.35rem;
         box-shadow: var(--green) -4px 4px;
         border: 1px solid var(--green);
-        border-radius: 10px;
+        border-radius: var(--border-round);
         padding: 1rem;
         text-transform: lowercase;  
     }
