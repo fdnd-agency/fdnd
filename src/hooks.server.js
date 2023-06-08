@@ -15,7 +15,6 @@ export async function handle({ event, resolve }) {
         const discord_response = await discord_request.json();
 
         if (discord_response.disco_access_token) {
-            console.log('setting discord user via refresh token..')
 
             const request = await fetch(`${DISCORD_API_URL}/users/@me`, {
                 headers: {

@@ -64,7 +64,7 @@
         <!-- Question card -->
         {#each threadsF as thread}
             <QuestionCard 
-                id={thread.id}
+                threadId={thread.id}
                 authorName={memberNames[thread.owner_id]}
                 date={thread.thread_metadata.create_timestamp}
                 title={thread.name}

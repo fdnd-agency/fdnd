@@ -31,8 +31,6 @@ export async function GET({ url, cookies }) {
   payload.append("refresh_token", disco_refresh_token)
   payload.append("redirect_uri", DISCORD_REDIRECT_URI)
 
-  console.log(payload); 
-
   // performing a fetch request to Discord's token endpoint
   const request = await fetch('https://discord.com/api/oauth2/token', {
     method: 'POST',

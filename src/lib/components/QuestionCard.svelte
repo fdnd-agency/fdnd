@@ -4,15 +4,13 @@
     export let title;
     export let reactions;
     export let tags;
-    export let id;
-
-    const baseThreadsUrl = "https://discord.com/channels/1017099203882782750/1027275543755890799/threads";
+    export let threadId;
 
     const formattedDate = new Date(date).toLocaleDateString();
 </script>
 
 <li>
-    <a href={`${baseThreadsUrl}/${id}`}>
+    <a href={`/thread/${threadId}`}>
         <article>
             
             <!-- Publication information -->
