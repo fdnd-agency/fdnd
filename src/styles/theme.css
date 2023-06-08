@@ -2,8 +2,14 @@
 # Variables
 --------------------------------------------------------------*/
 :root {
+
+    /* Colors */
     --blue: #050542;
     --green: #66e5bf;
     --purple: #a675f5;
     --white: #ffffff;
+
+    /* Borders */
+    --border-round: 10px;
+    --border-round-pilled: 2rem;
 }
