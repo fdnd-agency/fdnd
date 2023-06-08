@@ -90,10 +90,6 @@
         background-color: var(--blue);
     }
 
-    .filter-btn-wrapper {
-        display: flex;
-    }
-
     @media (min-width: 30rem) {
         .filter-wrapper {
             width: 100%;
@@ -107,10 +103,6 @@
             border-radius: var(--border-round);
             margin-top: 5rem;
             height: auto;
-        }
-
-        .filter-btn-wrapper {
-            display: none;
         }
     }
 </style>
