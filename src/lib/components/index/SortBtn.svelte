@@ -38,6 +38,11 @@
 		background-color: transparent;
 	}
 
+	select option {
+		background-color: var(--green);
+		color: var(--blue);
+	}
+
 	@media (min-width: 30rem) {
 		div {
 			margin-bottom: 0;
