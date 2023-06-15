@@ -20,7 +20,8 @@ body {
     background-color: var(--blue);
     font-family: "Open Sans", sans-serif;
     font-size: 1.2rem;
-
+    scrollbar-gutter: stable;
+    overflow-y: scroll;
 }
 
 ul {
@@ -66,7 +67,6 @@ button {
     outline: none;
     border: none;
     color: var(--text-white);
-    font-family: "Rubik", sans-serif;
     text-transform: uppercase;
 }
 

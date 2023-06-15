@@ -8,10 +8,15 @@
 
 <style>
 	a {
-		padding: 0 1rem;
 		color: var(--green);
 		background-color: var(--blue);
 		border: 1px solid var(--green);
-		border-radius: 2rem;
+		border-radius: 0.5rem;
+		padding: 0.6rem 1.2rem;
+	}
+
+	a:hover {
+		background-color: var(--green);
+		color: var(--blue);
 	}
 </style>

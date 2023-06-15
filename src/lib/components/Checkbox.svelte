@@ -45,7 +45,6 @@
         cursor: pointer;
         position: relative;
         align-items: center;
-        font-family: "Inter", sans-serif;
         font-size: 0.9rem;
         text-transform: capitalize;
     }

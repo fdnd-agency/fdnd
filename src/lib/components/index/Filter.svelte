@@ -38,10 +38,6 @@
             </noscript>
         </form>
     </div>
-
-    <div class="filter-btn-wrapper">
-        <button>Toon ... resultaten</button>
-    </div>
 </div>
 
 <style>
@@ -52,7 +48,6 @@
         border-top-right-radius: 1rem;
         position: fixed;
         z-index: 998;
-        height: 50%;
         width: 100%;
         transition: transform 200ms;
         bottom: 0;
@@ -60,14 +55,14 @@
     }
 
     h5 {
-        font-size: 1.25rem;
+        font-size: 1.3rem;
     }
 
     p {
         margin-top: 1.25rem;
-        font-family: "Montserrat", sans-serif;
         margin-bottom: 0.6rem;
-        font-size: 0.85rem;
+        font-size: 1rem;
+        font-weight: 600;
     }
 
     .categories-wrapper {
@@ -95,10 +90,6 @@
         background-color: var(--blue);
     }
 
-    .filter-btn-wrapper {
-        display: flex;
-    }
-
     @media (min-width: 30rem) {
         .filter-wrapper {
             width: 100%;
@@ -109,13 +100,9 @@
         .filter-wrapper {
             position: relative;
             transform: none;
-            border-radius: 0.5rem;
-            margin-top: 5.35rem;
+            border-radius: var(--border-round);
+            margin-top: 5rem;
             height: auto;
-        }
-
-        .filter-btn-wrapper {
-            display: none;
         }
     }
 </style>

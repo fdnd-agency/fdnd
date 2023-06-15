@@ -19,20 +19,18 @@
 	div {
 		padding: 0.94rem 1.6rem;
 		border: 1px solid var(--green);
-		border-radius: 0.63rem;
+		border-radius: var(--border-round);
 		color: var(--green);
 		display: none;
 	}
 
 	p {
-		font-family: "Rubik", sans-serif;
 		font-size: 1rem;
 	}
 
 	ol {
 		margin-top: 1rem;
 		padding: 0 1rem;
-		font-family: "Inter", sans-serif;
 	}
 
 	li {
