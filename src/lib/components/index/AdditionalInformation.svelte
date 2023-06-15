@@ -11,7 +11,7 @@
 <style>
     @media (min-width: 75rem) {
         div {
-            margin-top: 5.35rem;
+            margin-top: 4.9rem;
         }
     }
 </style>

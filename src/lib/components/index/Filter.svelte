@@ -101,7 +101,7 @@
             position: relative;
             transform: none;
             border-radius: var(--border-round);
-            margin-top: 5rem;
+            margin-top: 4.9rem;
             height: auto;
         }
     }
