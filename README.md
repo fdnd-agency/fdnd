@@ -14,7 +14,7 @@ Redesign en refactor de FDND Programma micro site naar de nieuwe huisstijl.
 
 [Design](https://fdnd.nl)
 
-[API: Hygraph GraphQL](https://eu-central-1.cdn.hygraph.com/content/cl54wpnkq38x701t370gr4cvs/maste)
+[API Hygraph GraphQL](https://eu-central-1.cdn.hygraph.com/content/cl54wpnkq38x701t370gr4cvs/maste)
 
 ## Licentie
 
