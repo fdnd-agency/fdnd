@@ -1,23 +1,38 @@
-# FDND
+# create-svelte
 
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-## FDND Programma Micro Site
-Het programma van FDND is te bekijken op https://programma.fdnd.nl/. Hier is informatie te vinden over de semesters en de sprints die het curriculum van FDND vormen. 
+## Creating a project
 
-## Design Challenge
-Redesign en refactor de FDND Programma micro site naar de nieuwe huisstijl. 
+If you're seeing this, you've probably already done this step. Congrats!
 
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-## Resources
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-[Backlog](https://github.com/orgs/fdnd-agency/projects/39)
+## Developing
 
-[Design](https://fdnd.nl)
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-[API Hygraph GraphQL](https://eu-central-1.cdn.hygraph.com/content/cl54wpnkq38x701t370gr4cvs/maste)
+```bash
+npm run dev
 
-## Licentie
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
+## Building
 
-This work is licensed under [GNU GPLv3](./LICENSE).
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
