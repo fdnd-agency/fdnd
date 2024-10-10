@@ -7,7 +7,7 @@
 	export let stargazer = false;
 	if (tasks) {
 		tasks.forEach((task) => {
-			if (!stargazer && task && task.forks.length > 0) {
+			if (!stargazer && task.forks && task.forks.length > 0) {
 				stargazer = true;
 			}
 		});
@@ -118,8 +118,7 @@
 	:global(section.show h3) {
 		display: block !important;
 	}
-	section.tasks p,
-	section.tasks li {
+	section.tasks p {
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
