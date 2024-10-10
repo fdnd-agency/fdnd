@@ -1,7 +1,7 @@
 # FDND Projectem
 
 
-## 🔜 FDND Programma microsite
+## 🚧 FDND Programma microsite
 Het programma van FDND is te bekijken op https://programma.fdnd.nl/.  
 Hier is informatie te vinden over de semesters en de sprints die het curriculum van FDND vormen. 
 
@@ -16,7 +16,7 @@ Redesign en refactor de FDND Programma microsite naar de nieuwe huisstijl.
 
 [API Hygraph (GraphQL)](https://eu-central-1.cdn.hygraph.com/content/cl54wpnkq38x701t370gr4cvs/maste)
 
-## 🔜 FDND We ❤️ Web microsite
+## 🚧 FDND We ❤️ Web microsite
 FDND organiseert de We Love Web sessies! Het programma is hier te bekijken https://weloveweb.fdnd.nl/.  
 In deze sessies komen sprekers hun ervaringen over werken in het Frontend vakgebied delen met onze studenten.
 
