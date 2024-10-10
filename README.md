@@ -1,7 +1,7 @@
 # FDND Projectem
 
 
-## ![image](https://github.com/user-attachments/assets/c6a05905-eadd-4c8a-a68b-884888fc11fd) FDND Programma microsite
+## ![image](https://github.com/user-attachments/assets/c6a05905-eadd-4c8a-a68b-884888fc11fd | width=20) FDND Programma microsite
 Het programma van FDND is te bekijken op https://programma.fdnd.nl/. Hier is informatie te vinden over de semesters en de sprints die het curriculum van FDND vormen. 
 
 ### Design Challenge
