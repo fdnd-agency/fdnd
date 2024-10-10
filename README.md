@@ -17,7 +17,8 @@ Redesign en refactor de FDND Programma microsite naar de nieuwe huisstijl.
 [API Hygraph GraphQL](https://eu-central-1.cdn.hygraph.com/content/cl54wpnkq38x701t370gr4cvs/maste)
 
 ## 🔜 FDND We ❤️ Web microsite
-FDND organiseert de We Love Web sessies! Hierin komen sprekers hun ervaringen over werken in het Frontend vakgebied delen met onze studenten.
+FDND organiseert de We Love Web sessies!  
+Hierin komen sprekers hun ervaringen over werken in het Frontend vakgebied delen met onze studenten.
 
 ### Design Challenge
 Ontwerpo en ontwikkel de FDND We ❤️ Web microsite in de nieuwe huisstijl. 
