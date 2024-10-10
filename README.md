@@ -30,8 +30,6 @@ Ontwerpo en ontwikkel de FDND We ❤️ Web microsite in de nieuwe huisstijl.
 
 [API Directus REST](https://fdnd-agency.directus.app/items/fdnd_wlw_session)
 
-## Licentie
-
-![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
+## <img src="https://www.gnu.org/graphics/gplv3-127x51.png" width="20"> Licentie
 
 This work is licensed under [GNU GPLv3](./LICENSE).
