@@ -14,7 +14,7 @@ Redesign en refactor de FDND Programma microsite naar de nieuwe huisstijl.
 
 [Design](https://fdnd.nl)
 
-[API Hygraph GraphQL](https://eu-central-1.cdn.hygraph.com/content/cl54wpnkq38x701t370gr4cvs/maste)
+[API Hygraph (GraphQL)](https://eu-central-1.cdn.hygraph.com/content/cl54wpnkq38x701t370gr4cvs/maste)
 
 ## 🔜 FDND We ❤️ Web microsite
 FDND organiseert de We Love Web sessies! Het programma is hier te bekijken https://weloveweb.fdnd.nl/.  
@@ -28,7 +28,7 @@ Ontwerpo en ontwikkel de FDND We ❤️ Web microsite in de nieuwe huisstijl.
 
 [Design](https://fdnd.nl)
 
-[API Directus REST](https://fdnd-agency.directus.app/items/fdnd_wlw_session)
+[API Directus (REST)](https://fdnd-agency.directus.app/items/fdnd_wlw_session)
 
 ## <img src="https://www.gnu.org/graphics/gplv3-127x51.png" width="50"> Licentie
 
