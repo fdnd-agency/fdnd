@@ -89,7 +89,7 @@
         flex-direction: column;
         max-width: 800px;
         width: 100%;
-        color: var(--white);
+        color: var(--blue);
     }
 
     footer article h2 {
@@ -98,9 +98,9 @@
 
     footer article p {
         font-size: clamp(1rem, calc(18 / 60 * 100vw / 24), var(--radius));
-        font-weight: 500;
+        font-weight: 400;
         letter-spacing: -0.03em;
-        margin-top: 1.1em;
+        margin-top: 1em;
         max-width: 60ch;
     }
 
