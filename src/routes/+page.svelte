@@ -4,7 +4,12 @@
     export let data;
 </script>
 
-    <Heading />
-    <Grid {data} />
-    <About />
-    <Credits />
+<Heading
+    smallText={'Laat je inspireren door experts!'}
+    h1Text={'We ❤️ Web'}
+    linkText={'Archief'}
+    link={'/collectie'}
+></Heading>
+<Grid {data} />
+<About />
+<Credits />

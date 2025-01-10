@@ -2,7 +2,6 @@
   /**
    * @typedef {Object} Props
    * @property {string} [name]
-
    * @property {string} [socialScale]
    */
 

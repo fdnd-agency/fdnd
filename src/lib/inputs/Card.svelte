@@ -63,6 +63,7 @@
         background-color: transparent;
         cursor: pointer;
         transition: 0.7s;
+        min-height: 157px;
     }
 
     article::before {
@@ -124,6 +125,18 @@
 
         p {
             margin-top: 1.375rem;
+        }
+    }
+    
+    @media screen and (min-width: 1024px) {
+        article {
+            min-height: 178px;
+        }
+    }
+    
+    @media screen and (min-width: 1024px) {
+        article {
+            min-height: 209px;
         }
     }
 </style>

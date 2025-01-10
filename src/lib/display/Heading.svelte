@@ -1,10 +1,25 @@
+<script>
+     /**
+   * @typedef {Object} Props
+   * @property {string} [smallText]
+   * @property {string} [h1Text]
+   * @property {string} [linkText]
+   * @property {string} [link]
+   */
+
+  export let smallText = "Hier komt de 'small'";
+  export let h1Text = "Hier komt de 'h1'";
+  export let linkText = "Hier komt de 'a' tekst";
+  export let link = "#";
+</script>
+
 <section>
     <header>
-        <small>Laat je inspireren door experts!</small>
-        <h1>We ❤️ Web</h1>
+        <small>{smallText}</small>
+    <h1>{h1Text}</h1>
     </header>
     <div>
-        <a href="#/">Archief</a>
+        <a href="{link}">{linkText}</a>
     </div>
 </section>
 

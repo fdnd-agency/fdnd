@@ -3,7 +3,6 @@
 
     export let data;
 
-
     const now = new Date();
 
     $: sortedList =
