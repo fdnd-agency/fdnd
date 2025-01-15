@@ -40,10 +40,7 @@
 </article>
 
 <style>
-    article.is-past h2,
-    article.is-past h3,
-    article.is-past p,
-    article.is-past time {
+    article > * {
         color: var(--fifthyshadesofgrey);
     }
 

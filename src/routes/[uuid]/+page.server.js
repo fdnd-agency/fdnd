@@ -10,7 +10,7 @@ export async function load({ params }) {
     const details = weLoveWeb.data.find((item) => item.uuid === params.uuid);
 
     if (!details) {
-        throw new Error("Item not found");
+        throw new Error("De detail pagina is niet gevonden, ga terug naar de vorige pagina.");
     }
 
     return {
