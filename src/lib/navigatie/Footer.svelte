@@ -17,51 +17,51 @@
     <ul>
         <li>
             <Anchor
-                anchorLink={"https://fdnd.nl/"}
-                anchorLabel={"Link naar fdnd.nl"}
-                anchorText={"FDND.nl"}
+                link={"https://fdnd.nl/"}
+                label={"Link naar fdnd.nl"}
+                text={"FDND.nl"}
             ></Anchor>
         </li>
         <li>
             <Anchor
-                anchorLink={"https://contact.fdnd.nl/"}
-                anchorLabel={"Link naar contact.fdnd.nl"}
-                anchorText={"Contact en routebeschrijving"}
+                link={"https://contact.fdnd.nl/"}
+                label={"Link naar contact.fdnd.nl"}
+                text={"Contact en routebeschrijving"}
             ></Anchor>
         </li>
         <li>
             <Anchor
-                anchorLink={"https://programma.fdnd.nl/"}
-                anchorLabel={"Link naar programma.fdnd.nl"}
-                anchorText={"Programma"}
+                link={"https://programma.fdnd.nl/"}
+                label={"Link naar programma.fdnd.nl"}
+                text={"Programma"}
             ></Anchor>
         </li>
         <li>
             <Anchor
-                anchorLink={"https://partners.fdnd.nl/"}
-                anchorLabel={"Link naar partners.fdnd.nl"}
-                anchorText={"Partners"}
+                link={"https://partners.fdnd.nl/"}
+                label={"Link naar partners.fdnd.nl"}
+                text={"Partners"}
             ></Anchor>
         </li>
         <li>
             <Anchor
-                anchorLink={"https://niveaumatrix.fdnd.nl/"}
-                anchorLabel={"Link naar niveaumatrix.fdnd.nl"}
-                anchorText={"Niveaumatrix"}
+                link={"https://niveaumatrix.fdnd.nl/"}
+                label={"Link naar niveaumatrix.fdnd.nl"}
+                text={"Niveaumatrix"}
             ></Anchor>
         </li>
         <li>
             <Anchor
-                anchorLink={"https://docs.fdnd.nl/"}
-                anchorLabel={"Link naar docs.fdnd.nl"}
-                anchorText={"Documenten"}
+                link={"https://docs.fdnd.nl/"}
+                label={"Link naar docs.fdnd.nl"}
+                text={"Documenten"}
             ></Anchor>
         </li>
         <li>
             <Anchor
-                anchorLink={"#"}
-                anchorLabel={"Link naar weloveweb.fdnd.nl"}
-                anchorText={"We Love Web"}
+                link={"#"}
+                label={"Link naar weloveweb.fdnd.nl"}
+                text={"We Love Web"}
             ></Anchor>
         </li>
     </ul>
