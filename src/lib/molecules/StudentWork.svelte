@@ -7,6 +7,7 @@
 
 <section class="showcase {stargazer ? 'stargazer' : ''}">
   <Heading title="Studentenwerk" />
+  <div class="gradient-container">
   <ul>
     {#each tasks as task}
       {#if task.forks && task.forks.length > 0}
@@ -31,15 +32,42 @@
       {/if}
     {/each}
   </ul>
+  </div>
 </section>
 
 <style>
   .showcase { display: block; }
 
+  .gradient-container {
+    width: 100%;
+    position: relative;
+  }
+
+  .gradient-container::before, .gradient-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    pointer-events: none;
+  }
+
+  .gradient-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--grey), rgba(255, 255, 255, 0));
+    z-index: 1;
+  }
+
+  .gradient-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--grey), rgba(255, 255, 255, 0));
+    z-index: 1;
+  }
+
   .showcase ul {
     display: flex;
     gap: 1rem;
-    padding: 0;
+    padding: 0 .5rem 0 .5rem;
     overflow: scroll;
     scroll-snap-type: x mandatory;
     padding-bottom: 1rem;
@@ -115,7 +143,7 @@
     font-size: 0.7em;
     display: block;
     padding: 0;
-    color: var(--lavender);
+    color: #7f2fff;
   }
 
   .profile::before {

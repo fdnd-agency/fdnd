@@ -37,10 +37,7 @@
 {/if}
 
 <style>
-  a:focus,
-  a:hover {
-    background-position: left bottom;
-  }
+  a:focus, a:hover { background-position: left bottom; }
 
   li {
     display: flex;
@@ -53,7 +50,7 @@
     box-shadow: -4px 4px var(--lavender);
     margin-top: 0.6em;
     background: var(--white);
-    width: 100%;
+    width: 275px;
     height: 3.75rem;
     overflow: hidden;
   }
@@ -67,21 +64,13 @@
     position: relative;
     height: 100%;
     width: 100%;
-    background: linear-gradient(
-      to right,
-      var(--turquoise) 50%,
-      var(--white) 50%
-    );
+    background: linear-gradient( to right, var(--turquoise) 50%, var(--white) 50% );
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all 0.3s ease-in;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    li a {
-      transition: none;
-    }
-  }
+  @media (prefers-reduced-motion: reduce) { li a { transition: none; } }
 
   li a span {
     display: flex;
@@ -125,8 +114,7 @@
   span.past {
     color: var(--attention);
   }
-  li a,
-  li > span {
+  li a, li > span {
     display: flex;
     white-space: nowrap;
     overflow: hidden;
@@ -169,10 +157,9 @@
     margin-right: 1em;
   }
 
-  @media (min-width: 25em) {
+  @media( 720px <= width){
     li {
-      width: 100%;
-      height: 4.75rem;
+      width: 320px;
     }
   }
 </style>

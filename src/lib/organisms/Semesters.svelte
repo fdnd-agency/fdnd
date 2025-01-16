@@ -98,6 +98,7 @@
   .semester-grid {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     overflow: scroll;
     gap: 1.75em;
     scroll-snap-type: x mandatory;
@@ -105,14 +106,5 @@
   }
 
   @media (prefers-reduced-motion: reduce) { .pacman::before, .pacman::after { animation: none; } }
-
-  @media (min-width: 1250px) {
-    .semester-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      padding: 2rem 0rem 2rem 0rem;
-    }
-
-    h2 { padding-left: 0rem; }
-  }
+  @media (min-width: 1250px) { h2 { padding-left: 0rem; } }
 </style>

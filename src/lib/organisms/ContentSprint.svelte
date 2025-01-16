@@ -31,5 +31,5 @@
 
   article div { margin-top: 1.5rem; }
   :global(article p) { font-size: 1rem; padding-left: .5rem;}
-  :global(blockquote) { font-size: 1rem; }
+  :global(blockquote) { font-size: 1rem; color: #444444; border-left: 3px solid #444444; padding-left: 1em;}
 </style>

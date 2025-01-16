@@ -72,8 +72,9 @@
     .left {
       grid-area: left;
       display: flex;
-      align-items: center;
-      margin: auto;
+      align-items: left;
+      margin: 0;
+      padding-left: 1em;
       a:hover, a:focus { transform: scale(1.1); }
       .fdnd-logo {
         position: relative;
@@ -134,9 +135,12 @@
           background-color: currentColor;
         }
       }
-      .left { .fdnd-logo { height: 3.5rem; } }
-      nav {
-        ul {
+      .left { 
+        margin: 0;
+        padding-left: 2em;
+        .fdnd-logo { height: 3.5rem; } }
+      
+        nav { ul {
           align-items: center;
           padding: 0.75em 2.5em;
           gap: 3.5rem;
@@ -159,7 +163,7 @@
           background-color: currentColor;
         }
       }
-      .left { margin-left: 10rem; .fdnd-logo { height: 5rem; } }
+      .left { .fdnd-logo { height: 5rem; } }
       nav {
         ul { padding: 0.25em 3.5em; gap: 4rem;
           li { a { font-weight: 500; font-size: 1.25rem; } }
