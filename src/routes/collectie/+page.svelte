@@ -1,9 +1,8 @@
 <script>
     import { Heading, Card } from "$lib";
 
-    export let data;
+    let { data } = $props();
 
-    // Functie om unieke jaren te verkrijgen uit de evenementen data
     const getUniqueYears = (events) => {
         const years = new Set();
         events.forEach(item => {
@@ -13,10 +12,8 @@
         return Array.from(years).sort((a, b) => b - a);
     };
 
-    // Verkrijg de unieke jaren
-    $: uniqueYears = getUniqueYears(data.weLoveWebList);
+    const uniqueYears = $derived(() => getUniqueYears(data.weLoveWebList));
 
-    // Functie om evenementen te filteren op basis van start- en eindjaar
     const filterEventsByYear = (events, startYear, endYear) => {
         const startDate = new Date(`${startYear}-08-01`);
         const endDate = new Date(`${endYear}-07-31`);
@@ -37,7 +34,6 @@
 ></Heading>
 
 {#each uniqueYears as year, i}
-    <!-- Controleer of er evenementen zijn voor het jaar -->
     {#if filterEventsByYear(data.weLoveWebList, year, year + 1).length > 0}
         <h2>{year} | {year + 1}</h2>
         <ul>
