@@ -75,6 +75,7 @@
       align-items: left;
       margin: 0;
       padding-left: 1em;
+
       a:hover, a:focus { transform: scale(1.1); }
       .fdnd-logo {
         position: relative;
@@ -140,7 +141,8 @@
         padding-left: 2em;
         .fdnd-logo { height: 3.5rem; } }
       
-        nav { ul {
+        nav {
+        ul {
           align-items: center;
           padding: 0.75em 2.5em;
           gap: 3.5rem;

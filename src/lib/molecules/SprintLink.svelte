@@ -45,6 +45,7 @@
     justify-content: flex-start;
     font-size: 1.75rem;
     margin-top: 0;
+    margin-left: .5em;
     border: 2px solid var(--turquoise);
     border-radius: var(--rounded);
     box-shadow: -4px 4px var(--lavender);
@@ -67,10 +68,7 @@
     background: linear-gradient( to right, var(--turquoise) 50%, var(--white) 50% );
     background-size: 200% 100%;
     background-position: right bottom;
-    transition: all 0.3s ease-in;
   }
-
-  @media (prefers-reduced-motion: reduce) { li a { transition: none; } }
 
   li a span {
     display: flex;
@@ -157,9 +155,15 @@
     margin-right: 1em;
   }
 
-  @media( 720px <= width){
+  @media (min-width: 1100px) {
     li {
-      width: 320px;
+      width: 350px;
+    }
+  }
+
+  @media (min-width: 1800px) {
+    li {
+      width: 400px;
     }
   }
 </style>

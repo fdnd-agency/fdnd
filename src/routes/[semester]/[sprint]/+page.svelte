@@ -3,7 +3,6 @@
   import Tasks from "$lib/organisms/Tasks.svelte";
   import Studentwork from "$lib/molecules/StudentWork.svelte";
   import Schedule from "$lib/organisms/Schedule.svelte";
-  
   let { data } = $props();
 
   const { title, sprintNumber, startdate, content, weekPlans, topics, tasks, stargazer } = data;

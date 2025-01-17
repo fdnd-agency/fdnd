@@ -19,10 +19,12 @@
     </form>
   {/if}
 
-  <div class="semester-grid">
-    {#each semesters as semester, i}
-      <Semester {semester} {i} />
-    {/each}
+  <div class="gradient-container">
+    <div class="semester-grid">
+      {#each semesters as semester, i}
+       <Semester {semester} {i} />
+      {/each}
+    </div>
   </div>
 </section>
 
@@ -36,7 +38,7 @@
     color: var(--blueberry);
   }
 
-  h2 { margin: 0; padding: 3rem .1rem 1.5rem; }
+  h2 { margin: 0; padding: 3rem .1rem 1.5rem 1%; }
 
   form {
     label{
@@ -45,7 +47,7 @@
       color: var(--blueberry);
       font-size: 0.7rem;
       font-weight: 700;
-      margin-left: 0.15rem;
+      margin-left: 1%;
     }
   
 
@@ -54,7 +56,6 @@
     position: relative;
     font-size: 1.5em;
     width: 3.5em;
-    margin-left: -0.15em;
     aspect-ratio: 3;
     border: max(1px, 0.05em) solid #fff;
     border-radius: 2em;
@@ -95,6 +96,32 @@
   .pacman:checked::after { --rotation: 30deg; }
   }
 
+  .gradient-container {
+  width: 100%;
+  position: relative;
+  }
+
+  .gradient-container::before,
+  .gradient-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  pointer-events: none;
+  }
+
+  .gradient-container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--grey), rgba(255, 255, 255, 0));
+  z-index: 1;
+  }
+
+  .gradient-container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--grey), rgba(255, 255, 255, 0));
+  z-index: 1;
+}
   .semester-grid {
     display: flex;
     flex-direction: row;
@@ -106,5 +133,6 @@
   }
 
   @media (prefers-reduced-motion: reduce) { .pacman::before, .pacman::after { animation: none; } }
-  @media (min-width: 1250px) { h2 { padding-left: 0rem; } }
+
+  @media (min-width: 1440px) { .semester-grid { justify-content: space-around; padding: 2em 0 2rem 0; } }
 </style>
