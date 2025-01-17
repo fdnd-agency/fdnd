@@ -1,7 +1,7 @@
 <script>
     import { Heading, Card } from "$lib";
 
-    let { data } = $props();
+    export let data;
 
     const getUniqueYears = (events) => {
         const years = new Set();
@@ -12,8 +12,7 @@
         return Array.from(years).sort((a, b) => b - a);
     };
 
-    const uniqueYears = $derived(() => getUniqueYears(data.weLoveWebList));
-
+    $: uniqueYears = getUniqueYears(data.weLoveWebList);
     const filterEventsByYear = (events, startYear, endYear) => {
         const startDate = new Date(`${startYear}-08-01`);
         const endDate = new Date(`${endYear}-07-31`);

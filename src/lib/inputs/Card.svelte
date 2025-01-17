@@ -1,14 +1,11 @@
 <script>
-
-    let {
-        title = "",
-        speaker = "",
-        job = "",
-        date_time = "",
-        isNextUpcoming = false,
-        uuid = "",
-        isArchivePage = false,
-    } = $props();
+    export let title = "";
+    export let speaker = "";
+    export let job = "";
+    export let date_time = "";
+    export let isNextUpcoming = false;
+    export let uuid = "";
+    export let isArchivePage = false;
 
     const formatTime = (dateTime) => {
         const date = new Date(dateTime);
@@ -25,9 +22,10 @@
         return `${day}-${month}`;
     };
 
-    const formattedTime = $derived(() => formatTime(date_time)); 
-    const formattedDate = $derived(() => formatDate(date_time)); 
-    const isPast = $derived(() => new Date(date_time) < new Date());
+    $: formattedTime = formatTime(date_time);
+    $: formattedDate = formatDate(date_time);
+
+    $: isPast = new Date(date_time) < new Date();
 </script>
 
 <article class:is-next-upcoming={!isArchivePage && isNextUpcoming} class:is-past={isArchivePage || isPast}>
