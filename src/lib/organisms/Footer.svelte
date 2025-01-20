@@ -35,6 +35,7 @@
     background: var(--lavender);
     position: sticky;
     bottom: 0;
+    z-index: 1;
   }
 
   .fixed-bar::before, .fixed-bar::after {
@@ -64,7 +65,9 @@
     padding: 0 0 2em 0;
     gap: 3em;
 
-    h2 { margin: 0; }
+    h2 { 
+      margin: 0; 
+    }
 
     p {
       margin: 0 0 1em 0;
@@ -77,7 +80,8 @@
       padding: 0;
       margin: 0;
 
-      li { padding: 0.5em 0.25em;
+      li { 
+        padding: 0.5em 0.25em;
 
         a {
           position: relative;
@@ -121,18 +125,23 @@
   }
 
   @media (min-width: 720px) {
-    footer { flex-wrap: nowrap;
+    footer { 
+      flex-wrap: nowrap;
 
       p {
         margin: 0 0 1em 0;
         max-width: 75ch;
       }
 
-      ul { max-width: 30em;
+      ul { 
+        max-width: 30em;
 
-        li { padding: 0.7em 0.2em;
+        li { 
+          padding: 0.7em 0.2em;
 
-          a { padding: 0.4em 0.6em; }
+          a { 
+            padding: 0.4em 0.6em; 
+          }
         }
       }
     }

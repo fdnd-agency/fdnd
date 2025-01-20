@@ -30,5 +30,7 @@
     font-size: 1.5rem;
   }
 
-  strong { color: var(--lavender); }
+  strong { 
+    color: var(--lavender); 
+    }
 </style>

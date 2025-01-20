@@ -23,8 +23,13 @@
 <Footer />
 
 <style>
-  :global(body) { margin: 0 0.75em; background-color: var(--lavender); }
-  :global(body), :global(body main) { display: block; }
+  :global(body) { 
+    margin: 0 0.75em; 
+    background-color: var(--lavender); 
+  }
+  :global(body), :global(body main) { 
+    display: block; 
+  }
 
   :global(main) {
     background-color: var(--grey);
@@ -32,10 +37,20 @@
     border-radius: var(--rounded);
   }
 
-  :global(footer) { margin: auto; margin-top: 1rem; }
-  :global(footer nav) { padding: 1rem; }
-  :global(footer nav h2) { margin: calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem; }
-  :global(footer nav p), :global(footer nav ul) { margin-left: 0.5rem; }
+  :global(footer) { 
+    margin: auto; 
+    margin-top: 1rem; 
+  }
+  :global(footer nav) { 
+    padding: 1rem; 
+  }
+  :global(footer nav h2) { 
+    margin: calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem; 
+  }
+  :global(footer nav p), :global(footer nav ul) { 
+    margin-left: 0.5rem; 
+  }
+  
   @media (min-width: 750px) {
     :global(main) {
       background-color: var(--grey);

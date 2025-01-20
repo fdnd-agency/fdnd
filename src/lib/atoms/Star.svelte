@@ -16,22 +16,22 @@
     position: absolute;
     right: -0.75rem;
     top: -1rem;
-  }
-
-  i em {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 0.6em;
-    font-style: normal;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 50%;
-    color: black;
-    position: absolute;
-    top: 0;
-    left: 0;
+    
+    em {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 0.6em;
+      font-style: normal;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 50%;
+      color: black;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 </style>

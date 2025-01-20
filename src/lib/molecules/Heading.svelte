@@ -3,10 +3,8 @@
   let id = title ? title .replace(/[^\w\s]/gi, "") .replace(/\s+/g, "-") .toLowerCase() : "";
 </script>
 
-<h2>
-  <span>
-    {title}
-  </span>
+<h2> 
+  {title}
   {#if subtitle !== ""}
     <strong> {subtitle} </strong>
   {/if}
@@ -21,10 +19,10 @@
     font-size: 2.25rem;
     padding: 0.25rem;
     padding-left: .5rem;
-  }
 
-  h2 > strong {
-    display: block;
-    white-space: nowrap;
+     strong {
+      display: block;
+      white-space: nowrap;
+    }
   }
 </style>

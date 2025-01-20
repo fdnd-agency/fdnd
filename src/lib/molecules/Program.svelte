@@ -5,7 +5,7 @@
 
 <section>
   <div>
-    <Heading {title} />
+    <Heading {title}/>
     {@html content.html}
   </div>
 </section>
@@ -26,7 +26,26 @@
       box-shadow: -4px 4px var(--lavender);
     }
   }
-  :global(section h2::selection, section p::selection) { background-color: var(--lavender); color: var(--lavender); }
-  :global(section p) { padding: 0 0.75em; font-size: 1rem; margin: 0; max-width: 65ch; letter-spacing: -0.04em; }
-  @media (min-width: 750px) { section{ padding: 3rem .25rem 2rem 1%; div { width: max-content; } }}
+  :global(section h2::selection, section p::selection) { 
+    background-color: var(--lavender);
+    color: var(--lavender);
+  }
+
+  :global(section p) {
+    padding: 0 0.75em; 
+    font-size: 1rem; 
+    margin: 0; 
+    max-width: 65ch; 
+    letter-spacing: -0.04em; 
+  }
+
+  @media (min-width: 750px) { 
+    section{ 
+      padding: 3rem .25rem 2rem 1%;
+
+      div { 
+        width: max-content; 
+      } 
+    }
+  }
 </style>

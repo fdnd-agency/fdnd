@@ -1,13 +1,11 @@
 <script>
   import { prettyDate } from "$lib/utils/date";
+  import { derived } from "svelte/store";
   let { semester, sprint, nextSprint } = $props();
   const today = new Date();
   const sprintDate = new Date(sprint.startdate);
   let nextSprintDate = nextSprint ? new Date(nextSprint.startdate) : false;
-
-  let active = $derived(
-    today >= sprintDate && (!nextSprintDate || today < nextSprintDate),
-  );
+  let active = $derived(today >= sprintDate && (!nextSprintDate || today < nextSprintDate));
   let past = $derived(nextSprintDate && today > nextSprintDate);
 </script>
 
@@ -37,7 +35,9 @@
 {/if}
 
 <style>
-  a:focus, a:hover { background-position: left bottom; }
+  a:focus, a:hover { 
+    background-position: left bottom; 
+  }
 
   li {
     display: flex;
@@ -95,6 +95,10 @@
     padding-left: 0.5em;
   }
 
+  :global(li.active a) {
+    background: var(--turquoise);
+  }
+
   :global(li.past) {
     opacity: 0.5;
   }
@@ -104,14 +108,14 @@
     text-decoration: line-through;
   }
 
-  :global(li.past time),
-  :global(li.extra.past span) {
+  :global(li.past time), :global(li.extra.past span) {
     text-decoration: line-through;
   }
 
   span.past {
     color: var(--attention);
   }
+
   li a, li > span {
     display: flex;
     white-space: nowrap;
