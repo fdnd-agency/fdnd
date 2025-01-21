@@ -30,7 +30,12 @@ $: nextUpcoming =
     }, null) || sortedList[0];
 </script>
 
-<Heading />
+<Heading
+    small={'Laat je inspireren door experts!'}
+    h1={'We ❤️ Web'}
+    linkText={'Archief'}
+    link={'/collectie'}
+></Heading>
 
 <section>
 {#if sortedList.length > 0}
