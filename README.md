@@ -36,6 +36,46 @@ Informatie over de ontwerpkeuzes en branding van de We love Web pagina, inclusie
 ### Thema
 Voor deze website hebben we de nieuwe huisstijl van FDND toegepast. In de briefing werd aangegeven dat ze niet tevreden waren met de huidige huisstijl en dat er op verschillende FDND-pagina's inconsistenties waren in de stijl. Wij waren enthousiast over de nieuwe huisstijl en besloten dat alle pagina's dezelfde uitstraling en sfeer moesten krijgen, zodat er meer eenheid ontstaat.
 
+### Code Conventies
+Er zijn verschillende code conventies afgesproken, de code is gebasseerd op deze regels:
+*Bestands- en Mapstructuur*
+
+
+*Componentstructuur*
+- Volg de volgorde: script -> markup -> styles in een .svelte bestand.
+- Declareer geïmporteerde componenten bovenaan in de `<script>`.
+- Gebruik export voor props
+
+*Indentering en Spaties*
+- Gebruik 2 spaties per niveau van inspringing.
+- Laat een lege regel tussen script, styles, en markup.
+
+*CSS en Styling*
+- Gebruik scoped styles door standaard `<style>` zonder `global` te gebruiken (met uitzondering op variabele en body styling).
+- Beperk het gebruik van !important.
+- Gebruik CSS variabele voor consistente styling.
+- Gebruik kebabcase voor variabele en functies: let userName.
+
+*Naming Conventions*
+- Gebruik kebabcase voor variabele: `--css-var: myvariable;`.
+- Gebruik camelcase voor functies en js variabele: `let myVar = any;`.
+- Gebruik camelcase namen voor componentbestanden: `myComponent.svelte`.
+
+*Reactiviteit*
+- Gebruik $-syntax voor reactieve declaraties.
+
+*API-aanroepen*
+- Haal data server-side op met load in SvelteKit waar mogelijk (in +page.server.js).
+
+*Toegankelijkheid (A11y)*
+- Voeg altijd alt-teksten toe waar nodig.
+- Gebruik semantische HTML: `<button>`, `<article>`, `<section>`, etc.
+
+*Git Conventies*
+- Schrijf beschrijvende commit messages in version control format
+- Gebruik branches voor features of bugs
+
+
 ------------------------------------------------------------------------------------------------------------------
 
 ## Bronnen
