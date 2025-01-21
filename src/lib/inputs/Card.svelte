@@ -5,6 +5,7 @@
     export let date_time = "";
     export let isNextUpcoming = false;
     export let uuid = "";
+    export let isArchivePage = false;
 
     const formatTime = (dateTime) => {
         const date = new Date(dateTime);
@@ -27,7 +28,7 @@
     $: isPast = new Date(date_time) < new Date();
 </script>
 
-<article class:is-next-upcoming={isNextUpcoming} class:is-past={isPast}>
+<article class:is-next-upcoming={!isArchivePage && isNextUpcoming} class:is-past={isArchivePage || isPast}>
     <a href={`/${uuid}`} aria-label="We Love Web Event">
         <h2 class:is-next-upcoming={isNextUpcoming}>{title}</h2>
         <h3>{speaker}</h3>
@@ -60,6 +61,7 @@
         background-color: transparent;
         cursor: pointer;
         transition: 0.7s;
+        min-height: 157px
     }
 
     article::before {
