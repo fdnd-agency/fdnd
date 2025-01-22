@@ -19,8 +19,9 @@ Welkom op de website van FDND - We Love Web! Op deze pagina vind je een overzich
 - Detailpagina: Op de detailpagina wordt meer informatie over de geselecteerde we love web sessie weergegeven, zoals beschrijving, tags en links.
 - SvelteKit & Directus API: De website is gebouwd met SvelteKit en haalt de data dynamisch op via de Directus API.
 ------------------------------------------------------------------------------------------------------------------
-## Afbeelding
-<img width="508" alt="Scherm­afbeelding 2024-11-20 om 19 00 23" src="https://github.com/user-attachments/assets/cd84a0aa-b5ce-44d3-882e-f3c450bdc9c0">
+## Afbeelding hoofdpagina
+![v4 0](https://github.com/user-attachments/assets/ac1654a1-cbab-490c-9b49-758a44e964d3)
+
 
 ------------------------------------------------------------------------------------------------------------------
 
