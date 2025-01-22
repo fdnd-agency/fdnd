@@ -1,40 +1,87 @@
 ![Static Badge](https://img.shields.io/badge/usage-sveltekit-orange) ![Vercel Badge](https://deploy-badge.vercel.app/vercel/deploy-badge) ![License](https://img.shields.io/badge/license-MIT-blue)
 
 # FDND We Love Web
-Welkom op de website van FDND! Op deze pagina vind je een overzicht van de komende en afgelopen "We Love Webs"-evenementen. Zo mis je er nooit een en kun je je kennis op een handige manier verrijken!
+Welkom op de website van FDND - We Love Web! Op deze pagina vind je een overzicht van de komende en afgelopen "We Love Webs" gastlezingen. Zo mis je er nooit een en kun je terugkijken op afgelopen sessies!
 
 ## Inhoudsopgave
   * [Beschrijving](#beschrijving)
-  * [Preview](#preview)
-  * [Live pagina](live)
+  * [Afbeelding](#afbeelding)
+  * [Live pagina](#live-pagina)
+  * [Missie & Visie](#missie--visie)
   * [Gebruikersaanwijzing](#gebruikersaanwijzing)
   * [Huisstijl](#huisstijl)
   * [Bronnen](#bronnen)
   * [Installatiehandleiding](#installatiehandleiding)
 
-## beschrijving
-- Homepagina: Bij het bezoeken van de site word je begroet met een leuke header, waarop een foto van de vorige "We Love Web" te zien is. Als je verder naar beneden scrolt, krijg je een toelichting op de "We Love Webs". Daaronder vind je een dynamische kalender met zowel de komende als de afgelopen evenementen.
-- Detailpagina: ...
+## Beschrijving
+- Homepagina: op de homepagina van de We Love Web sessies worden de we love webs van het huidige schooljaar weergegeven.
+- Archiefpagina: Op de archiefpagina worden de afgelopen we love webs weergegeven gesorteerd op jaar.
+- Detailpagina: Op de detailpagina wordt meer informatie over de geselecteerde we love web sessie weergegeven, zoals beschrijving, tags en links.
 - SvelteKit & Directus API: De website is gebouwd met SvelteKit en haalt de data dynamisch op via de Directus API.
 ------------------------------------------------------------------------------------------------------------------
-## Screenshot van de main page
+## Afbeelding
 <img width="508" alt="Scherm­afbeelding 2024-11-20 om 19 00 23" src="https://github.com/user-attachments/assets/cd84a0aa-b5ce-44d3-882e-f3c450bdc9c0">
 
 ------------------------------------------------------------------------------------------------------------------
 
 ## Live pagina
-Hier bevind zich de live link van de website
-bekijk het [hier](#)!
+De link naar de live site kun je [hier](https://weloveweb.agency.fdnd.nl/) vinden!
+
+## Missie & Visie
+De *opdrachtgever van de site zijn FDND*, en wilden deze site om een overzicht te creeëren voor mensen geintereseerd in hun gastlezingen. Daarom is het doel geweest tijdens het maken van deze site om de core functionality naar voren te duwen zodat de site meer gericht is op het overzicht van we love webs.
 
 ## Gebruikersaanwijzing
+Dit is de uitgebreide gebruikersaanwijzing voor personen die gebruik willen maken van de We Love Web website:
+
 ### Navigeren door de pagina
-* Homepagina: De gebruiker start op de homepagina, waar direct een prachtige hero-sectie met enkele navigatieknoppen zichtbaar is. Bij het scrollen naar beneden verschijnt de dynamische kalender, waarbij de gebruiker met twee knoppen kan kiezen om in de huidige maand te blijven, een maand vooruit te gaan of een maand terug te bladeren. Daarnaast kan de gebruiker op een specifieke "We Love Web" klikken, waarmee een detailpagina over dat specifieke evenement wordt geopend.
+* Homepagina: De gebruiker start op de homepagina, waar gelijk de core functionality zichtbaar is; de we love web kalender.
+Verder is er een duidelijke archief knop die leidt naar de archiefpagina, en de kaartjes in de kalender leiden naar hun respectievelijke detailpaginas
 
 ## Huisstijl
 Informatie over de ontwerpkeuzes en branding van de We love Web pagina, inclusief kleurenpaletten, typografie en andere visuele elementen die bijdragen aan het FDND thema.
 
 ### Thema
 Voor deze website hebben we de nieuwe huisstijl van FDND toegepast. In de briefing werd aangegeven dat ze niet tevreden waren met de huidige huisstijl en dat er op verschillende FDND-pagina's inconsistenties waren in de stijl. Wij waren enthousiast over de nieuwe huisstijl en besloten dat alle pagina's dezelfde uitstraling en sfeer moesten krijgen, zodat er meer eenheid ontstaat.
+
+### Code Conventies
+Er zijn verschillende code conventies afgesproken, de code is gebasseerd op deze regels:
+*Bestands- en Mapstructuur*
+
+
+*Componentstructuur*
+- Volg de volgorde: script -> markup -> styles in een .svelte bestand.
+- Declareer geïmporteerde componenten bovenaan in de `<script>`.
+- Gebruik export voor props
+
+*Indentering en Spaties*
+- Gebruik 2 spaties per niveau van inspringing.
+- Laat een lege regel tussen script, styles, en markup.
+
+*CSS en Styling*
+- Gebruik scoped styles door standaard `<style>` zonder `global` te gebruiken (met uitzondering op variabele en body styling).
+- Beperk het gebruik van !important.
+- Gebruik CSS variabele voor consistente styling.
+- Gebruik kebabcase voor variabele en functies: let userName.
+
+*Naming Conventions*
+- Gebruik kebabcase voor variabele: `--css-var: myvariable;`.
+- Gebruik camelcase voor functies en js variabele: `let myVar = any;`.
+- Gebruik camelcase namen voor componentbestanden: `myComponent.svelte`.
+
+*Reactiviteit*
+- Gebruik $-syntax voor reactieve declaraties.
+
+*API-aanroepen*
+- Haal data server-side op met load in SvelteKit waar mogelijk (in +page.server.js).
+
+*Toegankelijkheid (A11y)*
+- Voeg altijd alt-teksten toe waar nodig.
+- Gebruik semantische HTML: `<button>`, `<article>`, `<section>`, etc.
+
+*Git Conventies*
+- Schrijf beschrijvende commit messages in version control format
+- Gebruik branches voor features of bugs
+
 
 ------------------------------------------------------------------------------------------------------------------
 
@@ -48,26 +95,65 @@ Hier vind je de bronnen van de tools die we hebben gebruikt.
 ![image](https://github.com/user-attachments/assets/f55ed6b2-1d62-4999-9d23-7e4fb1f00cf3)
 
 ## Installatiehandleiding
-Instructies voor het lokaal opzetten van de FDND pagina, zodat ontwikkelaars het project kunnen downloaden, installeren en zelf kunnen draaien met behulp van SvelteKit.
+Instructies voor het lokaal opzetten van de FDND-pagina, zodat ontwikkelaars het project kunnen downloaden, installeren en lokaal draaien met behulp van SvelteKit.
 
-**1. Vereisten**
+### **1. Vereisten**
+Zorg ervoor dat je de volgende software hebt geïnstalleerd voordat je begint:
 
-Zorg ervoor dat je de volgende software hebt geïnstalleerd:
+- **[Node.js](https://nodejs.org/):** Zorg ervoor dat je een recente versie hebt (bij voorkeur de LTS-versie).  
+- **Packetmanager:** zoals `npm` (meegeleverd met Node.js) of [Yarn](https://yarnpkg.com/).
 
-- Node.js
-- Packetmanager zoals npm of yarn
+### **2. Repository clonen**
+Clone de repository naar je lokale machine met de volgende stappen:
 
-**2. git repository clonen**
+1. Open je terminal.  
+2. Voer het volgende commando uit:  
+  ```
+  git clone [repository-url]
+  ```
+3. Ga naar de projectmap:
+  ```
+  cd [project-map]
+  ```
+  Hiermee wordt de lokale server gestart en kun je het project openen via http://localhost:5173 (of een andere poort die in de terminal wordt vermeld).
 
-Je kunt op de main pagina de repo clonen en je eigen lokale versie opvragen.
 
-**3. SvelteKit en packets installeren**
+### **3. SvelteKit en packets installeren**
 
-Om aan het project te werken, moet je eerst een nieuw SvelteKit-project opzetten. Dit kan eenvoudig gedaan worden met create-svelte.
+Volg deze stappen om het project op te zetten en de benodigde pakketten te installeren:
 
-Open je terminal.
-Voer ```npm install``` of ```yarn install``` uit om de juiste packets te installeren om aan het project te werken.
+1. Open je terminal in de projectmap.
+2. Installeer de afhankelijkheden:
+```
+npm install
+```
+of, als je Yarn gebruikt:
 
-**4. Deployen op vercel**
+```
+yarn install
+```
 
-Op [vercel.com](https://vercel.com/docs/frameworks/sveltekit) kun je verder op weg met het deployen van een svelteproject. 
+3. Start de ontwikkelomgeving:
+```
+npm run dev -- --open
+```
+Hiermee wordt de lokale server gestart en kun je het project openen via http://localhost:5173 (of een andere poort die in de terminal wordt vermeld).
+
+### **4. Deployen op vercel**
+Volg deze stappen om het project te deployen op Vercel:
+
+1. Ga naar [vercel.com](https://vercel.com/docs/frameworks/sveltekit).
+2. Maak een account aan of log in.
+3. Koppel je Git-repository aan Vercel.
+4. Vercel detecteert automatisch dat je project SvelteKit gebruikt en stelt de juiste configuraties in.
+5. Klik op *Deploy* om je project live te zetten.
+
+### **5. Belangrijke NPM-scripts**
+Hieronder staan de belangrijkste scripts die je kunt gebruiken tijdens de ontwikkeling:
+
+- npm run dev: Start de ontwikkelserver en zorgt voor live reload. Gebruik dit tijdens het ontwikkelen.
+
+- `npm run build`: Bouwt de applicatie voor productie. Dit genereert geoptimaliseerde bestanden in de `build`-map.
+
+- `npm run preview`: Voer een preview uit van de gebouwde applicatie. Handig om te controleren hoe de applicatie eruitziet voordat je deze deployt.
+
