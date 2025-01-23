@@ -186,7 +186,7 @@
     --border: var(--call-to-action); 
   }
 
-  @media (min-width: 630px) {
+  @media (630px <= width) {
     .week {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

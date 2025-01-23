@@ -44,7 +44,7 @@
     width: 1.5em;
     aspect-ratio: 1;
     left: 0;
-    border-radius: 0 0 50% 0;
+    border-radius: 0 0 1rem 0;
     bottom: 0.75em;
     box-shadow: var(--rounded) var(--rounded) 0 var(--lavender);
     transform: rotate(90deg);
@@ -124,7 +124,7 @@
     }
   }
 
-  @media (min-width: 720px) {
+  @media (720px <= width) {
     footer { 
       flex-wrap: nowrap;
 
@@ -147,7 +147,7 @@
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (1024px <= width) {
     footer {
       justify-content: left;
       padding: 0 0 2em 2em;

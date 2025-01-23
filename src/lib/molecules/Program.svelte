@@ -16,7 +16,7 @@
     background-color: var(--grey);
     color: var(--blueberry);
     border-radius: var(--rounded) 0 0 0;
-    padding: 3rem 1.25rem 2rem 1.25rem;
+    padding: 3rem 1.25rem 2rem .25rem;
 
     div {
       padding: 1.25em;
@@ -39,7 +39,7 @@
     letter-spacing: -0.04em; 
   }
 
-  @media (min-width: 750px) { 
+  @media (750px <= width) { 
     section{ 
       padding: 3rem .25rem 2rem 1%;
 

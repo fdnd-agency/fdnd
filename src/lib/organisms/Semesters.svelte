@@ -20,11 +20,11 @@
   {/if}
 
   <div class="gradient-container">
-    <div class="semester-grid">
+    <section class="semester-grid">
       {#each semesters as semester, i}
        <Semester {semester} {i} />
       {/each}
-    </div>
+    </section>
   </div>
 </section>
 
@@ -40,17 +40,18 @@
 
   h2 { 
     margin: 0; 
-    padding: 3rem .1rem 1.5rem 1%; 
+    padding: 3rem .1rem 1rem 1.5rem; 
   }
 
   form {
     label{
       display: flex;
       flex-direction: column;
+      width: 8rem;
       color: var(--blueberry);
       font-size: 0.7rem;
       font-weight: 700;
-      margin-left: 1%;
+      margin-left: 1.5em;
     }
   
 
@@ -136,21 +137,16 @@
     flex-direction: row;
     justify-content: space-between;
     overflow: scroll;
-    gap: 1.75em;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding: 1rem 0 2rem 0;
+    gap: 1.75em;
+    padding: 1.5rem 2rem 2rem 0;
   }
+
 
   @media (prefers-reduced-motion: reduce) { 
     .pacman::before, .pacman::after { 
       animation: none; 
-    } 
-  }
-
-  @media (min-width: 1440px) { 
-    .semester-grid { 
-      justify-content: space-around; 
-      padding: 2em 0 2rem 0; 
     } 
   }
 </style>

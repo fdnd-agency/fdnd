@@ -26,8 +26,12 @@
 *::-webkit-scrollbar { 
   display: none; 
 }
+
 body { 
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  padding-inline: .25rem; 
+}
+
 h2 { 
   margin-left: 1.5rem; 
 }
@@ -37,7 +41,7 @@ footer {
 }
 
 footer nav h2 { 
-  margin: calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem 
+  margin: calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem;
 }
 
 ::marker { 
@@ -45,5 +49,11 @@ footer nav h2 {
 }
 
 section a { 
-  padding: 0 .25rem 
+  padding: 0 .25rem;
+}
+
+@media (2000px <= width) {
+  body { 
+    padding-inline: 2rem; 
+  }
 }

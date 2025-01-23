@@ -57,8 +57,12 @@
       justify-content: start;
       flex-direction: row;
       flex-wrap: wrap;
-      .hva-logo { display: inline-block; width: 70%; }
 
+      .hva-logo { 
+        display: inline-block; 
+        width: 70%; 
+      }
+      
       p {
         position: relative;
         letter-spacing: -0.03em;
@@ -66,6 +70,7 @@
         margin-left: 0.25em;
         display: none;
       }
+
       p::before { 
         content: unset; 
       }
@@ -108,7 +113,7 @@
         display: flex;
         flex-direction: row;
         gap: 1.75rem;
-        border-radius: var(--rounded) var(--rounded) 0 0;
+        border-radius: 1rem 1rem 0 0;
         margin: 0;
         padding: 0.5em 1.5rem;
         list-style: none;
@@ -132,7 +137,7 @@
         width: 1.5rem;
         height: 1.5rem;
         left: -1.5em;
-        border-radius: 0 0 50% 0;
+        border-radius: 0 0 1rem 0;
         bottom: 0;
         box-shadow: 0.5em 0.5em 0 0 var(--grey);
       }
@@ -238,6 +243,12 @@
         }
       }
     }
+  }
+
+  @media (1600 <= width){
+    .hva-logo {  
+          width: 15%; 
+        }
   }
   @keyframes up { 
     to { transform: translateY(0); } 

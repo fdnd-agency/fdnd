@@ -44,8 +44,7 @@
     align-items: center;
     justify-content: flex-start;
     font-size: 1.75rem;
-    margin-top: 0;
-    margin-left: .5em;
+    margin: 0 .5em 0 .5em;
     border: 2px solid var(--turquoise);
     border-radius: var(--rounded);
     box-shadow: -4px 4px var(--lavender);
@@ -126,11 +125,16 @@
 
   li.extra {
     display: none;
-    padding: 0.25em 0.1em;
-    border-radius: var(--rounded);
-    height: 2em;
+    font-size: 1.75rem;
+    margin-top: 0;
+    margin-left: .5em;
     border: 2px solid var(--lavender);
+    border-radius: var(--rounded);
     box-shadow: -4px 4px var(--turquoise);
+    margin-top: 0.6em;
+    background: var(--white);
+    height: 3.75rem;
+    overflow: hidden;
   }
 
   li.extra span {
@@ -159,15 +163,22 @@
     margin-right: 1em;
   }
 
-  @media (min-width: 1100px) {
+  @media (1100px <= width) {
     li {
-      width: 350px;
+      width: 325px;
     }
   }
 
-  @media (min-width: 1800px) {
+  @media (1800px <= width) {
     li {
-      width: 400px;
+      width: 380px;
+      margin-right: 2rem;
+    }
+  }
+  @media (2200px <= width) {
+    li {
+      width: 470px;
+      margin-right: 2rem;
     }
   }
 </style>
