@@ -29,6 +29,8 @@
     display: inline-block;
     font-size: 1.5em;
     margin: 0 -0.5rem 0.5 0.5em;
+    position: sticky;
+    left: 0;
   }
 
   .semester a:focus {
@@ -39,13 +41,13 @@
     list-style: none;
     padding: 0.5rem;
     margin-top: -1.5em;
-    margin-left: -.25em;
+    margin-left: -.75em;
     max-width: 320px;
   }
 
   :global(.semester h2 ) {
     line-height: 1.1;
-    font-size: 1.25rem !important;
+    font-size: 1rem;
     margin-bottom: .5em
   }
 

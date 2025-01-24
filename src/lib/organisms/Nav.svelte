@@ -3,11 +3,14 @@
   let navItems = [
     {
       href: "/static-web/the-startup",
-      title: "Sprint 6",
+      sprintNr: 6, 
+      sprintName: "The Startup",
     },
     {
       href: "/workflow-tooling-frameworks/release-candidate",
-      title: "Sprint 18",
+      sprintNr:18,
+      sprintName:'Release Candidate'
+      
     },
   ];
 </script>
@@ -33,7 +36,7 @@
     <ul>
       {#each navItems as item}
         <li>
-          <a class:active={$page.url.pathname === item.href} href={item.href} target="_self" class="nav-item"> {item.title} </a>
+          <a class:active={$page.url.pathname === item.href} href={item.href} target="_self" class="nav-item"> Sprint {item.sprintNr} <strong> {item.sprintName} </strong></a>
         </li>
       {/each}
     </ul>
@@ -93,6 +96,7 @@
       justify-content: space-between;
       margin: 0 0 0 auto;
       box-shadow: 0 6px var(--grey);
+      
       ul {
         position: relative;
         display: flex;
@@ -109,6 +113,7 @@
         animation: up 0.4s 0.6s ease-out forwards;
         li { a { color: var(--blueberry); text-decoration: none; } }
       }
+      
       ul::before {
         content: "";
         position: absolute;
@@ -120,6 +125,18 @@
         box-shadow: 0.5em 0.5em 0 0 var(--grey);
       }
     }
+
+    ul li a {
+      font-size: .6rem;
+      display:flex;
+      flex-direction: column;
+
+      strong {
+        font-size: 1rem;
+        font-weight: normal;
+      }
+    }
+
     a:hover, a:focus { text-decoration: underline; }
     a:focus-visible { outline: none; }
   }
@@ -168,7 +185,7 @@
       .left { .fdnd-logo { height: 5rem; } }
       nav {
         ul { padding: 0.25em 3.5em; gap: 4rem;
-          li { a { font-weight: 500; font-size: 1.25rem; } }
+          li { a { font-weight: 500; } }
         }
       }
     }

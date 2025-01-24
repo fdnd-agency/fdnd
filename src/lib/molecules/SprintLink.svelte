@@ -95,19 +95,18 @@
     padding-left: 0.5em;
   }
 
+  li a strong {
+    font-weight: normal;
+  }
+
   :global(li.past) {
     opacity: 0.5;
   }
 
   :global(li.past strong) {
     font-weight: 500;
-    text-decoration: line-through;
   }
 
-  :global(li.past time),
-  :global(li.extra.past span) {
-    text-decoration: line-through;
-  }
 
   span.past {
     color: var(--attention);

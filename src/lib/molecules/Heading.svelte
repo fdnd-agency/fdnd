@@ -20,7 +20,7 @@
     font-weight: 600;
     font-size: 2.25rem;
     padding: 0.25rem;
-    padding-left: .5rem;
+    padding-left: .75rem;
   }
 
   h2 > strong {
