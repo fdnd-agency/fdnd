@@ -28,9 +28,13 @@
     display: flex;
     flex-direction: column;
 
-    .content-container{ width: 100%; }
+    .content-container{ 
+      width: 100%; 
+    }
     article{
-      ol{ padding-left: 0; }
+      ol{ 
+        padding-left: 0; 
+      }
     }
   }
 
@@ -53,12 +57,16 @@
       grid-template-areas: "content sprints";
       grid-template-columns: 2fr 1fr;
 
-      .content-container{ grid-area: content; }
+      .content-container{ 
+        grid-area: content; 
+      }
       
       article{
         padding-left: 3em;
         padding-bottom: 1em;
-        ol{ grid-area: sprints; }
+        ol{ 
+          grid-area: sprints; 
+        }
       }
     }
   }

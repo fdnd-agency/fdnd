@@ -10,5 +10,7 @@
 {date}
 
 <style>
-  svg { transform: translate(-2px, 1px); }
+  svg { 
+    transform: translate(-2px, 1px); 
+  }
 </style>
