@@ -33,6 +33,8 @@ Mocht je dit project lokaal willen opzetten? Dat kan! Volg dan de volgende stapp
 3. Installeer de vereiste dependencies:
    ````
    npm install
+
+   npm install --save-dev @sveltejs/enhanced-img
    ````
 4. Voeg de environment-variables toe in een `.env` bestand: (vraag de benodigde info aan de product-owner)
    ````
