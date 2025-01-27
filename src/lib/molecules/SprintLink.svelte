@@ -44,7 +44,7 @@
     align-items: center;
     justify-content: flex-start;
     font-size: 1.75rem;
-    margin: 0 .5em 0 .5em;
+    margin: 0;
     border: 2px solid var(--turquoise);
     border-radius: var(--rounded);
     box-shadow: -4px 4px var(--lavender);
@@ -121,8 +121,6 @@
   li.extra {
     display: none;
     font-size: 1.75rem;
-    margin-top: 0;
-    margin-left: .5em;
     border: 2px solid var(--lavender);
     border-radius: var(--rounded);
     box-shadow: -4px 4px var(--turquoise);
@@ -134,7 +132,7 @@
 
   li.extra span {
     font-size: 0.5em;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2;
     margin-left: 1.75em;
     text-transform: uppercase;
@@ -152,28 +150,10 @@
   time {
     border: 0 solid;
     font-size: 0.7em;
-    font-weight: 600;
+    font-weight: 500;
     background-color: transparent;
     color: inherit;
     margin-right: 1em;
   }
 
-  @media (1100px <= width) {
-    li {
-      width: 325px;
-    }
-  }
-
-  @media (1800px <= width) {
-    li {
-      width: 380px;
-      margin-right: 2rem;
-    }
-  }
-  @media (2200px <= width) {
-    li {
-      width: 470px;
-      margin-right: 2rem;
-    }
-  }
 </style>

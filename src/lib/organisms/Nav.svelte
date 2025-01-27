@@ -107,7 +107,7 @@
 
     nav {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       margin: 0 0 0 auto;
       box-shadow: 0 6px var(--grey);
       
@@ -115,10 +115,10 @@
         position: relative;
         display: flex;
         flex-direction: row;
-        gap: 1.75rem;
+        gap:.75rem;
         border-radius: 1rem 1rem 0 0;
         margin: 0;
-        padding: 0.5em 1.5rem;
+        padding:  .75rem;
         list-style: none;
         background: var(--grey);
         color: var(--blueberry);
@@ -131,6 +131,11 @@
             color: var(--blueberry); 
             text-decoration: none; 
           } 
+        }
+
+        @media (min-width: 960px) {
+          gap: 1.75rem;
+          padding:.5rem 1.5rem;
         }
       }
       
@@ -156,9 +161,15 @@
       }
 
       strong {
-        font-size: 1rem;
+        font-size: .8rem;
         font-weight: normal;
+        white-space: nowrap;
+
+        @media (min-width: 960px) {
+          font-size: 1rem;
+        }
       }
+
     }
 
     a:hover, a:focus { text-decoration: underline; }

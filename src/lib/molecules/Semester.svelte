@@ -22,7 +22,6 @@
     padding: 0;
     border: none;
     scroll-snap-align: start;
-    margin-left: -.15em;
   }
 
   .semester a {
@@ -30,7 +29,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 1.5em;
-    margin: 0 -0.5rem 0.5 0.5em;
+    margin: 0;
     position: sticky;
     left: 0;
   }
@@ -41,16 +40,14 @@
 
   ol {
     list-style: none;
-    padding: 0.5rem;
-    margin-top: -1.5em;
-    margin-left: -.75em;
-    max-width: 320px;
+    padding:0;
+    margin:0;
   }
 
   :global(.semester h2 ) {
     line-height: 1.1;
     font-size: 1rem;
-    margin-bottom: .5em
+   
   }
 
   :global(.semester h2 > span) {
@@ -72,18 +69,7 @@
 
     ol {
       list-style: none;
-      max-width: 360px;
     }
   }
-  @media (1600px <= width) {
-    .semester{
-      width: 20%;
-      margin-left: .5em;
-    }
-  }
-  @media (2560px <= width) {
-    .semester{
-      width: 35%;
-    }
-  }
+
 </style>

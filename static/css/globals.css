@@ -30,6 +30,7 @@
 body { 
   overflow-x: hidden;
   padding-inline: .25rem; 
+  max-width:1304px; /* todo: design larger screen layout */ 
 }
 
 h2 { 
@@ -48,9 +49,6 @@ footer nav h2 {
   color: currentColor; 
 }
 
-section a { 
-  padding: 0 .25rem;
-}
 
 @media (2000px <= width) {
   body { 

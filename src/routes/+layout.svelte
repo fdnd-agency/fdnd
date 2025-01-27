@@ -31,31 +31,15 @@
     display: block; 
   }
 
-  :global(main) {
+  main {
+    padding:.5rem;
     background-color: var(--grey);
-    padding: 0 1rem 0 1rem;
     border-radius: var(--rounded);
-  }
-
-  :global(footer) { 
-    margin: auto; 
-    margin-top: 1rem; 
-  }
-  :global(footer nav) { 
-    padding: 1rem; 
-  }
-  :global(footer nav h2) { 
-    margin: calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem; 
-  }
-  :global(footer nav p), :global(footer nav ul) { 
-    margin-left: 0.5rem; 
-  }
-  
-  @media (min-width: 750px) {
-    :global(main) {
-      background-color: var(--grey);
-      padding: 0 2rem 0 2rem;
-      border-radius: 1rem 0 0 0;
+    
+    @media (min-width: 750px) {
+        background-color: var(--grey);
+        padding: 3rem;
+        border-radius: 1rem 0 0 0;
     }
   }
 

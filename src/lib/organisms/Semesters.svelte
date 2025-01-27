@@ -1,10 +1,19 @@
 <script>
-  import Semester from "$lib/molecules/Semester.svelte";
-  import { onMount } from "svelte";
-  let { semesters, subtitle } = $props();
-  let jsEnabled = $state(true);
-  function toggleDates({ target }) { if (target.nodeName == "INPUT") { document.body.classList.toggle("expand"); } }
-  onMount(() => { jsEnabled = true; document.body.classList.remove("expand"); });
+  import Semester from "$lib/molecules/Semester.svelte"
+  import { onMount } from "svelte"
+  let { semesters, subtitle } = $props()
+  let jsEnabled = $state(true)
+  function toggleDates({ target }) { 
+    if (target.nodeName == "INPUT") { 
+      document.body.classList.toggle("expand")
+      target.checked ? target.nextElementSibling.textContent = 'Hide full agenda' : target.nextElementSibling.textContent = 'Show full agenda'
+    } 
+  }
+
+  onMount(() => { 
+    jsEnabled = true 
+    document.body.classList.remove("expand") 
+  })
 </script>
 
 <section class="semesters-sprints">
@@ -14,17 +23,15 @@
     <form class="agenda-container">
       <label for="show-hide-dates">
         <input type="checkbox" id="show-hide-dates" class="pacman" onchange={toggleDates}/>
-        Show/hide full agenda
+        <span>Show full agenda</span>
       </label>
     </form>
   {/if}
 
-  <div class="gradient-container">
-    <section class="semester-grid">
-      {#each semesters as semester, i}
-       <Semester {semester} {i} />
-      {/each}
-    </section>
+  <div class="semester-grid">
+    {#each semesters as semester, i}
+      <Semester {semester} {i} />
+    {/each}
   </div>
 </section>
 
@@ -42,13 +49,23 @@
     gap: 1rem;
   }
 
-  h2 { margin: 0; padding: 0 1rem; font-weight: normal;}
+  h2 { 
+    margin: 0; 
+    font-weight: normal;
+    font-size: 1.25rem;
+
+    @media (min-width: 960px) {
+        font-size: 1.5rem;
+    }
+  }
 
   form {
+    margin-left:auto;
+
     label{
       display: flex;
       flex-direction: column;
-      width: 8rem;
+      white-space: nowrap;
       color: var(--blueberry);
       font-size: 0.7rem;
       font-weight: 700;
@@ -110,12 +127,27 @@
     }
   }
 
-  .gradient-container {
-    width: 100%;
-    position: relative;
+  .semester-grid {
+    --_breathing-space:4px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    overflow: scroll;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding:var(--_breathing-space);
+    gap: 1rem;
+    padding: var(--_breathing-space);
+    margin: 0 calc(-1 * var(--_breathing-space));
+    position:relative;
+
+    @media (min-width: 960px) {
+        gap:2rem;
+    }
   }
 
-  .gradient-container::before, .gradient-container::after {
+  /* .semester-grid::before, .semester-grid::after {
     content: '';
     position: absolute;
     top: 0;
@@ -124,27 +156,17 @@
     pointer-events: none;
   }
 
-  .gradient-container::before {
+  .semester-grid::before {
     left: 0;
     background: linear-gradient(to right, var(--grey), rgba(255, 255, 255, 0));
     z-index: 1;
   }
 
-  .gradient-container::after {
+  .semester-grid::after {
     right: 0;
     background: linear-gradient(to left, var(--grey), rgba(255, 255, 255, 0));
     z-index: 1;
-  }
-  .semester-grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    overflow: scroll;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1.75em;
-    padding: 1.5rem 2rem 2rem 0;
-  }
+  } */
 
 
   @media (prefers-reduced-motion: reduce) { 

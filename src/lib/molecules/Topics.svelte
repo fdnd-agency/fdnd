@@ -36,7 +36,7 @@
       li {
         padding: 0.1rem .25rem;
         font-size: 0.8rem;
-        font-weight: 600;
+        font-weight: 500;
         border-radius: var(--rounded);
         line-height: 1.5;
         display: flex;

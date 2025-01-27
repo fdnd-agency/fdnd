@@ -64,9 +64,15 @@
     font-size: 0.8em;
     padding: 0 0 2em 0;
     gap: 3em;
+    margin: auto; 
+    margin-top: 1rem;
+    
+    nav { 
+      padding: 1rem; 
+    }
 
-    h2 { 
-      margin: 0; 
+    nav h2 { 
+      margin: calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem; 
     }
 
     p {
