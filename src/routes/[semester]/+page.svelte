@@ -1,32 +1,46 @@
 <script>
-  import Heading from "$lib/molecules/Heading.svelte";
-  import Content from "$lib/organisms/ContentSemester.svelte";
-  import SprintLink from "$lib/molecules/SprintLink.svelte";
+  import Heading from "$lib/molecules/Heading.svelte"
+  import Content from "$lib/organisms/ContentSemester.svelte"
+  import SprintLink from "$lib/molecules/SprintLink.svelte"
 
-  let { data } = $props();
+  let { data } = $props()
 
-  const semester = data;
+  const semester = data
+  const {content, goal, sprints, title} = semester
 </script>
 
-<Heading title="Semester" subtitle={semester.title}/>
+<Heading title="Semester" subtitle={title}/>
+
 <section>
   <div class="content-container">
-    <Content {semester} />
-  </div>
+    <Content {semester} {content} />
+
     <article>
       <h3>Sprints</h3>
       <ol>
-        {#each semester.sprints as sprint}
+        {#each sprints as sprint}
           <SprintLink {semester} {sprint}/>
         {/each}
       </ol>
     </article>
+  </div>
+
+  
+
+  <article class="goal">
+    <h3> Leerresultaat </h3>
+    {@html semester.goal.html}
+  </article>
 </section>
 
 <style>
   section{
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap:2rem;
+
 
     .content-container{ 
       width: 100%; 
@@ -35,6 +49,24 @@
       ol{ 
         padding-left: 0; 
       }
+
+      h3 {
+        margin-top: 2rem;
+      }
+    }
+
+    article.goal {
+      background-color: var(--white);
+      color: black;
+      border: 2px solid var(--turquoise);
+      border-radius: var(--rounded);
+      box-shadow: -4px 4px var(--lavender);
+      padding:1rem;
+      margin: .9rem 0;
+    }
+
+    article.goal h3 {
+      margin-top: 0;
     }
   }
 
@@ -42,11 +74,15 @@
     section{
       display: flex;
       flex-direction: column;
+      justify-content: start;
 
       .content-container{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items:start;
+        gap:2rem;
+        
       }
     }
   }

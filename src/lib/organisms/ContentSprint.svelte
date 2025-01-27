@@ -17,16 +17,11 @@
 <style>
   article {
     position: relative;
-    background-color: var(--white);
     color: black;
     width: fit-content;
-    border: 2px solid var(--turquoise);
-    border-radius: var(--rounded);
-    box-shadow: -4px 4px var(--lavender);
-    margin-left: var(--shadow);
     min-height: 18rem;
     max-width: 35em;
-    padding: 1.25em;
+
     div { 
       margin-top: 1.5rem; 
     }
@@ -34,7 +29,6 @@
 
   :global(article p) { 
     font-size: 1rem; 
-    padding-left: .5rem;
   }
   
   :global(blockquote) { 

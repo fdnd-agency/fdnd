@@ -39,7 +39,6 @@
     box-shadow: -4px 4px var(--lavender);
     min-height: 18rem;
     width: fit-content;
-    max-width: 80%;
     word-wrap: break-word;
     padding: 1rem 1.25rem 2rem 1.25rem;
 
@@ -49,10 +48,10 @@
       justify-content: space-between;
       margin-top: .5em;
       margin-bottom: 0.5em;
-      padding-left: .75em;
+      font-weight: normal;
 
       a {
-        color: #7f2fff;
+        color: var(--turquoise);
         font-weight: 700;
         text-transform: capitalize;
         overflow: hidden;
@@ -81,7 +80,6 @@
     p {
         margin-top: -.5em;
         margin-bottom: 1.25em;
-        padding-left: .75em;
       }
   }
 

@@ -101,7 +101,7 @@
 
 <style>
   section {
-    padding-block: 2em;
+    padding-block: 2em 0;
     background: var(--grey);
   }
 
@@ -125,8 +125,8 @@
     background: var(--grey);
     top: 0;
     z-index: 1;
-    margin-left: -.2em;
-    padding-left: .2em;
+    margin-left: -4px;
+    padding-left: 4px;
     padding-block: .5em;
     margin-block: 0;
   }

@@ -41,11 +41,11 @@
   .showcase { display: block; }
 
   .gradient-container {
-    width: 100%;
     position: relative;
+    
   }
 
-  .gradient-container::before, .gradient-container::after {
+  /* .gradient-container::before, .gradient-container::after {
     content: '';
     position: absolute;
     top: 0;
@@ -64,15 +64,17 @@
     right: 0;
     background: linear-gradient(to left, var(--grey), rgba(255, 255, 255, 0));
     z-index: 1;
-  }
+  } */
 
   .showcase ul {
     display: flex;
     gap: 1rem;
-    padding: 0 .5rem 0 .5rem;
+    padding: 0;
     overflow: scroll;
     scroll-snap-type: x mandatory;
     padding-bottom: 1rem;
+    margin: 0 -4px;
+    padding: 4px;
   }
 
   .showcase ul li {
@@ -88,7 +90,7 @@
     scroll-snap-align: center;
     background: var(--white);
     border: var(--turquoise) 2px solid;
-    box-shadow: -2px 2px 2px var(--lavender);
+    box-shadow: -4px 4px 0px var(--lavender);
     gap: 0.25rem;
   }
 

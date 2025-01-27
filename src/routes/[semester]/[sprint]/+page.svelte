@@ -21,11 +21,10 @@
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    justify-content: space-between;
     gap: 2rem;
     background-color: var(--grey);
     border-radius: var(--rounded) 0 0 0;
-    padding: 3rem 0 2rem 0;
+    padding: 0  0 2em;
   }
 
   @media (min-width: 40em) {

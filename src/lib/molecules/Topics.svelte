@@ -23,7 +23,6 @@
 
 <style>
   aside {
-    padding-left: .5rem;
 
     ul {
       margin: 0;

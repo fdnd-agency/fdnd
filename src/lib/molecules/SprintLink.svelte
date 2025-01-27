@@ -50,7 +50,7 @@
     box-shadow: -4px 4px var(--lavender);
     margin-top: 0.6em;
     background: var(--white);
-    width: 275px;
+    min-width: 275px;
     height: 3.75rem;
     overflow: hidden;
   }

@@ -59,11 +59,11 @@
   footer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     font-size: 0.8em;
     padding: 0 0 2em 0;
-    gap: 3em;
+    gap: 1em;
     margin: auto; 
     margin-top: 1rem;
     
@@ -72,7 +72,7 @@
     }
 
     nav h2 { 
-      margin: calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem; 
+      margin: 0;
     }
 
     p {
