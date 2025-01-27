@@ -41,6 +41,7 @@
     width: fit-content;
     word-wrap: break-word;
     padding: 1rem 1.25rem 2rem 1.25rem;
+    width: calc(100% - 2.5rem);
 
     strong {
       display: flex;

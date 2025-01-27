@@ -85,8 +85,7 @@
     border-radius: var(--rounded);
     margin-bottom: 0;
     position: relative;
-    width: 300px;
-    min-width: 300px;
+    min-width: 230px;
     scroll-snap-align: center;
     background: var(--white);
     border: var(--turquoise) 2px solid;
