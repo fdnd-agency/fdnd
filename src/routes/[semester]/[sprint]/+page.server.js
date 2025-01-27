@@ -14,7 +14,7 @@ export const load = async ({params: {sprint}}) => {
     const dataSprint = await client({ query: querySprint, variables: { slug: sprint }, fetch: fetch, endpoint: import.meta.env.VITE_HYPGRAPH_ENDPOINT })
     const dataTasks  = await client({ query: queryTasks, variables: { slug: sprint }, fetch: fetch, endpoint: import.meta.env.VITE_GITHUB_ENDPOINT, headers: headersGitHub })
     
-    const sprintNumber = dataSprint.sprint.sprintNumber
+    const {sprint: {sprintNumber} } = dataSprint
 
     const { prevSprint, nextSprint } = await getSprintNavigation(sprintNumber)
 

@@ -1,5 +1,5 @@
 <script>
-  let { semester } = $props();
+  let { semester } = $props()
 </script>
 
 <article>

@@ -1,12 +1,16 @@
 <script>
-  import { prettyDate } from "$lib/utils/date";
-  import { derived } from "svelte/store";
-  let { semester, sprint, nextSprint } = $props();
-  const today = new Date();
-  const sprintDate = new Date(sprint.startdate);
-  let nextSprintDate = nextSprint ? new Date(nextSprint.startdate) : false;
-  let active = $derived(today >= sprintDate && (!nextSprintDate || today < nextSprintDate));
-  let past = $derived(nextSprintDate && today > nextSprintDate);
+  import { prettyDate } from "$lib/utils/date"
+  import { derived } from "svelte/store"
+
+  let { semester, sprint, nextSprint } = $props()
+
+  const today = new Date()
+  const sprintDate = new Date(sprint.startdate)
+
+  let nextSprintDate = nextSprint ? new Date(nextSprint.startdate) : false
+  
+  let active = $derived(today >= sprintDate && (!nextSprintDate || today < nextSprintDate))
+  let past = $derived(nextSprintDate && today > nextSprintDate)
 </script>
 
 {#if sprint.sprintNumber}

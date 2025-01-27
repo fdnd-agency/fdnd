@@ -1,6 +1,7 @@
 <script>
-  import Heading from "$lib/molecules/Heading.svelte";
-  let { tasks } = $props();
+  import Heading from "$lib/molecules/Heading.svelte"
+  
+  let { tasks } = $props()
 </script>
 
 {#if tasks && tasks.length > 0}

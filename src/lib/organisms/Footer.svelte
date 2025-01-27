@@ -1,5 +1,5 @@
 <script>
-  import Logo from "$lib/atoms/HvaPayoff.svelte";
+  import Logo from "$lib/atoms/HvaPayoff.svelte"
 </script>
 
 <div class="fixed-bar"></div>
@@ -62,9 +62,8 @@
     align-items: flex-start;
     flex-wrap: wrap;
     font-size: 0.8em;
-    padding: 0 0 2em 0;
+    padding: 0 0 2rem 0;
     gap: 1em;
-    margin: auto; 
     margin-top: 1rem;
     
     nav { 
@@ -156,7 +155,7 @@
   @media (1024px <= width) {
     footer {
       justify-content: left;
-      padding: 0 0 2em 2em;
+      padding: 0 0 2rem 2rem;
     }
   }
 </style>

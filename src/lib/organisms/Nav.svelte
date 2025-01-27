@@ -1,5 +1,5 @@
 <script>
-  import { page } from "$app/stores";
+  import { page } from "$app/stores"
   let navItems = [
     {
       href: "/static-web/the-startup",

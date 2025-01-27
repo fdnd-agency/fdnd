@@ -1,7 +1,10 @@
 <script>
-  import Heading from "$lib/molecules/Heading.svelte";
-  import { prettyDate, longDate } from "$lib/utils/date.js";
-  let { weekPlans } = $props();
+  import Heading from "$lib/molecules/Heading.svelte"
+
+  import { prettyDate, longDate } from "$lib/utils/date.js"
+
+  let { weekPlans } = $props()
+
   const checkKeywords = (content) => {
     const strings = [
       "sprintplanning",
@@ -12,31 +15,41 @@
       "retrospect ",
       "wrap-up",
       "review",
-    ];
-    let newString = "";
+    ]
+
+    let newString = ""
+
     if (content) {
-      const splitted = content.split("<p>");
+      const splitted = content.split("<p>")
+
       splitted.forEach((paragraph) => {
         let toReplace = strings.filter((s) => {
           if (paragraph.toLowerCase().includes(s)) {
             return s
               .replace("we ♥ web", "we love web", s)
-              .replaceAll(" ", "-", s);
+              .replaceAll(" ", "-", s)
+
           }
-        });
-        let classes = toReplace.join(" ");
-        paragraph = "<p>" + paragraph;
+        })
+
+        let classes = toReplace.join(" ")
+
+        paragraph = "<p>" + paragraph
+
         newString += paragraph.replace(
           "<p>",
           `<p class="${classes}">`,
           paragraph,
-        );
-      });
-    }
-    return newString;
-  };
+        )
 
-  const plans = [];
+      })
+
+    }
+
+    return newString;
+  }
+
+  const plans = []
   weekPlans.forEach((plan) => {
     let startDate = new Date(plan["mondayDate"]);
     const week = [
@@ -65,14 +78,15 @@
         weekDay: "Vrijdag",
         content: checkKeywords(plan["friday"].html),
       },
-    ];
-    plans.push(week);
-  });
+    ]
+    plans.push(week)
+  })
 
   function addDays(date, days) {
-    var result = new Date(date);
-    result.setDate(result.getDate() + days);
-    return result;
+    var result = new Date(date)
+    result.setDate(result.getDate() + days)
+
+    return result
   }
 </script>
 

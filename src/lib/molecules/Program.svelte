@@ -1,6 +1,7 @@
 <script>
-  import Heading from "$lib/molecules/Heading.svelte";
-  let { title, content } = $props();
+  import Heading from "$lib/molecules/Heading.svelte"
+  
+  let { title, content } = $props()
 </script>
 
 <section>

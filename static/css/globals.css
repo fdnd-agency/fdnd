@@ -30,8 +30,14 @@
 body { 
   overflow-x: hidden;
   padding-inline: .25rem; 
-  max-width:1304px; /* todo: design larger screen layout */ 
-  color:var(--blueberry)
+  max-width: 1304px; /* todo: design larger screen layout */ 
+  color: var(--blueberry);
+  margin: 0 0.75em; 
+  background-color: var(--lavender); 
+
+  @media (2000px <= width) {
+    padding-inline: 2rem; 
+  }
 }
 
 h2 { 
@@ -52,13 +58,6 @@ a {
 
 ::marker { 
   color: currentColor; 
-}
-
-
-@media (2000px <= width) {
-  body { 
-    padding-inline: 2rem; 
-  }
 }
 
 .sr-only {

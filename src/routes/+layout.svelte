@@ -1,13 +1,8 @@
 <script>
-  import Nav from "$lib/organisms/Nav.svelte";
-  import Footer from "$lib/organisms/Footer.svelte";
-  /**
-   * @typedef {Object} Props
-   * @property {import('svelte').Snippet} [children]
-   */
-
-  /** @type {Props} */
-  let { children } = $props();
+  import Nav from "$lib/organisms/Nav.svelte"
+  import Footer from "$lib/organisms/Footer.svelte"
+ 
+  let { children } = $props()
 </script>
 
 <svelte:head>
@@ -23,14 +18,6 @@
 <Footer />
 
 <style>
-  :global(body) { 
-    margin: 0 0.75em; 
-    background-color: var(--lavender); 
-  }
-  :global(body), :global(body main) { 
-    display: block; 
-  }
-
   main {
     padding:1rem;
     background-color: var(--grey);

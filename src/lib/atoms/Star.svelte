@@ -1,5 +1,5 @@
 <script>
-  let { stargazerCount } = $props();
+  let { stargazerCount } = $props()
 </script>
 
 <i>

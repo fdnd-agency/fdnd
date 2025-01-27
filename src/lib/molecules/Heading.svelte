@@ -1,6 +1,6 @@
 <script>
-  let { title, subtitle = "" } = $props();
-  let id = title ? title .replace(/[^\w\s]/gi, "") .replace(/\s+/g, "-") .toLowerCase() : "";
+  let { title, subtitle = "" } = $props()
+  let id = title ? title .replace(/[^\w\s]/gi, "") .replace(/\s+/g, "-") .toLowerCase() : ""
 </script>
 
 <h2> 
