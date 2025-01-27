@@ -86,7 +86,7 @@
     border-radius: var(--rounded);
     border: 2px solid var(--turquoise);
     background: var(--white);
-    color: var(--lavender);
+    color: var(--blueberry);
   }
 
   li a div {
@@ -102,8 +102,8 @@
     font-weight: normal;
   }
 
-  :global(li.past) {
-    opacity: 0.5;
+  li.past span {
+    font-weight: normal;
   }
 
   :global(li.past strong) {
@@ -158,6 +158,11 @@
     background-color: transparent;
     color: inherit;
     margin-right: 1em;
+  }
+
+  li.active span {
+    background:var(--turquoise);
+    color: var(--blueberry);
   }
 
 </style>
