@@ -31,6 +31,7 @@ body {
   overflow-x: hidden;
   padding-inline: .25rem; 
   max-width:1304px; /* todo: design larger screen layout */ 
+  color:var(--blueberry)
 }
 
 h2 { 

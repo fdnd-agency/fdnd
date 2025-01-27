@@ -15,7 +15,7 @@
     font-weight: bold;
     letter-spacing: -0.04em;
     margin: 0;
-    font-weight: 500;
+    font-weight: 200;
     font-size: clamp(1.8rem, 2.25rem, 5vw);
     text-wrap: balance;
 

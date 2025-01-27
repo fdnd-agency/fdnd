@@ -59,7 +59,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: var(--blueberry);
     font-size: 1rem;
     position: relative;
     height: 100%;
@@ -103,7 +103,7 @@
   }
 
   :global(li.past strong) {
-    font-weight: 500;
+    font-weight: 200;
   }
 
   span.past {
@@ -132,7 +132,7 @@
 
   li.extra span {
     font-size: 0.5em;
-    font-weight: 500;
+    font-weight: 200;
     line-height: 1.2;
     margin-left: 1.75em;
     text-transform: uppercase;
@@ -150,7 +150,7 @@
   time {
     border: 0 solid;
     font-size: 0.7em;
-    font-weight: 500;
+    font-weight: 200;
     background-color: transparent;
     color: inherit;
     margin-right: 1em;

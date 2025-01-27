@@ -17,7 +17,7 @@
 <style>
   article {
     position: relative;
-    color: black;
+    color: var(--blueberry);
     width: fit-content;
     min-height: 18rem;
     max-width: 35em;

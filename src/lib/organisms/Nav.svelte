@@ -216,7 +216,7 @@
 
             li { 
               a { 
-                font-weight: 500; 
+                font-weight: 200; 
               } 
             }
           }
@@ -255,7 +255,7 @@
 
       nav {
         ul { padding: 0.25em 3.5em; gap: 4rem;
-          li { a { font-weight: 500; } }
+          li { a { font-weight: 200; } }
         }
       }
     }

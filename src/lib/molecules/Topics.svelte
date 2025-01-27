@@ -35,12 +35,12 @@
       li {
         padding: 0.1rem .25rem;
         font-size: 0.8rem;
-        font-weight: 500;
+        font-weight: 200;
         border-radius: var(--rounded);
         line-height: 1.5;
         display: flex;
         background: var(--turquoise);
-        color: black;
+        color: var(--blueberry);
       }
     }
   }

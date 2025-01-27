@@ -33,7 +33,7 @@
   section {
     position: relative;
     background-color: var(--white);
-    color: black;
+    color: var(--blueberry);
     border: 2px solid var(--turquoise);
     border-radius: var(--rounded);
     box-shadow: -4px 4px var(--lavender);
@@ -51,7 +51,7 @@
       font-weight: normal;
 
       a {
-        color: var(--turquoise);
+        color: var(--blueberry);
         font-weight: 700;
         text-transform: capitalize;
         overflow: hidden;

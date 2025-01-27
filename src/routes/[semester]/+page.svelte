@@ -57,7 +57,7 @@
 
     article.goal {
       background-color: var(--white);
-      color: black;
+      color: var(--blueberry);
       border: 2px solid var(--turquoise);
       border-radius: var(--rounded);
       box-shadow: -4px 4px var(--lavender);
@@ -98,7 +98,6 @@
       }
       
       article{
-        padding-left: 3em;
         padding-bottom: 1em;
         ol{ 
           grid-area: sprints; 

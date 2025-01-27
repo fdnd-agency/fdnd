@@ -28,7 +28,7 @@
       font-weight: bold;
       text-align: center;
       border-radius: 50%;
-      color: black;
+      color: var(--blueberry);
       position: absolute;
       top: 0;
       left: 0;

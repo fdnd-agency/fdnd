@@ -32,7 +32,7 @@
   }
 
   main {
-    padding:.5rem;
+    padding:1rem;
     background-color: var(--grey);
     border-radius: var(--rounded);
     
