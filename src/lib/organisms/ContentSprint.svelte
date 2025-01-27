@@ -33,8 +33,10 @@
   
   :global(blockquote) { 
     font-size: 1rem;
-    color: #444444; 
-    border-left: 3px solid #444444; 
-    padding-left: 1em;
+    border-left: 1px solid currentColor; 
+    padding-left: 1rem;
+    margin:0;
+    font-style: italic;
+
   }
 </style>

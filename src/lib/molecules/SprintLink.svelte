@@ -104,6 +104,7 @@
 
   li.past span {
     font-weight: normal;
+    font-size: 1em;
   }
 
   :global(li.past strong) {
