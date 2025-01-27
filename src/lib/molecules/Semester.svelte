@@ -1,12 +1,14 @@
 <script>
-  import Heading from "$lib/molecules/Heading.svelte";
-  import SprintLink from "$lib/molecules/SprintLink.svelte";
-  let { semester } = $props();
+  import Heading from "$lib/molecules/Heading.svelte"
+  import SprintLink from "$lib/molecules/SprintLink.svelte"
+  let { semester, i } = $props()
+  let semesterNr = `Semester ${++i}` 
+  
 </script>
 
 <section class="semester">
   <a href="/{semester.slug}">
-    <Heading title={`Semester`} subtitle={semester.title} />
+    <Heading title={semesterNr} subtitle={semester.title} />
   </a>
   <ol>
     {#each semester.sprints as sprint, index}

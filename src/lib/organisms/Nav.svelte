@@ -36,7 +36,7 @@
     <ul>
       {#each navItems as item}
         <li>
-          <a class:active={$page.url.pathname === item.href} href={item.href} target="_self" class="nav-item"> Sprint {item.sprintNr} <strong> {item.sprintName} </strong></a>
+          <a class:active={$page.url.pathname === item.href} href={item.href} target="_self" class="nav-item"><span>Sprint {item.sprintNr}</span> <strong> {item.sprintName} </strong></a>
         </li>
       {/each}
     </ul>
@@ -130,6 +130,10 @@
       font-size: .6rem;
       display:flex;
       flex-direction: column;
+
+      span {
+        text-transform: uppercase;
+      }
 
       strong {
         font-size: 1rem;
