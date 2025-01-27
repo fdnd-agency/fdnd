@@ -17,7 +17,7 @@
 </script>
 
 <section class="semesters-sprints">
-  <h2>{subtitle}</h2>
+  <h2 class="sr-only">{subtitle}</h2>
 
   {#if jsEnabled}
     <form class="agenda-container">
