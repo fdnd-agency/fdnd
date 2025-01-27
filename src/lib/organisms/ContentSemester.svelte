@@ -22,7 +22,13 @@
     box-shadow: -4px 4px var(--lavender);
     max-width: 100%;
 
-    h3 { margin: 0 0 0.5rem; }
+    h3 { 
+      margin: 0 0 0.5rem; 
+    }
   }
-  @media (750px <=width){ article { max-width: 43%; } }
+  @media (750px <=width){ 
+    article { 
+      max-width: 43%; 
+    } 
+  }
 </style>

@@ -32,6 +32,7 @@
       flex-wrap: wrap;
       column-gap: 0.25rem;
       row-gap: 0.25rem;
+      
       li {
         padding: 0.1rem .25rem;
         font-size: 0.8rem;

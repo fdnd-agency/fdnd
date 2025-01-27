@@ -1,16 +1,24 @@
 # FDND Project
 
-Het programma van FDND is te bekijken op https://programma.fdnd.nl/. Hier is informatie te vinden over de semesters en de sprints die het curriculum van FDND vormen. Aan ons is nu de taak om deze website om te bouwen zodat deze beter past bij de studenten.
+Het FDND Programma is in feite een digitale hub voor studenten en geïnteresseerden van de opleiding Frontend Design and Development. Het is een online platform waar je alles kunt vinden over de opleiding, de opbouw van het jaar en de verschillende projecten waar studenten aan werken.
+
+Het programma van FDND is te bekijken op https://programma.fdnd.nl/.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/701e5b8a-bc87-45f7-a3d3-d8800d084214/deploy-status)](https://app.netlify.com/sites/fdnd-programma/deploys)
+
+## Het team
+- Kaan Kalmioglu
+- Ilona van Oosbree
+
+## Beschrijving
+Voor de nieuwe website van het FDND Programma hebben we een complete make-over gegeven. We hebben de website aangepast aan de frisse, nieuwe huisstijl die je ook op de [hoofdpagina van FDND](https://fdnd.nl/) kunt vinden. Naast een verbeterde uiterlijk, hebben we ons vooral gericht op gebruiksgemak voor iedereen. Of je nu kleurenblind bent, een schermlezer gebruikt of gewoon traag internet hebt, onze website is toegankelijk voor iedereen. We hebben ervoor gezorgd dat de website snel laadt en soepel werkt, zodat je een goede gebruikerservaring hebt. En om het geheel wat levendiger en speelser te maken, hebben we hier en daar kleine animaties toegevoegd. Op deze manier willen we niet alleen een mooie website creëren, maar ook laten zien hoe belangrijk toegankelijkheid en goede performance zijn voor ons als opleiding.
 
 ## Screenshot
 De website live bekijken kan ook! Klik hiervoor op de link: [FDND Programma website](https://fdnd-programma.netlify.app/)
 
-![image](https://github.com/user-attachments/assets/8b02d733-98d2-45e9-83c6-6c7356bd148a)
+![kS4Lllh4qF](https://github.com/user-attachments/assets/49c2db79-da79-44d4-813a-b7e9d40ec153)
 
-## Beschrijving
-De Programma pagina moet een rework krijgen, hierbij gaan wij een nieuw design toepassen en hierbij de code refactoren. Denk bij een grote refactor aan het maken van componenten, het opschonen van ongebruikte code etc. Ook wilt de opdrachtgever graag dat we de database switchen van Hygraph naar Directus. De FDND Programma pagina is bedoelt voor studenten, docenten, gastsprekers en partners van de studie FDND. Hier kunnen ze alle informatie vinden over het curriculum van FDND.
+
 
 ## Installatie
 Mocht je dit project lokaal willen opzetten? Dat kan! Volg dan de volgende stappen: 
@@ -25,6 +33,8 @@ Mocht je dit project lokaal willen opzetten? Dat kan! Volg dan de volgende stapp
 3. Installeer de vereiste dependencies:
    ````
    npm install
+
+   npm install --save-dev @sveltejs/enhanced-img
    ````
 4. Voeg de environment-variables toe in een `.env` bestand: (vraag de benodigde info aan de product-owner)
    ````

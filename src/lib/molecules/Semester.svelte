@@ -6,7 +6,7 @@
   
 </script>
 
-<section class="semester">
+<article class="semester">
   <a href="/{semester.slug}">
     <Heading title={semesterNr} subtitle={semester.title} />
   </a>
@@ -15,7 +15,7 @@
       <SprintLink {semester} {sprint} nextSprint={index !== semester.sprints.length - 1 ? semester.sprints[index + 1] : false}/>
     {/each}
   </ol>
-</section>
+</article>
 
 <style>
   .semester {
@@ -59,7 +59,7 @@
     text-transform: uppercase;
   }
 
-  @media (min-width: 960px) {
+  @media (960px <= width) {
     .semester > a {
       color: var(--blueberry);
       text-decoration: none;
@@ -75,5 +75,15 @@
       max-width: 360px;
     }
   }
-
+  @media (1600px <= width) {
+    .semester{
+      width: 20%;
+      margin-left: .5em;
+    }
+  }
+  @media (2560px <= width) {
+    .semester{
+      width: 35%;
+    }
+  }
 </style>

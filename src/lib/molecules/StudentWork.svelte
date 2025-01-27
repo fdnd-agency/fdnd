@@ -5,6 +5,7 @@
   if (tasks) { tasks.forEach((task) => { if (!stargazer && task.forks && task.forks.length > 0) { stargazer = true; } });}
 </script>
 
+{#if tasks && tasks.length > 0}
 <section class="showcase {stargazer ? 'stargazer' : ''}">
   <Heading title="Studentenwerk" />
   <div class="gradient-container">
@@ -24,7 +25,7 @@
               </div>
             </div>
             <strong class="profile">
-              <img src={fork.avatarUrl} alt="" class="avatar"/>
+              <img src={fork.avatarUrl} alt="" class="avatar" loading="lazy" height="2rem" width="2rem"/>
               <a href={fork.ownerUrl} target="_blank" rel="noreferrer"> @{fork.owner} </a>
             </strong>
           </li>
@@ -34,6 +35,7 @@
   </ul>
   </div>
 </section>
+{/if}
 
 <style>
   .showcase { display: block; }
@@ -43,8 +45,7 @@
     position: relative;
   }
 
-  .gradient-container::before,
-  .gradient-container::after {
+  .gradient-container::before, .gradient-container::after {
     content: '';
     position: absolute;
     top: 0;
@@ -162,5 +163,7 @@
     height: 2rem;
     border-radius: 50%;
     margin-bottom: 0;
+    image-rendering: optimizeSpeed;
+    content-visibility: auto;
   }
 </style>

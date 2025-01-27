@@ -35,6 +35,7 @@
     background: var(--lavender);
     position: sticky;
     bottom: 0;
+    z-index: 1;
   }
 
   .fixed-bar::before, .fixed-bar::after {
@@ -43,7 +44,7 @@
     width: 1.5em;
     aspect-ratio: 1;
     left: 0;
-    border-radius: 0 0 50% 0;
+    border-radius: 0 0 1rem 0;
     bottom: 0.75em;
     box-shadow: var(--rounded) var(--rounded) 0 var(--lavender);
     transform: rotate(90deg);
@@ -64,7 +65,9 @@
     padding: 0 0 2em 0;
     gap: 3em;
 
-    h2 { margin: 0; }
+    h2 { 
+      margin: 0; 
+    }
 
     p {
       margin: 0 0 1em 0;
@@ -77,7 +80,8 @@
       padding: 0;
       margin: 0;
 
-      li { padding: 0.5em 0.25em;
+      li { 
+        padding: 0.5em 0.25em;
 
         a {
           position: relative;
@@ -120,25 +124,30 @@
     }
   }
 
-  @media (min-width: 720px) {
-    footer { flex-wrap: nowrap;
+  @media (720px <= width) {
+    footer { 
+      flex-wrap: nowrap;
 
       p {
         margin: 0 0 1em 0;
         max-width: 75ch;
       }
 
-      ul { max-width: 30em;
+      ul { 
+        max-width: 30em;
 
-        li { padding: 0.7em 0.2em;
+        li { 
+          padding: 0.7em 0.2em;
 
-          a { padding: 0.4em 0.6em; }
+          a { 
+            padding: 0.4em 0.6em; 
+          }
         }
       }
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (1024px <= width) {
     footer {
       justify-content: left;
       padding: 0 0 2em 2em;
