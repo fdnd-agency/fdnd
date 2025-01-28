@@ -49,13 +49,13 @@
     grid-template-areas:
       "top top"
       "left nav";
-    padding: 1.5rem 0 0 0;
+    padding: 1rem 0 0 0;
 
     .top {
       grid-area: top;
       max-width: 100%;
       min-height: 1.2rem;
-      margin-bottom: 0.5em;
+      margin-bottom: 1rem;
       display: flex;
       justify-content: start;
       flex-direction: row;
@@ -63,7 +63,8 @@
 
       .hva-logo { 
         display: inline-block; 
-        width: 70%; 
+        width: 50%; 
+        margin-left:1rem;
       }
       
       p {
@@ -110,13 +111,15 @@
       justify-content: flex-end;
       margin: 0 0 0 auto;
       box-shadow: 0 6px var(--grey);
+      position: relative;
+      z-index:10;
       
       ul {
         position: relative;
         display: flex;
         flex-direction: row;
         gap:.75rem;
-        border-radius: 1rem 1rem 0 0;
+        border-radius: 1rem 0 0 0;
         margin: 0;
         padding:  .75rem;
         list-style: none;
@@ -133,7 +136,8 @@
           } 
         }
 
-        @media (min-width: 960px) {
+        @media (min-width: 750px) {
+          border-radius: 1rem 1rem 0 0;
           gap: 1.75rem;
           padding:.5rem 1.5rem;
         }
@@ -165,7 +169,7 @@
         font-weight: normal;
         white-space: nowrap;
 
-        @media (min-width: 960px) {
+        @media (min-width: 750px) {
           font-size: 1rem;
         }
       }

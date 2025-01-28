@@ -24,7 +24,9 @@
 
 <style>
   aside {
-
+    h3 {
+      font-weight: normal;
+    }
     ul {
       margin: 0;
       padding: 0;

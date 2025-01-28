@@ -47,16 +47,18 @@
   :global(.semester h2 ) {
     line-height: 1.1;
     font-size: 1rem;
-   
+    display:flex;
+    flex-direction: column;
   }
 
   :global(.semester h2 > span) {
     font-size: 0.6em;
     letter-spacing: 0;
     text-transform: uppercase;
+    font-weight: normal;
   }
 
-  @media (960px <= width) {
+  @media (750px <= width) {
     .semester > a {
       color: var(--blueberry);
       text-decoration: none;

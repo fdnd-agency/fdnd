@@ -63,15 +63,14 @@
 
       a:hover{
         text-decoration:underline;
-        text-decoration-color: var(--turquoise);
         text-decoration-thickness: 2px;
         text-decoration-skip: ink;
       }
 
       small {
-        font-size: 0.7em;
+        font-size: 0.6em;
         font-weight: 400;
-        color: #444;
+        color: var(--blueberry);
         margin-left: 0.25rem;
         padding: 0 0.1rem;
         transform: translateY(-5px);

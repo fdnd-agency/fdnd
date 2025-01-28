@@ -56,7 +56,7 @@
     font-weight: normal;
     font-size: 1.25rem;
 
-    @media (min-width: 960px) {
+    @media (min-width: 750px) {
         font-size: 1.5rem;
     }
   }
@@ -144,7 +144,7 @@
     margin: 0 calc(-1 * var(--_breathing-space));
     position:relative;
 
-    @media (min-width: 960px) {
+    @media (min-width: 750px) {
         gap:2rem;
     }
   }

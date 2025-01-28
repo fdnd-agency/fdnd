@@ -4,7 +4,7 @@
 </script>
 
 <h2> 
-  {title}
+  <span>{title}</span>
   {#if subtitle !== ""}
     <strong> {subtitle} </strong>
   {/if}
@@ -12,16 +12,19 @@
 
 <style>
   h2 {
-    font-weight: bold;
     letter-spacing: -0.04em;
-    margin: 0;
-    font-weight: 200;
-    font-size: clamp(1.8rem, 2.25rem, 5vw);
     text-wrap: balance;
+    margin: 0;
 
     strong {
       display: block;
       white-space: nowrap;
     }
+  }
+
+  :global(section > h2),
+  :global(article > h2) {
+    font-size: clamp(1.8rem, 2.25rem, 5vw);
+    font-weight: 200;
   }
 </style>

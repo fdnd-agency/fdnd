@@ -1,4 +1,18 @@
-:root {
+@font-face {
+  font-family: 'Open Sans';
+  src: url(../fonts/OpenSans-VariableFont_wdth\,wght.woff2) format('woff2');
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  list-style: none;
+
+  &::-webkit-scrollbar { 
+    display: none; 
+  }
+}
+
+body { 
   --white: #fff;
   --grey: #ECECEC;
   --blueberry: #050542;
@@ -11,32 +25,17 @@
   --pilled: 2rem;
   --shadow: .3rem;
   --breakpoint-medium: 30em;
-}
 
-@font-face {
-  font-family: 'Open Sans';
-  src: url(../fonts/OpenSans-VariableFont_wdth\,wght.woff2) format('woff2');
-}
-
-* {
-  font-family: "Open Sans", sans-serif;
-  list-style: none;
-}
-
-*::-webkit-scrollbar { 
-  display: none; 
-}
-
-body { 
   overflow-x: hidden;
-  padding-inline: .25rem; 
   max-width: 1304px; /* todo: design larger screen layout */ 
   color: var(--blueberry);
-  margin: 0 0.75em; 
-  background-color: var(--lavender); 
-
-  @media (2000px <= width) {
-    padding-inline: 2rem; 
+  background-color: var(--lavender);
+  margin: 0; 
+  padding: 0;
+   
+  @media (750px <= width) {
+    padding-inline: .25rem;
+    margin: 0 1rem;
   }
 }
 

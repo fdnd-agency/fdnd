@@ -5,10 +5,8 @@
 </script>
 
 <section>
-  <div>
     <Heading {title} />
     <!-- {@html content.html} -->
-  </div>
 </section>
 
 <style>
@@ -17,5 +15,5 @@
     color: var(--blueberry);
   }
   
-  @media (min-width: 750px) { section{ margin:0; div { width: max-content; } }}
+  @media (min-width: 750px) { section{ margin:0; }}
 </style>
