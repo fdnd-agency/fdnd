@@ -19,7 +19,7 @@
 
 <style>
   main {
-    padding:1rem .5rem .5rem;
+    padding:1rem .5rem;
     background-color: var(--grey);
     position: relative;
     z-index:20;
@@ -27,7 +27,7 @@
     @media (min-width: 750px) {
         border-radius: var(--rounded);
         padding: 3rem;
-        border-radius: 1rem 0 0 0;
+        border-radius: 1rem 0 1rem 1rem;
     }
   }
 

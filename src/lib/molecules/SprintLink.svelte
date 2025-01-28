@@ -39,8 +39,8 @@
 {/if}
 
 <style>
-  a:focus, a:hover { 
-    background-position: left bottom; 
+  li a:focus, li a:hover { 
+    background: var(--turquoise); 
   }
 
   li {
@@ -53,7 +53,6 @@
     border-radius: var(--rounded);
     box-shadow: -4px 4px var(--lavender);
     margin-top: 0.6em;
-    background: var(--white);
     min-width: 275px;
     height: 3.75rem;
     overflow: hidden;
@@ -68,9 +67,23 @@
     position: relative;
     height: 100%;
     width: 100%;
-    background: linear-gradient( to right, var(--turquoise) 50%, var(--white) 50% );
+    background: var(--white);
     background-size: 200% 100%;
     background-position: right bottom;
+
+    &:focus, 
+    &:hover { 
+      background: var(--turquoise); 
+    }
+  }
+
+  li.past a {
+    background-color: var(--grey);
+
+    &:focus, 
+    &:hover { 
+      background: var(--dark-grey); 
+    }
   }
 
   li a span {
@@ -105,6 +118,7 @@
   li.past span {
     font-weight: normal;
     font-size: 1em;
+    background: var(--grey)
   }
 
   :global(li.past strong) {
