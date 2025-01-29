@@ -128,6 +128,7 @@
         max-width: calc(100% - var(--rounded) * 2.25);
         transform: translateY(100%);
         animation: up 0.4s 0.6s ease-out forwards;
+        border-radius: 1rem 1rem 0 0;
 
         li { 
           a { 
@@ -137,7 +138,7 @@
         }
 
         @media (min-width: 750px) {
-          border-radius: 1rem 1rem 0 0;
+          
           gap: 1.75rem;
           padding:.5rem 1.5rem;
         }

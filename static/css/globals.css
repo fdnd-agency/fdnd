@@ -32,7 +32,7 @@ body {
   color: var(--blueberry);
   background-color: var(--lavender);
   margin: 0; 
-  padding: 0;
+  padding: .5rem;
    
   @media (750px <= width) {
     padding-inline: .25rem;
