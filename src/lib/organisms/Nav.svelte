@@ -70,7 +70,7 @@
       p {
         position: relative;
         letter-spacing: -0.03em;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         margin-left: 0.25em;
         display: none;
       }
@@ -189,8 +189,8 @@
         }
 
         p { 
-          margin-left: 1em; 
-          font-size: 1rem; 
+          margin-left: 1.5rem; 
+
           display: block; 
         }
 
@@ -236,11 +236,6 @@
         .hva-logo { 
           height: auto; 
           width: 20%; 
-        }
-
-        p { 
-          margin-left: 1em; 
-          font-size: 1.25rem; 
         }
 
         p::before {
