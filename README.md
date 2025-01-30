@@ -20,8 +20,16 @@ Welkom op de website van FDND - We Love Web! Op deze pagina vind je een overzich
 - SvelteKit & Directus API: De website is gebouwd met SvelteKit en haalt de data dynamisch op via de Directus API.
 ------------------------------------------------------------------------------------------------------------------
 ## Afbeelding hoofdpagina
+Op deze screenshot is de hoofdpagina van de We Love Web-site te zien. Hier worden alle aankomende en afgelopen We Love Webs van dit schooljaar weergegeven, gesorteerd op sprints. Er zijn drie kleuren voor de kaartjes: grijze kaartjes geven de reeds gehouden We Love Webs aan, het groene kaartje markeert de eerstvolgende sessie, en de blauwe kaartjes vertegenwoordigen de resterende geplande We Love Webs van dit jaar. Verder zie je hieronder een uitleg van wat deze site is en hoe je mee kan doen.
 ![v4 0](https://github.com/user-attachments/assets/ac1654a1-cbab-490c-9b49-758a44e964d3)
 
+## Afbeelding detail pagina
+Wanneer je op een kaartje klikt, word je doorgestuurd naar de detailpagina ervan. Hier vind je de naam van de spreker, de sprint en de datum van de sessie. Daarnaast bevat de pagina een grote afbeelding, een beschrijving van de spreker en enkele tags die aangeven waar de lezing over gaat. Onder de tags vind je links naar de spreker.
+![screencapture-weloveweb-agency-fdnd-nl-9a3af20f-7c50-4e8e-b3ee-df38abaa5bcd-2025-01-30-14_23_42](https://github.com/user-attachments/assets/28c81c4c-4aee-4c3a-a754-ad7fd1ea9703)
+
+## Afbeelding archief pagina
+Op de archiefpagina vind je een overzicht van alle We Love Webs uit voorgaande jaren. Mocht je een sessie gemist hebben of geïnteresseerd zijn in eerdere edities, dan kun je ze hier terugvinden. De opzet lijkt op die van de hoofdpagina, maar met aanzienlijk meer kaartjes. Alle kaartjes zijn grijs, omdat deze sessies al hebben plaatsgevonden.
+![screencapture-weloveweb-agency-fdnd-nl-collectie-2025-01-30-14_24_01](https://github.com/user-attachments/assets/a19d91ec-6581-44ed-958b-0cad6c1e03dd)
 
 ------------------------------------------------------------------------------------------------------------------
 
