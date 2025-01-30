@@ -14,7 +14,7 @@
 </script>
 
 {#if sprint.sprintNumber}
-  <li class:active class:past>
+  <li class:active class:past class={sprint.type}>
     <a data-sveltekit-prefetch href="{semester.slug}/{sprint.slug}">
       <span class:past> {sprint.sprintNumber} </span>
       <div>
@@ -56,7 +56,10 @@
     min-width: 275px;
     height: 3.75rem;
     overflow: hidden;
+    position: relative;
   }
+
+  
 
   li a {
     display: flex;
@@ -173,6 +176,34 @@
     background-color: transparent;
     color: inherit;
     margin-right: 1em;
+    display:flex;
+    gap:.25rem;
+    align-items:center;
+  }
+
+  li:not(.extra) time::after {
+    --_bgcolor:var(--grey);
+    --_type: 'sprint';
+    background:var(--_bgcolor);
+    content:var(--_type);
+    padding:0.1rem 0.25rem;
+    text-transform: capitalize;
+    
+  }
+
+  li:not(.extra).tribe time::after {
+    --_type:'tribe';
+    --_bgcolor:#fbfbd5;
+  }
+
+  li:not(.extra).designChallenge time::after {
+    --_type:'design-challenge';
+    --_bgcolor:#e6d7ff;
+  }
+
+  li:not(.extra).project time::after {
+    --_type: 'project';
+    --_bgcolor:#c4f9e9;
   }
 
   li.active span {

@@ -11,11 +11,11 @@ export default function getQueryProgram(){
                 title
                 slug
                 sprints (first:20) {
-
                     title
                     slug
                     sprintNumber
                     startdate
+                    type
                 }
             }
         }
