@@ -28,7 +28,7 @@
     @media (min-width: 750px) {
         border-radius: var(--rounded);
         padding: 3rem;
-        max-width:75rem;
+        max-width:75.5rem;
         
     }
   }
