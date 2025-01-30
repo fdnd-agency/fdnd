@@ -44,22 +44,22 @@
   }
 
   li {
+    --_brd-color: var(--turquoise);
+    --_shadow-color: var(--lavender);
     display: flex;
     align-items: center;
     justify-content: flex-start;
     font-size: 1.75rem;
     margin: 0;
-    border: 2px solid var(--turquoise);
+    border: 2px solid var(--_brd-color);
     border-radius: var(--rounded);
-    box-shadow: -4px 4px var(--lavender);
+    box-shadow: -4px 4px var(--_shadow-color);
     margin-top: 0.6em;
     min-width: 275px;
     height: 3.75rem;
     overflow: hidden;
     position: relative;
   }
-
-  
 
   li a {
     display: flex;
@@ -82,6 +82,7 @@
 
   li.past a {
     background-color: var(--grey);
+    opacity:.75;
 
     &:focus, 
     &:hover { 
@@ -94,7 +95,7 @@
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: 200;
     font-size: 1.2em;
     width: 60px;
     height: 100%;
@@ -121,7 +122,7 @@
   li.past span {
     font-weight: normal;
     font-size: 1em;
-    background: var(--grey)
+    background: var(--grey);
   }
 
   :global(li.past strong) {
@@ -186,8 +187,12 @@
     --_type: 'sprint';
     background:var(--_bgcolor);
     content:var(--_type);
-    padding:0.1rem 0.25rem;
-    text-transform: capitalize;
+    padding:0.1rem .5rem;
+    border-radius: var(--rounded) 0 var(--rounded) 0;
+    position:absolute;
+    bottom:0;
+    right:0;
+
     
   }
 
@@ -209,6 +214,9 @@
   li.active span {
     background:var(--turquoise);
     color: var(--blueberry);
+  }
+  li.active a span {
+    font-weight: 800;
   }
 
 </style>
