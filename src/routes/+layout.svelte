@@ -26,10 +26,8 @@
     border-radius: 1rem 0 1rem 1rem;
     
     @media (min-width: 750px) {
-        border-radius: var(--rounded);
         padding: 3rem;
         max-width:75.5rem;
-        
     }
   }
 
