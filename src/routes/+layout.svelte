@@ -27,7 +27,7 @@
     
     @media (min-width: 750px) {
         padding: 3rem;
-        max-width:75.5rem;
+        max-width:76rem;
     }
   }
 
