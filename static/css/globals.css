@@ -38,6 +38,11 @@ body {
     padding-inline: .25rem;
     margin: 0 1rem;
   }
+
+  @media (width > calc(1300px + 2.5rem)) {
+    display:grid;
+    place-self: center;
+  }
 }
 
 h2 { 
