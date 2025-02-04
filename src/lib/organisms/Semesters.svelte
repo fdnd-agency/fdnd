@@ -1,21 +1,23 @@
 <script>
-  import Semester from "$lib/molecules/Semester.svelte"
-  import { onMount } from "svelte"
-  
-  let { semesters, subtitle } = $props()
-  let jsEnabled = $state(true)
-  
-  function toggleDates({ target }) { 
-    if (target.nodeName == "INPUT") { 
-      document.body.classList.toggle("expand")
-      target.checked ? target.nextElementSibling.textContent = 'Hide full agenda' : target.nextElementSibling.textContent = 'Show full agenda'
-    } 
+  import Semester from "$lib/molecules/Semester.svelte";
+  import { onMount } from "svelte";
+
+  let { semesters, subtitle } = $props();
+  let jsEnabled = $state(true);
+
+  function toggleDates({ target }) {
+    if (target.nodeName == "INPUT") {
+      document.body.classList.toggle("expand");
+      target.checked
+        ? (target.nextElementSibling.textContent = "Hide full agenda")
+        : (target.nextElementSibling.textContent = "Show full agenda");
+    }
   }
 
-  onMount(() => { 
-    jsEnabled = true 
-    document.body.classList.remove("expand") 
-  })
+  onMount(() => {
+    jsEnabled = true;
+    document.body.classList.remove("expand");
+  });
 </script>
 
 <section class="semesters-sprints">
@@ -24,7 +26,12 @@
   {#if jsEnabled}
     <form class="agenda-container">
       <label for="show-hide-dates">
-        <input type="checkbox" id="show-hide-dates" class="pacman" onchange={toggleDates}/>
+        <input
+          type="checkbox"
+          id="show-hide-dates"
+          class="pacman"
+          onchange={toggleDates}
+        />
         <span>Show full agenda</span>
       </label>
     </form>
@@ -38,44 +45,45 @@
 </section>
 
 <style>
-  @keyframes waka_waka_waka { to { transform: translate(-50%, var(--translation)) rotate(var(--rotation)); } }
+  @keyframes waka_waka_waka {
+    to {
+      transform: translate(-50%, var(--translation)) rotate(var(--rotation));
+    }
+  }
 
   section {
     position: relative;
     padding: 0;
     background: var(--grey);
     color: var(--blueberry);
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: start;
     gap: 1rem;
   }
 
-  h2 { 
-    margin: 0; 
+  h2 {
+    margin: 0;
     font-weight: normal;
     font-size: 1.25rem;
 
     @media (min-width: 750px) {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
     }
   }
 
   form {
-    margin-left:auto;
+    padding-top: 1em;
 
-    label{
+    label {
       display: flex;
       flex-direction: column;
       white-space: nowrap;
       color: var(--blueberry);
       font-size: 0.7rem;
       font-weight: 700;
-      margin-left: 1rem;
-      align-items: end;
-      translate:0 -2px;
+      translate: 0 -2px;
     }
-  
 
     .pacman {
       appearance: none;
@@ -87,13 +95,17 @@
       border-radius: 2em;
       box-sizing: content-box;
       cursor: pointer;
-      background: linear-gradient(90deg, var(--lavender) 6em, #1230 0) -5.5em 0 / 9em 100%, radial-gradient(circle, #fff 0.075em, #fff0 0.08em) 50% 0 / 0.4em 100%, var(--lavender);
+      background:
+        linear-gradient(90deg, var(--lavender) 6em, #1230 0) -5.5em 0 / 9em 100%,
+        radial-gradient(circle, #fff 0.075em, #fff0 0.08em) 50% 0 / 0.4em 100%,
+        var(--lavender);
       transition: background-position calc(var(--speed) * 4) linear;
       --waka-speed: 0.4s;
       --speed: 0.5s;
     }
 
-    .pacman::before, .pacman::after {
+    .pacman::before,
+    .pacman::after {
       --rotation: 30deg;
       --translation: -100%;
       content: "";
@@ -109,28 +121,36 @@
       transition: left calc(var(--speed)) linear;
       animation: waka_waka_waka var(--waka-speed) alternate infinite;
     }
-    
+
+    .pacman:focus-visible {
+    outline-color: var(--lavender);
+    }
+
+
     .pacman::after {
       --rotation: -30deg;
       --translation: 0;
       border-radius: 50% / 0 0 100% 100%;
       transform-origin: 50% 0;
     }
-    
-    .pacman:checked { 
-      background-position: 2.5em 0, 50% 0; 
+
+    .pacman:checked {
+      background-position:
+        2.5em 0,
+        50% 0;
     }
-    .pacman:checked::before, .pacman:checked::after { 
-      --rotation: -30deg; 
-      left: calc(100% - 0.5em); 
+    .pacman:checked::before,
+    .pacman:checked::after {
+      --rotation: -30deg;
+      left: calc(100% - 0.5em);
     }
-    .pacman:checked::after { 
-    --rotation: 30deg; 
+    .pacman:checked::after {
+      --rotation: 30deg;
     }
   }
 
   .semester-grid {
-    --_breathing-space:4px;
+    --_breathing-space: 4px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -138,14 +158,14 @@
     overflow: scroll;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-padding:var(--_breathing-space);
+    scroll-padding: var(--_breathing-space);
     gap: 1rem;
     padding: var(--_breathing-space);
     margin: 0 calc(-1 * var(--_breathing-space));
-    position:relative;
+    position: relative;
 
     @media (min-width: 750px) {
-        gap:2rem;
+      gap: 2rem;
     }
   }
 
@@ -170,10 +190,10 @@
     z-index: 1;
   } */
 
-
-  @media (prefers-reduced-motion: reduce) { 
-    .pacman::before, .pacman::after { 
-      animation: none; 
-    } 
+  @media (prefers-reduced-motion: reduce) {
+    .pacman::before,
+    .pacman::after {
+      animation: none;
+    }
   }
 </style>
