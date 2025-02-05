@@ -125,6 +125,10 @@
           right: 2px;
           top: 2px;
         }
+
+        a:focus-visible {
+          outline: none;
+        }
       }
     }
   }

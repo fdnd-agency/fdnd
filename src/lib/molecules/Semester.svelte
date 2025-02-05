@@ -34,8 +34,14 @@
     left: 0;
   }
 
-  .semester a:focus {
+  .semester a:focus, .semester a:hover {
     color: var(--blueberry);
+    text-decoration: underline;
+    text-decoration-color: var(--lavender);
+  }
+
+  .semester a:focus-visible {
+    outline: none;
   }
 
   ol {

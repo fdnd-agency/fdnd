@@ -80,10 +80,10 @@
       display: flex;
       margin: 0;
       padding-left: 1em;
-      padding-bottom: 0.5em;
+      padding-bottom: 1em;
       align-items: center;
-
     }
+    
       .fdnd-logo {
           position: relative;
           color: var(--blueberry);
@@ -93,12 +93,7 @@
           border-radius: var(--rounded);
           text-decoration: none;
           background: var(--white);
-
-          font-variation-settings:
-          "wght" var(--text-wght),
-          "wdth" var(--text-wdth),
-          "opsz" var(--text-opsz),
-          "GRAD" var(--text-GRAD);
+          transition: all 0.4s ease-out;
 
           h1 {
         margin: 0;
@@ -108,16 +103,9 @@
 
         .fdnd-logo:focus-visible, .fdnd-logo:hover {
           background-color: var(--call-to-action);
-          right: 1px;
-          top: 1px;
-          transition: all 0.4s ease-out;
+          right: 3px;
+          top: 3px;
           text-decoration: none;
-        }
-
-        .fdnd-logo:focus-visible::before, .fdnd-logo:hover::before {
-          background-color: #b1b073;
-          right: 1px;
-          top: 1px;
         }
 
         .fdnd-logo::before {
@@ -130,9 +118,21 @@
           background-color: var(--grey);
           border-radius: var(--rounded);
           color: var(--attent);
-          right: 2px;
+          right: 3px;
           top: 2px;
         }
+
+        .fdnd-logo:focus-visible::before, .fdnd-logo:hover::before {
+          background-color: #b1b073;
+          right: 1px;
+          top: 1px;
+        }
+
+        a:hover, a:focus, a:focus-visible  { 
+      text-decoration: underline;
+      text-decoration-color: var(--lavender);
+      outline: none;
+    }
       }
 
     nav {
