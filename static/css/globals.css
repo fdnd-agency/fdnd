@@ -6,10 +6,6 @@
 * {
   font-family: "Open Sans", sans-serif;
   list-style: none;
-
-  &::-webkit-scrollbar { 
-    display: none; 
-  }
 }
 
 body { 
