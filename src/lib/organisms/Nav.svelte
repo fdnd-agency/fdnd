@@ -129,9 +129,9 @@
         }
 
         a:hover:not(.fdnd-logo), a:focus:not(.fdnd-logo), a:focus-visible:not(.fdnd-logo)  { 
-      color: var(--lavender);
+      color: var(--text-element-hover);
 
-      text-decoration-color: var(--lavender);
+      text-decoration-color: var(--text-element-hover);
       outline: none;
     }
       }

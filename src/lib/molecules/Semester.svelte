@@ -35,14 +35,14 @@
   }
 
   .semester a:focus, .semester a:hover {
-    color: var(--lavender);
+    color: var(--text-element-hover);
     text-decoration: underline;
-    text-decoration-color: var(--lavender);
+    text-decoration-color: var(--text-element-hover);
   }
 
   .semester a:focus-visible {
     outline: none;
-    color: var(--lavender);
+    color: var(--text-element-hover);
   }
 
   ol {
