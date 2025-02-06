@@ -35,13 +35,14 @@
   }
 
   .semester a:focus, .semester a:hover {
-    color: var(--blueberry);
+    color: var(--lavender);
     text-decoration: underline;
     text-decoration-color: var(--lavender);
   }
 
   .semester a:focus-visible {
     outline: none;
+    color: var(--lavender);
   }
 
   ol {
@@ -66,13 +67,8 @@
 
   @media (750px <= width) {
     .semester > a {
-      color: var(--blueberry);
       text-decoration: none;
       display: inline-block;
-    }
-
-    .semester > a:focus {
-      color: var(--blueberry);
     }
 
     ol {

@@ -128,8 +128,9 @@
           top: 1px;
         }
 
-        a:hover, a:focus, a:focus-visible  { 
-      text-decoration: underline;
+        a:hover:not(.fdnd-logo), a:focus:not(.fdnd-logo), a:focus-visible:not(.fdnd-logo)  { 
+      color: var(--lavender);
+
       text-decoration-color: var(--lavender);
       outline: none;
     }
@@ -196,7 +197,6 @@
 
       strong {
         font-size: .8rem;
-        font-weight: normal;
         white-space: nowrap;
 
         @media (min-width: 750px) {
