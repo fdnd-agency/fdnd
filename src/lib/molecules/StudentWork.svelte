@@ -131,8 +131,8 @@
     color: var(--blueberry);
   }
 
-  .links a:hover {
-    background-color: var(--lavender);
+  .links a:hover:not(.profile), a:focus:not(.profile), a:focus-visible:not(.profile) {
+    background-color: var(--call-to-action);
     color: var(--blueberry);
   }
 

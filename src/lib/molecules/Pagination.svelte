@@ -37,9 +37,13 @@
         cursor:pointer;
 
         &:hover,
-        &:focus {
-            outline-color: var(--blueberry);
+        &:focus,
+        &:focus-visible {
+            color: var(--text-element-hover);
             text-decoration: underline;
+            outline: none;
+            outline-offset: none;
+            text-decoration-color: var(--text-element-hover);
         }
     }
 

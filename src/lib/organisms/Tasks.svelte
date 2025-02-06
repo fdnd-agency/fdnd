@@ -61,11 +61,13 @@
         padding: 0;
       }
 
-      a:hover{
-        text-decoration:underline;
-        text-decoration-thickness: 2px;
-        text-decoration-skip: ink;
-      }
+      a:hover, a:focus, a:focus-visible {
+        color: var(--text-element-hover);
+        text-decoration: underline;
+        outline: none;
+        outline-offset: none;
+        text-decoration-color: var(--text-element-hover);
+    }
 
       small {
         font-size: 0.6em;
