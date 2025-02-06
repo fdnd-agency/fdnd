@@ -1,7 +1,6 @@
 import { client } from '$lib/utils/client'
 import getQueryProgram from '$lib/queries/program'
 import {loadingState} from '$lib/stores/program'
-import { log } from 'console'
 
 export const load = async () => {
     loadingState.set(true)
