@@ -77,7 +77,8 @@
 
     label {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      gap: 0.5em;
       white-space: nowrap;
       color: var(--blueberry);
       font-size: 0.7rem;
