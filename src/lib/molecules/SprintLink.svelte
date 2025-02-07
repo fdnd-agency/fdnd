@@ -1,7 +1,6 @@
 <script>
   import { prettyDate } from "$lib/utils/date"
-  import { derived } from "svelte/store"
-
+  
   let { semester, sprint, nextSprint } = $props()
 
   const today = new Date()
@@ -9,12 +8,18 @@
 
   let nextSprintDate = nextSprint ? new Date(nextSprint.startdate) : false
   
-  let active = $derived(today >= sprintDate && (!nextSprintDate || today < nextSprintDate))
-  let past = $derived(nextSprintDate && today > nextSprintDate)
+  let active = (today >= sprintDate && (!nextSprintDate || today < nextSprintDate))
+  let past = (nextSprintDate && today > nextSprintDate)
+  let semester4 = sprint.sprintNumber == 19 || sprint.sprintNumber == 20
+
+  let sprintClasses = [sprint.type]
+  if (active) sprintClasses.push('active')
+  if (past) sprintClasses.push('past')
+  if (semester4) sprintClasses.push('semester4')
 </script>
 
 {#if sprint.sprintNumber}
-  <li class:active class:past class={sprint.type}>
+  <li class={sprintClasses.join(' ')}>
     <a data-sveltekit-prefetch href="{semester.slug}/{sprint.slug}">
       <span class:past> {sprint.sprintNumber} </span>
       <div>
@@ -78,6 +83,10 @@
     &:hover { 
       background: var(--turquoise); 
     }
+  }
+
+  li.semester4 {
+    height: 222px;
   }
 
   li.past a {
