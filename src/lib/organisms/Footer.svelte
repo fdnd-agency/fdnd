@@ -101,6 +101,7 @@
 
         a:focus-visible, a:hover {
           background-color: var(--call-to-action);
+          outline: none;
           right: 1px;
           top: 1px;
           transition: all 0.4s ease-out;
@@ -124,10 +125,6 @@
           color: var(--attent);
           right: 2px;
           top: 2px;
-        }
-
-        a:focus-visible {
-          outline: none;
         }
       }
     }

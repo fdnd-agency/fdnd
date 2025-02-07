@@ -11,7 +11,7 @@
       {#if task.topic == "task"}
         <strong>
           <a href={task.url} data-sveltekit-prefetch>{task.name}</a>
-          <small>{task.forkCount} forks</small>
+          <small aria-label="Number of forks: {task.forkCount}">{task.forkCount} forks</small>
         </strong>
         <p>{task.description}</p>
       {/if}
