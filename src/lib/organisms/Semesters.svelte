@@ -124,9 +124,8 @@
     }
 
     .pacman:focus-visible {
-    outline-color: var(--lavender);
+      outline-color: var(--lavender);
     }
-
 
     .pacman::after {
       --rotation: -30deg;

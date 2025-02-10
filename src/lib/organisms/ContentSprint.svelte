@@ -1,18 +1,18 @@
 <script>
-  import Heading from "$lib/molecules/Heading.svelte"
-  import Topics from "$lib/molecules/Topics.svelte"
-  let { title, sprintNumber, content, startdate, topics } = $props()
+  import Heading from "$lib/molecules/Heading.svelte";
+  import Topics from "$lib/molecules/Topics.svelte";
+  let { title, sprintNumber, content, startdate, topics } = $props();
 </script>
 
-  <article>
-    <Heading title="Sprint {sprintNumber}: {title}" />
-    <div>
-      {#if content}
-        {@html content.html}
-      {/if}
-    </div>
-    <Topics {startdate} {topics} />
-  </article>
+<article>
+  <Heading title="Sprint {sprintNumber}: {title}" />
+  <div>
+    {#if content}
+      {@html content.html}
+    {/if}
+  </div>
+  <Topics {startdate} {topics} />
+</article>
 
 <style>
   article {
@@ -22,21 +22,20 @@
     min-height: 18rem;
     max-width: 35em;
 
-    div { 
-      margin-top: 1.5rem; 
+    div {
+      margin-top: 1.5rem;
     }
   }
 
-  :global(article p) { 
-    font-size: 1rem; 
-  }
-  
-  :global(blockquote) { 
+  :global(article p) {
     font-size: 1rem;
-    border-left: 1px solid currentColor; 
-    padding-left: 1rem;
-    margin:0;
-    font-style: italic;
+  }
 
+  :global(blockquote) {
+    font-size: 1rem;
+    border-left: 1px solid currentColor;
+    padding-left: 1rem;
+    margin: 0;
+    font-style: italic;
   }
 </style>
