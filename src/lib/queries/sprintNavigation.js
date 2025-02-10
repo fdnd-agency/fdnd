@@ -8,5 +8,5 @@ export default function getQuerySprintNavigation(sprintNumber) {
         slug
       }
     }
-  }`
+  }`;
 }

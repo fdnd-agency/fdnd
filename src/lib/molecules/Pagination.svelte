@@ -1,70 +1,106 @@
 <script>
-  let { prevSprint, nextSprint } = $props()
+  let { prevSprint, nextSprint } = $props();
 </script>
 
 <nav>
   {#if prevSprint}
-      <a data-sveltekit-reload href="/{prevSprint.semester.slug}/{prevSprint.slug}">
-        <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M5 12l4 4" /><path d="M5 12l4 -4" /></svg>
-        Vorige sprint
-        <span>: {prevSprint.title}</span>
-      </a>
+    <a
+      data-sveltekit-reload
+      href="/{prevSprint.semester.slug}/{prevSprint.slug}"
+    >
+      <svg
+        aria-hidden="true"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+          d="M5 12l14 0"
+        /><path d="M5 12l4 4" /><path d="M5 12l4 -4" /></svg
+      >
+      Vorige sprint
+      <span>: {prevSprint.title}</span>
+    </a>
   {/if}
-  
-  {#if nextSprint}
-      <a data-sveltekit-reload href="/{nextSprint.semester.slug}/{nextSprint.slug}">
-          Volgende sprint<span>: {nextSprint.title}</span>
 
-          <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg>
-      </a>
+  {#if nextSprint}
+    <a
+      data-sveltekit-reload
+      href="/{nextSprint.semester.slug}/{nextSprint.slug}"
+    >
+      Volgende sprint<span>: {nextSprint.title}</span>
+
+      <svg
+        aria-hidden="true"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+          d="M5 12l14 0"
+        /><path d="M15 16l4 -4" /><path d="M15 8l4 4" /></svg
+      >
+    </a>
   {/if}
 </nav>
 
 <style>
   nav {
-        font-size: 1rem;
-        font-weight: 600;
-        display: flex;
-        justify-content: space-between;
-        margin: 2rem 0 0;
-    
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0 0;
+
     a {
-        text-decoration: none;
-        color: var(--blueberry);
-        display: flex;
-        align-items: center;
-        gap:.25rem;
-        cursor:pointer;
+      text-decoration: none;
+      color: var(--blueberry);
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      cursor: pointer;
 
-        &:hover,
-        &:focus,
-        &:focus-visible {
-            color: var(--text-element-hover);
-            text-decoration: underline;
-            outline: none;
-            outline-offset: none;
-            text-decoration-color: var(--text-element-hover);
-        }
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        color: var(--text-element-hover);
+        text-decoration: underline;
+        outline: none;
+        outline-offset: none;
+        text-decoration-color: var(--text-element-hover);
+      }
     }
 
-    a > span{
-        display:none;
+    a > span {
+      display: none;
     }
 
-    @media (min-width:47rem) {
+    @media (min-width: 47rem) {
       a > span {
-          display: inline;
-      } 
+        display: inline;
+      }
     }
 
     a:last-of-type {
-        margin-left:auto;
+      margin-left: auto;
     }
 
     svg {
-      translate:0 1px;
+      translate: 0 1px;
     }
   }
 </style>

@@ -1,5 +1,5 @@
 export default function getQuerySprint(slug) {
-    return `
+  return `
     query Sprint {
         sprint(where: {slug: "${slug}"}) {
           slug
@@ -35,5 +35,5 @@ export default function getQuerySprint(slug) {
             name
           }
         }
-    }`
+    }`;
 }

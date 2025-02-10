@@ -1,9 +1,8 @@
 <script>
-  import Heading from "$lib/molecules/Heading.svelte"
-  import SprintLink from "$lib/molecules/SprintLink.svelte"
-  let { semester, i } = $props()
-  let semesterNr = `Semester ${++i}` 
-  
+  import Heading from "$lib/molecules/Heading.svelte";
+  import SprintLink from "$lib/molecules/SprintLink.svelte";
+  let { semester, i } = $props();
+  let semesterNr = `Semester ${++i}`;
 </script>
 
 <article class="semester">
@@ -12,7 +11,13 @@
   </a>
   <ol>
     {#each semester.sprints as sprint, index}
-      <SprintLink {semester} {sprint} nextSprint={index !== semester.sprints.length - 1 ? semester.sprints[index + 1] : false}/>
+      <SprintLink
+        {semester}
+        {sprint}
+        nextSprint={index !== semester.sprints.length - 1
+          ? semester.sprints[index + 1]
+          : false}
+      />
     {/each}
   </ol>
 </article>
@@ -34,7 +39,8 @@
     left: 0;
   }
 
-  .semester a:focus, .semester a:hover {
+  .semester a:focus,
+  .semester a:hover {
     color: var(--text-element-hover);
     text-decoration: underline;
     text-decoration-color: var(--text-element-hover);
@@ -47,14 +53,14 @@
 
   ol {
     list-style: none;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
   }
 
-  :global(.semester h2 ) {
+  :global(.semester h2) {
     line-height: 1.1;
     font-size: 1rem;
-    display:flex;
+    display: flex;
     flex-direction: column;
   }
 
@@ -75,5 +81,4 @@
       list-style: none;
     }
   }
-
 </style>

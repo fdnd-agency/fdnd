@@ -124,9 +124,8 @@
     }
 
     .pacman:focus-visible {
-    outline-color: var(--lavender);
+      outline-color: var(--lavender);
     }
-
 
     .pacman::after {
       --rotation: -30deg;
@@ -169,27 +168,6 @@
       gap: 2rem;
     }
   }
-
-  /* .semester-grid::before, .semester-grid::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 10px;
-    pointer-events: none;
-  }
-
-  .semester-grid::before {
-    left: 0;
-    background: linear-gradient(to right, var(--grey), rgba(255, 255, 255, 0));
-    z-index: 1;
-  }
-
-  .semester-grid::after {
-    right: 0;
-    background: linear-gradient(to left, var(--grey), rgba(255, 255, 255, 0));
-    z-index: 1;
-  } */
 
   @media (prefers-reduced-motion: reduce) {
     .pacman::before,

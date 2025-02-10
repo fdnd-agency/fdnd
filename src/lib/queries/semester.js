@@ -1,5 +1,5 @@
 export default function getQuerySemester(slug) {
-    return `
+  return `
     query Semester {
         semester(where: {slug: "${slug}"}) {
           title
@@ -17,5 +17,5 @@ export default function getQuerySemester(slug) {
               startdate
           }
         }
-    }`
+    }`;
 }
