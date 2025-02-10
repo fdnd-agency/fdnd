@@ -4,11 +4,7 @@
 
 <main>
   <h1>OOPS!</h1>
-  <p>
-    Looks like our students have taken <strong>
-      "Website Destructuring"
-    </strong> to a whole new level
-  </p>
+  <p> Looks like our students have taken <strong> "Website Destructuring" </strong> to a whole new level </p>
 </main>
 
 <style>
@@ -34,7 +30,7 @@
     font-size: 1.5rem;
   }
 
-  strong {
-    color: var(--lavender);
-  }
+  strong { 
+    color: var(--lavender); 
+    }
 </style>

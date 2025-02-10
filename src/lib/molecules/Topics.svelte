@@ -1,9 +1,9 @@
 <script>
-  import { longDate } from "$lib/utils/date.js";
-  import IconCal from "$lib/atoms/Calendar.svelte";
-  import IconTopic from "$lib/atoms/Topic.svelte";
-
-  let { startdate, topics } = $props();
+  import { longDate } from "$lib/utils/date.js"
+  import IconCal from "$lib/atoms/Calendar.svelte"
+  import IconTopic from "$lib/atoms/Topic.svelte"
+  
+  let { startdate, topics } = $props()
 </script>
 
 <aside>
@@ -34,9 +34,9 @@
       flex-wrap: wrap;
       column-gap: 0.25rem;
       row-gap: 0.25rem;
-
+      
       li {
-        padding: 0.1rem 0.25rem;
+        padding: 0.1rem .25rem;
         font-size: 0.8rem;
         font-weight: 200;
         border-radius: var(--rounded);

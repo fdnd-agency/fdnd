@@ -1,14 +1,9 @@
 <script>
-  let { title, subtitle = "" } = $props();
-  let id = title
-    ? title
-        .replace(/[^\w\s]/gi, "")
-        .replace(/\s+/g, "-")
-        .toLowerCase()
-    : "";
+  let { title, subtitle = "" } = $props()
+  let id = title ? title .replace(/[^\w\s]/gi, "") .replace(/\s+/g, "-") .toLowerCase() : ""
 </script>
 
-<h2>
+<h2> 
   <span>{title}</span>
   {#if subtitle !== ""}
     <strong> {subtitle} </strong>

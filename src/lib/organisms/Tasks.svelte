@@ -1,7 +1,7 @@
 <script>
-  import Heading from "$lib/molecules/Heading.svelte";
-
-  let { tasks } = $props();
+  import Heading from "$lib/molecules/Heading.svelte"
+  
+  let { tasks } = $props()
 </script>
 
 {#if tasks && tasks.length > 0}
@@ -11,15 +11,13 @@
       {#if task.topic == "task"}
         <strong>
           <a href={task.url} data-sveltekit-prefetch>{task.name}</a>
-          <small aria-label="Number of forks: {task.forkCount}"
-            >{task.forkCount} forks</small
-          >
+          <small aria-label="Number of forks: {task.forkCount}">{task.forkCount} forks</small>
         </strong>
         <p>{task.description}</p>
       {/if}
     {/each}
 
-    <Heading title="Deeltaken" />
+    <Heading title="Deeltaken"/>
     {#each tasks as task}
       {#if task.topic == "subtask"}
         <strong>
@@ -50,7 +48,7 @@
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      margin-top: 0.5em;
+      margin-top: .5em;
       margin-bottom: 0.5em;
       font-weight: normal;
 
@@ -63,15 +61,13 @@
         padding: 0;
       }
 
-      a:hover,
-      a:focus,
-      a:focus-visible {
+      a:hover, a:focus, a:focus-visible {
         color: var(--text-element-hover);
         text-decoration: underline;
         outline: none;
         outline-offset: none;
         text-decoration-color: var(--text-element-hover);
-      }
+    }
 
       small {
         font-size: 0.6em;
@@ -83,15 +79,15 @@
         white-space: nowrap;
       }
     }
-
+    
     p {
-      margin-top: -0.5em;
-      margin-bottom: 1.25em;
-    }
+        margin-top: -.5em;
+        margin-bottom: 1.25em;
+      }
   }
 
   @media (768px <= width) {
-    section {
+    section{
       max-width: 35em;
     }
   }

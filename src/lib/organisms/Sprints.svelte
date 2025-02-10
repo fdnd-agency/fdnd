@@ -1,14 +1,14 @@
 <script>
-  import SprintLink from "$lib/molecules/SprintLink.svelte";
-
-  let { semester, sprints } = $props();
+  import SprintLink from "$lib/molecules/SprintLink.svelte"
+  
+  let { semester, sprints } = $props()
 </script>
 
 <article>
   <h3>Sprints</h3>
   <ol>
     {#each sprints as sprint}
-      <SprintLink {semester} {sprint} />
+      <SprintLink {semester} {sprint}/>
     {/each}
   </ol>
 </article>
@@ -17,12 +17,12 @@
   article {
     padding-bottom: 1em;
 
-    ol {
+    ol { 
       padding: 0;
     }
 
     h3 {
-      margin-top: 2rem;
+          margin-top: 2rem;
     }
   }
 </style>

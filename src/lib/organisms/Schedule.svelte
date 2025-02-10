@@ -1,9 +1,9 @@
 <script>
-  import Heading from "$lib/molecules/Heading.svelte";
+  import Heading from "$lib/molecules/Heading.svelte"
 
-  import { prettyDate, longDate } from "$lib/utils/date.js";
+  import { prettyDate, longDate } from "$lib/utils/date.js"
 
-  let { weekPlans } = $props();
+  let { weekPlans } = $props()
 
   const checkKeywords = (content) => {
     const strings = [
@@ -15,38 +15,41 @@
       "retrospect ",
       "wrap-up",
       "review",
-    ];
+    ]
 
-    let newString = "";
+    let newString = ""
 
     if (content) {
-      const splitted = content.split("<p>");
+      const splitted = content.split("<p>")
 
       splitted.forEach((paragraph) => {
         let toReplace = strings.filter((s) => {
           if (paragraph.toLowerCase().includes(s)) {
             return s
               .replace("we ♥ web", "we love web", s)
-              .replaceAll(" ", "-", s);
+              .replaceAll(" ", "-", s)
+
           }
-        });
+        })
 
-        let classes = toReplace.join(" ");
+        let classes = toReplace.join(" ")
 
-        paragraph = "<p>" + paragraph;
+        paragraph = "<p>" + paragraph
 
         newString += paragraph.replace(
           "<p>",
           `<p class="${classes}">`,
-          paragraph
-        );
-      });
+          paragraph,
+        )
+
+      })
+
     }
 
     return newString;
-  };
+  }
 
-  const plans = [];
+  const plans = []
   weekPlans.forEach((plan) => {
     let startDate = new Date(plan["mondayDate"]);
     const week = [
@@ -75,15 +78,15 @@
         weekDay: "Vrijdag",
         content: checkKeywords(plan["friday"].html),
       },
-    ];
-    plans.push(week);
-  });
+    ]
+    plans.push(week)
+  })
 
   function addDays(date, days) {
-    var result = new Date(date);
-    result.setDate(result.getDate() + days);
+    var result = new Date(date)
+    result.setDate(result.getDate() + days)
 
-    return result;
+    return result
   }
 </script>
 
@@ -138,7 +141,7 @@
     z-index: 1;
     margin-left: -4px;
     padding-left: 4px;
-    padding-block: 0.5em;
+    padding-block: .5em;
     margin-block: 0;
   }
 
@@ -185,21 +188,16 @@
     opacity: 1;
   }
 
-  .day :global(.sprintplanning) {
-    --border: var(--lavender);
+  .day :global(.sprintplanning) { 
+    --border: var(--lavender); 
   }
 
-  .day :global(.workshop) {
-    --border: var(--turquoise);
+  .day :global(.workshop) { 
+    --border: var(--turquoise); 
   }
 
-  .day :global(.opdrachtgever),
-  .day :global(.code-review),
-  .day :global(.review),
-  .day :global(.retrospect),
-  .day :global(.kickoff),
-  .day :global(.wrap-up) {
-    --border: var(--call-to-action);
+  .day :global(.opdrachtgever), .day :global(.code-review), .day :global(.review), .day :global(.retrospect), .day :global(.kickoff), .day :global(.wrap-up) { 
+    --border: var(--call-to-action); 
   }
 
   @media (630px <= width) {

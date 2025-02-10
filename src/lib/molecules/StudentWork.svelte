@@ -1,73 +1,78 @@
 <script>
-  import Heading from "$lib/molecules/Heading.svelte";
-  import IconStar from "$lib/atoms/Star.svelte";
+  import Heading from "$lib/molecules/Heading.svelte"
+  import IconStar from "$lib/atoms/Star.svelte"
 
-  let { stargazer = $bindable(false), tasks } = $props();
+  let { stargazer = $bindable(false), tasks } = $props()
 
-  if (tasks) {
-    tasks.forEach((task) => {
-      if (!stargazer && task.forks && task.forks.length > 0) {
-        stargazer = true;
-      }
-    });
+  if (tasks) { 
+    tasks.forEach((task) => { 
+      if (!stargazer && task.forks && task.forks.length > 0) { 
+        stargazer = true 
+      } 
+    })
   }
 </script>
 
 {#if tasks && tasks.length > 0}
-  <section class="showcase {stargazer ? 'stargazer' : ''}">
-    <Heading title="Studentenwerk" />
-    <div class="gradient-container">
-      <ul>
-        {#each tasks as task}
-          {#if task.forks && task.forks.length > 0}
-            {#each task.forks as fork}
-              <li>
-                <div class="repo">
-                  <span class="repo-title">{fork.title}</span>
-                  <IconStar stargazerCount={fork.stargazerCount} />
-                  <div class="links">
-                    <a href={fork.url} target="_blank" rel="noreferrer">Code</a>
-                    {#if fork.homepageUrl}
-                      <a
-                        href={fork.homepageUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Website
-                      </a>
-                    {/if}
-                  </div>
-                </div>
-                <strong class="profile">
-                  <img
-                    src={fork.avatarUrl}
-                    alt=""
-                    class="avatar"
-                    loading="lazy"
-                    height="2rem"
-                    width="2rem"
-                  />
-                  <a href={fork.ownerUrl} target="_blank" rel="noreferrer">
-                    @{fork.owner}
-                  </a>
-                </strong>
-              </li>
-            {/each}
-          {/if}
+<section class="showcase {stargazer ? 'stargazer' : ''}">
+  <Heading title="Studentenwerk" />
+  <div class="gradient-container">
+  <ul>
+    {#each tasks as task}
+      {#if task.forks && task.forks.length > 0}
+        {#each task.forks as fork}
+          <li>
+            <div class="repo">
+              <span class="repo-title">{fork.title}</span>
+              <IconStar stargazerCount={fork.stargazerCount} />
+              <div class="links">
+                <a href={fork.url} target="_blank" rel="noreferrer">Code</a>
+                {#if fork.homepageUrl}
+                  <a href={fork.homepageUrl} target="_blank" rel="noreferrer"> Website </a>
+                {/if}
+              </div>
+            </div>
+            <strong class="profile">
+              <img src={fork.avatarUrl} alt="" class="avatar" loading="lazy" height="2rem" width="2rem"/>
+              <a href={fork.ownerUrl} target="_blank" rel="noreferrer"> @{fork.owner} </a>
+            </strong>
+          </li>
         {/each}
-      </ul>
-    </div>
-  </section>
+      {/if}
+    {/each}
+  </ul>
+  </div>
+</section>
 {/if}
 
 <style>
-  .showcase {
-    display: block;
-  }
+  .showcase { display: block; }
 
   .gradient-container {
     position: relative;
+    
   }
+
+  /* .gradient-container::before, .gradient-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    pointer-events: none;
+  }
+
+  .gradient-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--grey), rgba(255, 255, 255, 0));
+    z-index: 1;
+  }
+
+  .gradient-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--grey), rgba(255, 255, 255, 0));
+    z-index: 1;
+  } */
 
   .showcase ul {
     display: flex;
@@ -96,18 +101,11 @@
     gap: 0.25rem;
   }
 
-  .stargazer {
-    display: block;
-  }
+  .stargazer { display: block; }
 
-  .repo {
-    overflow: hidden;
-  }
+  .repo { overflow: hidden; }
 
-  .repo a,
-  .repo span {
-    display: block;
-  }
+  .repo a, .repo span { display: block; }
 
   .repo-title {
     white-space: nowrap;
@@ -126,16 +124,14 @@
     border: 1px solid currentColor;
     border-radius: 1rem;
     padding: 0.3em 0.5em;
-    margin: 1em 0 0.8em 0;
+    margin: 1em 0 .8em 0;
     line-height: 1;
     text-decoration: none;
     font-size: 0.6em;
     color: var(--blueberry);
   }
 
-  .links a:hover:not(.profile),
-  a:focus:not(.profile),
-  a:focus-visible:not(.profile) {
+  .links a:hover:not(.profile), a:focus:not(.profile), a:focus-visible:not(.profile) {
     background-color: var(--call-to-action);
     color: var(--blueberry);
   }

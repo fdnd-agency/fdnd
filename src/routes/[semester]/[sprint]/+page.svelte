@@ -1,23 +1,13 @@
 <script>
-  import Content from "$lib/organisms/ContentSprint.svelte";
-  import Tasks from "$lib/organisms/Tasks.svelte";
-  import Studentwork from "$lib/molecules/StudentWork.svelte";
-  import Schedule from "$lib/organisms/Schedule.svelte";
-  import Pagination from "$lib/molecules/Pagination.svelte";
+  import Content from "$lib/organisms/ContentSprint.svelte"
+  import Tasks from "$lib/organisms/Tasks.svelte"
+  import Studentwork from "$lib/molecules/StudentWork.svelte"
+  import Schedule from "$lib/organisms/Schedule.svelte"
+  import Pagination from "$lib/molecules/Pagination.svelte"
 
-  let { data } = $props();
+  let { data } = $props()
 
-  const {
-    title,
-    sprintNumber,
-    startdate,
-    content,
-    weekPlans,
-    topics,
-    tasks,
-    prevSprint,
-    nextSprint,
-  } = data;
+  const { title, sprintNumber, startdate, content, weekPlans, topics, tasks, prevSprint, nextSprint } = data;
 </script>
 
 <div>
@@ -38,7 +28,7 @@
     gap: 2rem;
     background-color: var(--grey);
     border-radius: var(--rounded) 0 0 0;
-    padding: 0 0 2em;
+    padding: 0  0 2em;
 
     @media (min-width: 40em) {
       flex-direction: row;
