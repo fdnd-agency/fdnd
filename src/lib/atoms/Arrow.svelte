@@ -1,4 +1,8 @@
-<svg
+<script>
+  let { rightArrow } = $props();
+</script>
+
+<svg class={rightArrow}
   aria-hidden="true"
   role="img"
   xmlns="http://www.w3.org/2000/svg"
@@ -19,5 +23,9 @@
 <style>
   svg {
     translate: 0 1px;
+  }
+
+  .right-arrow {
+    transform: scaleX(-1);
   }
 </style>

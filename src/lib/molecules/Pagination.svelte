@@ -1,7 +1,6 @@
 <script>
   let { prevSprint, nextSprint } = $props();
-  import ArrowLeft from "../atoms/ArrowLeft.svelte";
-  import ArrowRight from "../atoms/ArrowRight.svelte";
+  import Arrow from "../atoms/Arrow.svelte";
 </script>
 
 <nav>
@@ -10,8 +9,8 @@
       data-sveltekit-reload
       href="/{prevSprint.semester.slug}/{prevSprint.slug}"
     >
-      <ArrowLeft />
-      
+      <Arrow />
+
       Vorige sprint
       <span>: {prevSprint.title}</span>
     </a>
@@ -24,7 +23,8 @@
     >
       Volgende sprint<span>: {nextSprint.title}</span>
 
-      <ArrowRight />
+      <Arrow rightArrow="right-arrow" />
+      
     </a>
   {/if}
 </nav>
