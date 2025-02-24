@@ -2,8 +2,6 @@
     import { IconCal, IconTopic } from '$lib';
 
   import { longDate } from "$lib/utils/date.js";
-
-
   let { startdate, topics } = $props();
 </script>
 
