@@ -1,5 +1,5 @@
 <script>
-  import Logo from "$lib/atoms/HvaPayoff.svelte";
+  import { Logo } from '$lib';
 </script>
 
 <div class="fixed-bar"></div>

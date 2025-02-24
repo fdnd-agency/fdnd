@@ -1,6 +1,5 @@
 <script>
-  import Heading from "$lib/molecules/Heading.svelte";
-  import SprintLink from "$lib/molecules/SprintLink.svelte";
+    import { Heading, SprintLink } from '$lib';
   let { semester, i } = $props();
   let semesterNr = `Semester ${++i}`;
 </script>

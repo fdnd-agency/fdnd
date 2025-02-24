@@ -1,5 +1,5 @@
 <script>
-  import Semester from "$lib/molecules/Semester.svelte";
+  import { Semester } from '$lib';
   import { onMount } from "svelte";
 
   let { semesters, subtitle } = $props();

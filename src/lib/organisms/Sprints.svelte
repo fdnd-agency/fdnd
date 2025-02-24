@@ -1,5 +1,5 @@
 <script>
-  import SprintLink from "$lib/molecules/SprintLink.svelte";
+  import { SprintLink } from '$lib';
 
   let { semester, sprints } = $props();
 </script>

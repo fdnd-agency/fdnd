@@ -1,5 +1,5 @@
 <script>
-  import Heading from "$lib/molecules/Heading.svelte";
+  import { Heading } from '$lib';
 
   import { prettyDate, longDate } from "$lib/utils/date.js";
 

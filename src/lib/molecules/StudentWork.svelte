@@ -1,6 +1,6 @@
 <script>
-  import Heading from "$lib/molecules/Heading.svelte";
-  import IconStar from "$lib/atoms/Star.svelte";
+  import { Heading, IconStar } from '$lib';
+
 
   let { stargazer = $bindable(false), tasks } = $props();
 

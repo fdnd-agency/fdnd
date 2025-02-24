@@ -1,6 +1,7 @@
 <script>
   import { page } from "$app/stores";
-  import HvaLogo from "../atoms/HvaLogo.svelte";
+  import { HvaLogo } from '$lib';
+  
   let navItems = [
     {
       href: "/static-web/the-startup",

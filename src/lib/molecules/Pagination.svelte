@@ -1,6 +1,6 @@
 <script>
   let { prevSprint, nextSprint } = $props();
-  import Arrow from "../atoms/Arrow.svelte";
+  import { Arrow } from '$lib';
 </script>
 
 <nav>
