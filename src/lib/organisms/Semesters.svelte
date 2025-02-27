@@ -1,5 +1,5 @@
 <script>
-  import Semester from "$lib/molecules/Semester.svelte";
+  import { Semester } from '$lib';
   import { onMount } from "svelte";
 
   let { semesters, subtitle } = $props();
@@ -77,7 +77,8 @@
 
     label {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      gap: 0.5em;
       white-space: nowrap;
       color: var(--blueberry);
       font-size: 0.7rem;
@@ -123,9 +124,8 @@
     }
 
     .pacman:focus-visible {
-    outline-color: var(--lavender);
+      outline-color: var(--lavender);
     }
-
 
     .pacman::after {
       --rotation: -30deg;

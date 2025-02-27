@@ -1,20 +1,26 @@
 <script>
-  import { prettyDate } from "$lib/utils/date"
-  import { derived } from "svelte/store"
+  import { prettyDate } from "$lib/utils/date";
 
-  let { semester, sprint, nextSprint } = $props()
+  let { semester, sprint, nextSprint } = $props();
 
-  const today = new Date()
-  const sprintDate = new Date(sprint.startdate)
+  const today = new Date();
+  const sprintDate = new Date(sprint.startdate);
 
-  let nextSprintDate = nextSprint ? new Date(nextSprint.startdate) : false
-  
-  let active = $derived(today >= sprintDate && (!nextSprintDate || today < nextSprintDate))
-  let past = $derived(nextSprintDate && today > nextSprintDate)
+  let nextSprintDate = nextSprint ? new Date(nextSprint.startdate) : false;
+
+  let active =
+    today >= sprintDate && (!nextSprintDate || today < nextSprintDate);
+  let past = nextSprintDate && today > nextSprintDate;
+  let semester4 = sprint.sprintNumber == 19 || sprint.sprintNumber == 20;
+
+  let sprintClasses = [sprint.type];
+  if (active) sprintClasses.push("active");
+  if (past) sprintClasses.push("past");
+  if (semester4) sprintClasses.push("semester4");
 </script>
 
 {#if sprint.sprintNumber}
-  <li class:active class:past class={sprint.type}>
+  <li class={sprintClasses.join(" ")}>
     <a data-sveltekit-prefetch href="{semester.slug}/{sprint.slug}">
       <span class:past> {sprint.sprintNumber} </span>
       <div>
@@ -39,8 +45,9 @@
 {/if}
 
 <style>
-  li a:focus, li a:hover { 
-    background: var(--turquoise); 
+  li a:focus,
+  li a:hover {
+    background: var(--turquoise);
   }
 
   li {
@@ -74,19 +81,23 @@
     background-size: 200% 100%;
     background-position: right bottom;
 
-    &:focus, 
-    &:hover { 
-      background: var(--turquoise); 
+    &:focus,
+    &:hover {
+      background: var(--turquoise);
     }
+  }
+
+  li.semester4 {
+    height: 222px;
   }
 
   li.past a {
     background-color: var(--grey);
-    opacity:.75;
+    opacity: 0.75;
 
-    &:focus, 
-    &:hover { 
-      background: var(--dark-grey); 
+    &:focus,
+    &:hover {
+      background: var(--dark-grey);
     }
   }
 
@@ -133,7 +144,8 @@
     color: var(--attention);
   }
 
-  li a, li > span {
+  li a,
+  li > span {
     display: flex;
     white-space: nowrap;
     overflow: hidden;
@@ -177,46 +189,43 @@
     background-color: transparent;
     color: inherit;
     margin-right: 1em;
-    display:flex;
-    gap:.25rem;
-    align-items:center;
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
   }
 
   li:not(.extra) time::after {
-    --_bgcolor:var(--grey);
-    --_type: 'sprint';
-    background:var(--_bgcolor);
-    content:var(--_type);
-    padding:0.1rem .5rem;
+    --_bgcolor: var(--grey);
+    --_type: "sprint";
+    background: var(--_bgcolor);
+    content: var(--_type);
+    padding: 0.1rem 0.5rem;
     border-radius: var(--rounded) 0 var(--rounded) 0;
-    position:absolute;
-    bottom:0;
-    right:0;
-
-    
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 
   li:not(.extra).tribe time::after {
-    --_type:'tribe';
-    --_bgcolor:#fbfbd5;
+    --_type: "tribe";
+    --_bgcolor: #fbfbd5;
   }
 
   li:not(.extra).designChallenge time::after {
-    --_type:'design-challenge';
-    --_bgcolor:#e6d7ff;
+    --_type: "design-challenge";
+    --_bgcolor: #e6d7ff;
   }
 
   li:not(.extra).project time::after {
-    --_type: 'project';
-    --_bgcolor:#c4f9e9;
+    --_type: "project";
+    --_bgcolor: #c4f9e9;
   }
 
   li.active span {
-    background:var(--turquoise);
+    background: var(--turquoise);
     color: var(--blueberry);
   }
   li.active a span {
     font-weight: 800;
   }
-
 </style>
