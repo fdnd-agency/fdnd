@@ -9,6 +9,9 @@ export default function getQuerySprint(slug) {
           content {
             html
           }
+          criteria {
+            html
+          }
           weekPlans(first:100) {
             weekNumber
             mondayDate
