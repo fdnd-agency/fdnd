@@ -56,6 +56,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    box-sizing: border-box;
     font-size: 1.75rem;
     margin: 0;
     border: 2px solid var(--_brd-color);
@@ -88,9 +89,9 @@
   }
 
   li.semester4 {
-    height: 222px;
+    height: calc((3 * 3.75rem) + (2 * 0.6em));
   }
-
+  
   li.past a {
     background-color: var(--grey);
     opacity: 0.75;
