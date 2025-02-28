@@ -104,7 +104,6 @@
 
     .fdnd-logo:focus-visible,
     .fdnd-logo:hover {
-      background-color: var(--call-to-action);
       right: 3px;
       top: 3px;
       text-decoration: none;
@@ -126,7 +125,6 @@
 
     .fdnd-logo:focus-visible::before,
     .fdnd-logo:hover::before {
-      background-color: #b1b073;
       right: 1px;
       top: 1px;
     }

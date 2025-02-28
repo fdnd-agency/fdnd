@@ -157,7 +157,6 @@
   .links a:hover:not(.profile),
   a:focus:not(.profile),
   a:focus-visible:not(.profile) {
-    background-color: var(--call-to-action);
     color: var(--blueberry);
   }
 

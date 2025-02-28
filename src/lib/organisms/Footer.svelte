@@ -112,7 +112,6 @@
 
         a:focus-visible,
         a:hover {
-          background-color: var(--call-to-action);
           outline: none;
           right: 1px;
           top: 1px;
