@@ -112,8 +112,8 @@
     min-width: 230px;
     scroll-snap-align: center;
     background: var(--white);
-    border: var(--turquoise) 2px solid;
-    box-shadow: -4px 4px 0px var(--lavender);
+    border: var(--blueberry) 2px solid;
+    box-shadow: -4px 4px 0px var(--blueberry);
     gap: 0.25rem;
   }
 

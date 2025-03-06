@@ -11,9 +11,9 @@
   article.goal {
     background-color: var(--white);
     color: var(--blueberry);
-    border: 2px solid var(--turquoise);
+    border: 2px solid var(--blueberry);
     border-radius: var(--rounded);
-    box-shadow: -4px 4px var(--lavender);
+    box-shadow: -4px 4px var(--blueberry);
     padding: 1rem;
     margin: 0.9rem 0;
   }

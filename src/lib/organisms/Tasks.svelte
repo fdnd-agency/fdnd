@@ -37,9 +37,9 @@
     position: relative;
     background-color: var(--white);
     color: var(--blueberry);
-    border: 2px solid var(--turquoise);
+    border: 2px solid var(--blueberry);
     border-radius: var(--rounded);
-    box-shadow: -4px 4px var(--lavender);
+    box-shadow: -4px 4px var(--blueberry);
     min-height: 18rem;
     width: fit-content;
     word-wrap: break-word;
