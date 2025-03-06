@@ -96,6 +96,9 @@
 
       h1 {
         margin: 0;
+        font-size: 20px;
+        padding: 0.05em;
+        letter-spacing: -0.5px;
         font-variation-settings:
           "wght" 800,
           "wdth" 90;
@@ -104,8 +107,8 @@
 
     .fdnd-logo:focus-visible,
     .fdnd-logo:hover {
-      right: 3px;
-      top: 3px;
+      right: 1px;
+      top: 1px;
       text-decoration: none;
     }
 
@@ -119,7 +122,7 @@
       background-color: var(--grey);
       border-radius: var(--rounded);
       color: var(--attent);
-      right: 3px;
+      right: 1px;
       top: 2px;
     }
 
