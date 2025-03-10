@@ -69,27 +69,6 @@
     position: relative;
   }
 
-  /* .gradient-container::before, .gradient-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 10px;
-    pointer-events: none;
-  }
-
-  .gradient-container::before {
-    left: 0;
-    background: linear-gradient(to right, var(--grey), rgba(255, 255, 255, 0));
-    z-index: 1;
-  }
-
-  .gradient-container::after {
-    right: 0;
-    background: linear-gradient(to left, var(--grey), rgba(255, 255, 255, 0));
-    z-index: 1;
-  } */
-
   .showcase ul {
     display: flex;
     gap: 1rem;
@@ -106,7 +85,7 @@
     flex-wrap: wrap;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    border-radius: var(--rounded);
+    border-radius: var(--rounded)
     margin-bottom: 0;
     position: relative;
     min-width: 230px;
@@ -178,7 +157,6 @@
     font-size: 0.7em;
     display: block;
     padding: 0;
-    color: #7f2fff;
   }
 
   .profile::before {
