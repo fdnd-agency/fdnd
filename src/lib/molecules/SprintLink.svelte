@@ -195,6 +195,33 @@
     align-items: center;
   }
 
+  li:not(.extra) time::after {
+    --_bgcolor: var(--grey);
+    --_type: "sprint";
+    background: var(--_bgcolor);
+    content: var(--_type);
+    padding: 0.1rem 0.5rem;
+    border-radius: var(--rounded) 0 var(--rounded) 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  li:not(.extra).tribe time::after {
+    --_type: "tribe";
+    --_bgcolor: #fbfbd5;
+  }
+
+  li:not(.extra).designChallenge time::after {
+    --_type: "design-challenge";
+    --_bgcolor: #e6d7ff;
+  }
+
+  li:not(.extra).project time::after {
+    --_type: "project";
+    --_bgcolor: #c4f9e9;
+  }
+
   li.active span {
     background: var(--turquoise);
     color: var(--blueberry);
