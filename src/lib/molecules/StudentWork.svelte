@@ -85,7 +85,7 @@
     flex-wrap: wrap;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    border-radius: var(--rounded)
+    border-radius: var(--rounded);
     margin-bottom: 0;
     position: relative;
     min-width: 230px;
@@ -124,7 +124,7 @@
 
   .links a {
     border: 1px solid currentColor;
-    border-radius: 1rem;
+    border-radius: var(--rounded);
     padding: 0.3em 0.5em;
     margin: 1em 0 0.8em 0;
     line-height: 1;

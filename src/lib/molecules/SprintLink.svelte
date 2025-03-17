@@ -171,11 +171,12 @@
     font-weight: 200;
     line-height: 1.2;
     margin-left: 1.75em;
-    text-transform: uppercase;
+    background-color: white;
   }
 
   li.extra time {
     color: inherit;
+    font-size: 0.5em;
   }
 
   :global(body.expand) li.extra {
