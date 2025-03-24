@@ -6,7 +6,7 @@
 
 {#if tasks && tasks.length > 0}
   <section>
-    <Heading title="Leertaken" />
+    <h3 class="titles">Leertaken</h3>
     {#each tasks as task}
       {#if task.topic == "task"}
         <strong>
@@ -19,7 +19,7 @@
       {/if}
     {/each}
 
-    <Heading title="Deeltaken" />
+    <h3 class="titles">Deeltaken</h3>
     {#each tasks as task}
       {#if task.topic == "subtask"}
         <strong>
@@ -90,6 +90,11 @@
     }
   }
 
+  .titles {
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 200;
+  }
   @media (768px <= width) {
     section {
       max-width: 35em;
