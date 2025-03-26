@@ -51,8 +51,8 @@
   }
 
   li {
-    --_brd-color: var(--turquoise);
-    --_shadow-color: var(--lavender);
+    --_brd-color: var(--blueberry);
+    --_shadow-color: var(--blueberry);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -113,7 +113,7 @@
     height: 100%;
     margin-left: -0.25em;
     border-radius: var(--rounded);
-    border: 2px solid var(--turquoise);
+    border: 2px solid var(--blueberry);
     background: var(--white);
     color: var(--blueberry);
   }
@@ -157,9 +157,9 @@
   li.extra {
     display: none;
     font-size: 1.75rem;
-    border: 2px solid var(--lavender);
+    border: 2px solid var(--blueberry);
     border-radius: var(--rounded);
-    box-shadow: -4px 4px var(--turquoise);
+    box-shadow: -4px 4px var(--blueberry);
     margin-top: 0.6em;
     background: var(--white);
     height: 3.75rem;
@@ -171,11 +171,12 @@
     font-weight: 200;
     line-height: 1.2;
     margin-left: 1.75em;
-    text-transform: uppercase;
+    background-color: white;
   }
 
   li.extra time {
     color: inherit;
+    font-size: 0.5em;
   }
 
   :global(body.expand) li.extra {

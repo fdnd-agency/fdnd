@@ -6,7 +6,7 @@
 
 {#if tasks && tasks.length > 0}
   <section>
-    <Heading title="Leertaken" />
+    <h3 class="titles">Leertaken</h3>
     {#each tasks as task}
       {#if task.topic == "task"}
         <strong>
@@ -19,7 +19,7 @@
       {/if}
     {/each}
 
-    <Heading title="Deeltaken" />
+    <h3 class="titles">Deeltaken</h3>
     {#each tasks as task}
       {#if task.topic == "subtask"}
         <strong>
@@ -37,9 +37,9 @@
     position: relative;
     background-color: var(--white);
     color: var(--blueberry);
-    border: 2px solid var(--turquoise);
+    border: 2px solid var(--blueberry);
     border-radius: var(--rounded);
-    box-shadow: -4px 4px var(--lavender);
+    box-shadow: -4px 4px var(--blueberry);
     min-height: 18rem;
     width: fit-content;
     word-wrap: break-word;
@@ -90,6 +90,11 @@
     }
   }
 
+  .titles {
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 200;
+  }
   @media (768px <= width) {
     section {
       max-width: 35em;

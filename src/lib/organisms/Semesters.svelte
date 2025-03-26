@@ -4,13 +4,16 @@
 
   let { semesters, subtitle } = $props();
   let jsEnabled = $state(true);
+  let isAgendaVisible = $state(false); // Correcte declaratie voor reactiviteit
 
-  function toggleDates({ target }) {
-    if (target.nodeName == "INPUT") {
-      document.body.classList.toggle("expand");
-      target.checked
-        ? (target.nextElementSibling.textContent = "Hide full agenda")
-        : (target.nextElementSibling.textContent = "Show full agenda");
+  function toggleDates() {
+    isAgendaVisible = !isAgendaVisible;
+    document.body.classList.toggle("expand", isAgendaVisible);
+  }
+
+  function handleKeydown(event) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      toggleDates();
     }
   }
 
@@ -25,14 +28,19 @@
 
   {#if jsEnabled}
     <form class="agenda-container">
-      <label for="show-hide-dates">
-        <input
-          type="checkbox"
+      <label for="show-hide-dates" class="switch-label">
+        <button
+          type="button"
           id="show-hide-dates"
-          class="pacman"
-          onchange={toggleDates}
-        />
-        <span>Show full agenda</span>
+          class="switch"
+          aria-pressed={isAgendaVisible}
+          aria-label={isAgendaVisible ? "Verberg gehele agenda" : "Toon gehele agenda"}
+          onclick={toggleDates}
+          onkeydown={handleKeydown}
+        >
+          <span class="switch-circle {isAgendaVisible ? 'on' : ''}"></span>
+        </button>
+        <span>{isAgendaVisible ? 'Verberg gehele agenda' : 'Toon gehele agenda'}</span>
       </label>
     </form>
   {/if}
@@ -45,12 +53,6 @@
 </section>
 
 <style>
-  @keyframes waka_waka_waka {
-    to {
-      transform: translate(-50%, var(--translation)) rotate(var(--rotation));
-    }
-  }
-
   section {
     position: relative;
     padding: 0;
@@ -74,79 +76,53 @@
 
   form {
     padding-top: 1em;
+  }
 
-    label {
-      display: flex;
-      align-items: center;
-      gap: 0.5em;
-      white-space: nowrap;
-      color: var(--blueberry);
-      font-size: 0.7rem;
-      font-weight: 700;
-      translate: 0 -2px;
-    }
+  .switch-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 0.875rem;
+    color: var(--blueberry);
+    font-weight: 700;
+    cursor: pointer;
+  }
 
-    .pacman {
-      appearance: none;
-      position: relative;
-      font-size: 1.5em;
-      width: 3.5em;
-      aspect-ratio: 3;
-      border: max(1px, 0.05em) solid #fff;
-      border-radius: 2em;
-      box-sizing: content-box;
-      cursor: pointer;
-      background:
-        linear-gradient(90deg, var(--lavender) 6em, #1230 0) -5.5em 0 / 9em 100%,
-        radial-gradient(circle, #fff 0.075em, #fff0 0.08em) 50% 0 / 0.4em 100%,
-        var(--lavender);
-      transition: background-position calc(var(--speed) * 4) linear;
-      --waka-speed: 0.4s;
-      --speed: 0.5s;
-    }
+  /* 🔹 Toggle switch */
+  .switch {
+    width: 2.5em;
+    height: 1.5em;
+    background-color: var(--grey);
+    border-radius: 1.5em;
+    border: 2px solid var(--blueberry);
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    outline: none;
+  }
 
-    .pacman::before,
-    .pacman::after {
-      --rotation: 30deg;
-      --translation: -100%;
-      content: "";
-      position: absolute;
-      width: 0.7em;
-      height: 0.4em;
-      background: yellow;
-      border-radius: 50% / 100% 100% 0 0;
-      top: 50%;
-      left: 0.5em;
-      transform-origin: 50% 100%;
-      transform: translate(-50%, var(--translation)) rotate(0);
-      transition: left calc(var(--speed)) linear;
-      animation: waka_waka_waka var(--waka-speed) alternate infinite;
-    }
+  .switch-circle {
+    width: 1.2em;
+    height: 1.2em;
+    background-color: var(--blueberry);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
 
-    .pacman:focus-visible {
-      outline-color: var(--lavender);
-    }
+  .switch[aria-pressed="true"] {
+    background-color: var(--blueberry);
+  }
 
-    .pacman::after {
-      --rotation: -30deg;
-      --translation: 0;
-      border-radius: 50% / 0 0 100% 100%;
-      transform-origin: 50% 0;
-    }
+  .switch[aria-pressed="true"] .switch-circle {
+    transform: translateX(1em);
+    background-color: var(--grey);
+  }
 
-    .pacman:checked {
-      background-position:
-        2.5em 0,
-        50% 0;
-    }
-    .pacman:checked::before,
-    .pacman:checked::after {
-      --rotation: -30deg;
-      left: calc(100% - 0.5em);
-    }
-    .pacman:checked::after {
-      --rotation: 30deg;
-    }
+  .switch:focus-visible {
+    outline: 2px solid var(--blueberry);
   }
 
   .semester-grid {
@@ -169,31 +145,9 @@
     }
   }
 
-  /* .semester-grid::before, .semester-grid::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 10px;
-    pointer-events: none;
-  }
-
-  .semester-grid::before {
-    left: 0;
-    background: linear-gradient(to right, var(--grey), rgba(255, 255, 255, 0));
-    z-index: 1;
-  }
-
-  .semester-grid::after {
-    right: 0;
-    background: linear-gradient(to left, var(--grey), rgba(255, 255, 255, 0));
-    z-index: 1;
-  } */
-
   @media (prefers-reduced-motion: reduce) {
-    .pacman::before,
-    .pacman::after {
-      animation: none;
+    .switch-circle {
+      transition: none;
     }
   }
 </style>

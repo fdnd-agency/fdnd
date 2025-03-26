@@ -149,11 +149,11 @@
   }
 
   .day {
-    border: 2px solid var(--turquoise);
+    border: 2px solid var(--blueberry);
     border-radius: var(--rounded);
     padding: 1rem;
     background: var(--white);
-    box-shadow: -4px 4px var(--lavender);
+    box-shadow: -4px 4px var(--blueberry);
     word-wrap: break-word;
     overflow-wrap: break-word;
     word-break: break-word;
