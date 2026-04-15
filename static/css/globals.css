@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url(../fonts/OpenSans-VariableFont_wdth\,wght.woff2) format('woff2');
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  list-style: none;
+}
+
+body { 
+  --white: #fff;
+  --grey: #ECECEC;
+  --dark-grey: #ddd;
+  --blueberry: #050542;
+  --turquoise: #66e5bf;
+  --lavender: #a675f5;
+  --attention: #050542;
+  --attention-background: #05054233;
+  --call-to-action: #fffc86;
+  --text-element-hover: #612FAC;
+  --rounded: .5rem;
+  --pilled: 2rem;
+  --shadow: .3rem;
+  --breakpoint-medium: 30em;
+
+  font-variation-settings:
+  "wght" var(--text-wght),
+  "wdth" var(--text-wdth),
+  "opsz" var(--text-opsz),
+  "GRAD" var(--text-GRAD);
+
+  overflow-x: hidden;
+  max-width: 1304px; /* todo: design larger screen layout */ 
+  color: var(--blueberry);
+  background-color: var(--lavender);
+  margin: 0; 
+  padding: .5rem;
+   
+  @media (750px <= width) {
+    padding-inline: .25rem;
+    margin: 0 1rem;
+  }
+
+  @media (width > calc(1300px + 2.5rem)) {
+    display:grid;
+    place-self: center;
+  }
+}
+
+h2 { 
+  margin-left: 1.5rem; 
+}
+
+footer { 
+  margin-top: 2rem; 
+}
+
+footer nav h2 { 
+  margin: calc(-1rem - 1px) calc(-1rem - 1px) 1rem 2rem;
+}
+
+a { 
+  color:var(--blueberry) 
+}
+
+::marker { 
+  color: currentColor; 
+}
+
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
