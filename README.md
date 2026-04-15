@@ -1,8 +1,7 @@
-# FDND Project
+# FDND Programma Redesign
 
-Het FDND Programma is in feite een digitale hub voor studenten en geïnteresseerden van de opleiding Frontend Design and Development. Het is een online platform waar je alles kunt vinden over de opleiding, de opbouw van het jaar en de verschillende projecten waar studenten aan werken.
-
-Het programma van FDND is te bekijken op https://programma.fdnd.nl/.
+Het huidige programma van FDND is te bekijken op https://programma.fdnd.nl/.  
+Hier is informatie te vinden over de semesters en de sprints die het curriculum van FDND vormen. 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/701e5b8a-bc87-45f7-a3d3-d8800d084214/deploy-status)](https://app.netlify.com/sites/fdnd-programma/deploys)
 
@@ -18,37 +17,6 @@ De website live bekijken kan ook! Klik hiervoor op de link: [FDND Programma webs
 
 ![kS4Lllh4qF](https://github.com/user-attachments/assets/49c2db79-da79-44d4-813a-b7e9d40ec153)
 
+## <img src="https://www.gnu.org/graphics/gplv3-127x51.png" width="50"> Licentie
 
-
-## Installatie
-Mocht je dit project lokaal willen opzetten? Dat kan! Volg dan de volgende stappen: 
-1. Clone de repository:
-   ````
-   git clone https://github.com/jouw-gebruikersnaam/jouw-repository-naam.git
-   ````
-2. Ga naar de projectmap:
-   ````
-   cd jouw-repository-naam
-   ````
-3. Installeer de vereiste dependencies:
-   ````
-   npm install
-
-   npm install --save-dev @sveltejs/enhanced-img
-   ````
-4. Voeg de environment-variables toe in een `.env` bestand: (vraag de benodigde info aan de product-owner)
-   ````
-   VITE_GITHUB_ENDPOINT = ''
-   VITE_GITHUB_PERSONAL_ACCESS_TOKEN = ''
-   VITE_HYPGRAPH_ENDPOINT = ''
-   ````
-5. Start de ontwikkelserver:
-   ````
-   npm run dev
-   ````
-
-## Bronnen
-Projectboard: [Backlog](https://github.com/orgs/fdnd-agency/projects/39)
-
-## Licentie
-![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
+This work is licensed under [GNU GPLv3](./LICENSE).
